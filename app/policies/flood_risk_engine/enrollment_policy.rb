@@ -61,7 +61,3 @@ module FloodRiskEngine
 
   end
 end
-
-class DigitalServicesCore::EnrollmentPolicy < FloodRiskEngine::EnrollmentPolicy
-end
-
