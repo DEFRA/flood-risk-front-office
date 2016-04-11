@@ -45,16 +45,18 @@ Run the following to download the app dependencies ([rubygems](https://www.ruby-
 
 #### Databases _(local)_
 
-There are several databases per environment, therefore, ensure you run the following:
+The usual rails commands can be used to manage the databases for example
 
-    bundle exec rake db:create:all
+    bundle exec rake db:create
     bundle exec rake db:migrate db:seed
 
 #### .env configuration file
 
 The project uses the [dotenv](https://github.com/bkeepers/dotenv) gem which allows enviroment variables to be loaded from a ```.env``` configuration file in the project root.
 
-Duplicate ```./env.example``` and rename the copy as ```./env```. Open it and update SECRET_KEY_BASE and settings for database, email etc.
+Duplicate ```./env.example``` and rename the copy as ```./env```
+
+Open it and update SECRET_KEY_BASE and settings for database, email etc.
 
 #### Start the service _(local)_
 
@@ -85,22 +87,8 @@ case any development email will seem to be sent to your global git config email 
 
 ## Quality
 
-We use tools like [rubocop](https://github.com/bbatsov/rubocop), [brakeman](https://github.com/presidentbeef/brakeman), and [i18n-tasks](https://github.com/glebm/i18n-tasks) to help maintain quality, reusable code. Rather than running them manually we automate it via a git pre-commit hook, utilizing the [overcommit](https://github.com/brigade/overcommit) gem.
-
-    gem install overcommit
-    overcommit --install
-
-The first time the hooks run you may get a message that pre-commit plugins have been changed and that you should verify and sign the changes. To resolve this simply enter the following.
-
-    overcommit --sign pre-commit
-
-The tests will run whenever you call `git commit`. If the tests fail the commit itself will not proceed,
-so you can fix the issue and then retry. Please note **overcommit** comes with a set of default hooks, some of which are also run alongside those we have added.
-Check out the [overcommit _default.yml_](https://github.com/brigade/overcommit/blob/master/config/default.yml) for details.
-
-You can run the tests at anytime using the following.
-
-    overcommit --run
+We use [Before Commit](https://github.com/EnvironmentAgency/before_commit) to install and manage a number 
+of tools such as rubocop, brakeman, and i18n-tasks to help maintain quality, reusable code.
 
 ### Potential Gotcha
 
@@ -110,21 +98,14 @@ If this is an issue you may need to ensure the gem is installed in both your [rv
 
 ## Tests
 
-We use [RSpec](http://rspec.info/) for unit testing, and intend to use [Cucumber](https://github.com/cucumber/cucumber-rails) for our acceptance testing.
+We use [RSpec](http://rspec.info/) for unit testing.
 
 ### Test database seeding
-
-Before executing the tests for the first time, you will need to seed the database:
-
-    bundle exec rake db:seed RAILS_ENV=test
 
 To execute the unit tests simply enter:
 
     rspec
 
-As this point we have no acceptance tests but when we do they can be executed using:
-
-    cucumber
 
 ## Contributing to this project
 
