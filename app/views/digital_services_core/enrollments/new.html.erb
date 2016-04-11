@@ -1,0 +1,10 @@
+<%= backto_start_link %>
+
+<%= render 'shared/errors' %>
+
+<%= form_for @enrollment, html: { novalidate: true } do |form| %>
+    <%= render 'enrollments/states/' + @enrollment.state, form: form %>
+
+    <%= form.submit "Continue", class:'button' %>
+
+<% end %>

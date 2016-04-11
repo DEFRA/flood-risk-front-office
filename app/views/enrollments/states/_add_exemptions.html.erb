@@ -1,0 +1,51 @@
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <%= form.fields_for @form.model do |f| %>
+
+      <header class="text">
+        <h1 class="form-title heading-large" id="groupLabel">
+          <%= set_page_title t('.heading') %>
+        </h1>
+      </header>
+
+      <table summary="exemption-codes" role="presentation" class="exemption-table">
+        <thead>
+        <tr>
+          <th class="exemption-description"><span class="heading-small"><%= t('.text') %></span></th>
+          <th class="exemption-description"><span class="heading-small"><%= t('.text1') %></span></th>
+          <th class="exemption-checkbox"><span class="heading-small"><%= t('.text2') %></span></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @form.exemptions.each do |a| %>
+          <tr>
+            <td class="exemption-description">
+              <span class="bold-large">FRA2</span>
+            </td>
+            <td class="exemption-description">
+              <p>The erection of an electrical cable service crossing over a main river</p>
+            </td>
+            <td class="exemption-select">
+              <label class="form-checkbox" for="checkbox-<%= a.code %>">
+                <%= f.radio_button 'add_exemptions_id',
+                                   a.id,
+                                   checked: false,
+                                   id: "a"
+                %>
+                <%= a.display %>
+              </label>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+
+    <% end %>
+
+  </div>
+</div>
+
+
+
