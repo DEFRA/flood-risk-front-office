@@ -42,8 +42,8 @@ DigitalServicesCore::EnrollmentsController.class_eval do
           redirect_to(digital_services_core.enrollment_state_path(@enrollment.state, @enrollment)) && return
         end
       else
-        puts "Form Could NOT be SAVED - #{@form.inspect}"
-        puts "Errors - #{@form.model.errors.inspect}"
+        logger.error("Form Could NOT be SAVED - #{@form.inspect}")
+        logger.error(@form.model.errors.inspect)
 
         puts "Just a PROTOTYOPE - CALLING NEXT ANYWAY"
 
