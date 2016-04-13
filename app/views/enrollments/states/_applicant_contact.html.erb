@@ -1,0 +1,36 @@
+
+
+  
+
+  
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <%= form.fields_for @form.model do |f| %>
+
+          <header class="text">
+    <h1 class="form-title heading-large" id="groupLabel">
+      <%= set_page_title t('.heading') %>
+    </h1>
+  </header>
+
+
+        <fieldset>
+          <legend class="visuallyhidden"><%= t('.legend') %></legend>
+
+          <div class="form-group">
+            <label class="block-label" for="contact_yes"><%= t('.label') %></label>
+            <label class="block-label" for="contact_no"><%= t('.label1') %></label>
+          </div>
+
+        </fieldset>
+
+        
+
+      <% end %>
+
+    </div>
+  </div>
+
+

@@ -1,0 +1,47 @@
+
+
+  
+
+  
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <%= form.fields_for @form.model do |f| %>
+
+          <header class="text">
+    <h1 class="form-title heading-large" id="groupLabel">
+      <%= set_page_title t('.heading') %>
+    </h1>
+  </header>
+
+
+        <fieldset>
+          <legend class="visuallyhidden"><%= t('.legend') %></legend>
+
+          <!-- Full name -->
+          <div class="form-group">
+            <label class="form-label" for="full-name"><%= t('.label') %></label>
+            <p class="form-hint"><%= t('.para_text') %></p>
+                      <%= f.text_field 'full_name', class:  'form-control' %>
+
+          </div>
+
+          <!-- Position -->
+          <div class="form-group">
+            <label class="form-label" for="position"><%= t('.label1') %></label>
+            <p class="form-hint"><%= t('.para_text1') %></p>
+                      <%= f.text_field 'position', class:  'form-control' %>
+
+          </div>
+
+        </fieldset>
+
+        
+
+      <% end %>
+
+    </div>
+  </div>
+
+
