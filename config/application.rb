@@ -18,7 +18,7 @@ module StateEngineTest
     end
 
     config.to_prepare do
-      Dir.glob(File.join(Rails.root, "app/states", "**/*.rb")).each do |c|
+      Dir.glob(File.join(Rails.root, "app/forms", "**/*.rb")).each do |c|
         require_dependency(c)
       end
     end

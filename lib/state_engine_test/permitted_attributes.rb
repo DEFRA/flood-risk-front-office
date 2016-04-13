@@ -31,7 +31,7 @@ module StateEngineTest
                             :full_name
     ]
 
-    @@location_attributes = [:id, :grid_reference, :uprn, :lat, :long, :site_info]
+    @@location_attributes = [:id, :grid_reference_form, :uprn, :lat, :long, :site_info]
 
     @@organisation_attributes = [:id, :type, :name, :company_number]
 

@@ -6,10 +6,22 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Exemption.create(code: "Blah 01",
-                 summary: "River flood example 001",
-                 description: "This exemption is only for testing",
-                 valid_from: Time.zone.now,
-                 valid_to: nil,
-                 url: "https://www.gov.uk/guidance/"
-)
+Exemption.delete_all
+
+puts "Seeding Exemptions from locale data :"
+
+codes = I18n.t('.enrollments.states.add_exemptions.td.span').values
+desc  = I18n.t('.enrollments.states.add_exemptions.td.p').values
+
+puts codes.inspect, desc.inspect
+codes.each_with_index do |c, i|
+
+  Exemption.create(code: c,
+                   summary: desc[i],
+                   description:  desc[i],
+                   valid_from: Time.zone.now,
+                   valid_to: nil,
+                   url: "TBD"
+  )
+end
+

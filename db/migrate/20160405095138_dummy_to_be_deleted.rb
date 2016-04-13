@@ -27,6 +27,9 @@ class DummyToBeDeleted < ActiveRecord::Migration
       t.datetime "valid_from"
     end
 
+
+    add_reference :enrollments, :organisation
+
   end
 
 end
