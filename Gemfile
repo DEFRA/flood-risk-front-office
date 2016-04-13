@@ -25,6 +25,7 @@ group :development, :test do
   gem 'bullet' # ActiveRecord N+1 detection
   gem 'factory_girl_rails', '~> 4.6.0', require: false # N.B require is false so factories aren't loaded during e.g db:migrate
   gem 'ffaker', '~> 2.2.0'
+  gem "database_cleaner", "~> 1.5"
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

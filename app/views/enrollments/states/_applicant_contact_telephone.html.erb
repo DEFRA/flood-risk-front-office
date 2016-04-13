@@ -26,4 +26,10 @@
   </div>
 </div>
 
+<%= content_for(:heading) { t(".heading") } %>
+
+<%= render layout: 'step',  locals: { form: form, step: step } do |f| %>
+  <%= f.collection_radio_buttons :type, types, :first, :last %>
+<% end %>
+
 

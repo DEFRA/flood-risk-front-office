@@ -92,6 +92,7 @@ GEM
       currencies (~> 0.4.2)
       i18n_data (~> 0.7.0)
     currencies (0.4.2)
+    database_cleaner (1.5.1)
     debug_inspector (0.0.2)
     declarative (0.0.7)
       uber (>= 0.0.15)
@@ -332,6 +333,7 @@ DEPENDENCIES
   bullet
   byebug
   coffee-rails (~> 4.1.0)
+  database_cleaner (~> 1.5)
   digital_services_core (= 1.0.0)!
   factory_girl_rails (~> 4.6.0)
   ffaker (~> 2.2.0)
