@@ -5,7 +5,7 @@ DigitalServicesCore::EnrollmentsController.class_eval do
   def create
 
     unless @form.validate(params[:enrollment])
-    puts "Ohhhh No"
+      puts "FORM VALIDATIOn FAILED #{@form.model.inspect}"
     end
 
     respond_to do |format|
@@ -31,7 +31,9 @@ DigitalServicesCore::EnrollmentsController.class_eval do
     end if(params[:enrollment])
 
     respond_to do |format|
-      if @form.save#(@enrollment)
+
+      logger.debug "Calling SAVE ON - #{@form.inspect}"
+      if @form.save
 
         puts "Form SAVED - Calling Next - #{@form.inspect}"
         @enrollment.next!
