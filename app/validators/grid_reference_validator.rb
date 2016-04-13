@@ -5,7 +5,7 @@
 
     include ActiveModel::Validations
 
-    delegate :site_info, :grid_reference, :errors, to: :location
+    delegate :site_info, :grid_reference_form, :errors, to: :location
 
     def initialize(location)
       @location = location
@@ -21,7 +21,7 @@
     # Fire the lengths validation on it's own, and then only for format, if length ok
     validate :grid_reference_lengths
 
-    validates :grid_reference,
+    validates :grid_reference_form,
               format: { with: GridReferenceValidator::GRID_REFERENCE_REGEX },
               if: Proc.new {|location| !location.grid_reference.blank? && location.errors.empty?}
 
@@ -35,7 +35,7 @@
       #unless grid_ref_valid_lengths.include?(grid_reference.to_s.length)
       unless(grid_ref_valid_lengths == grid_reference.to_s.length)
         Rails.logger.debug"GridReference - INVALID  #{grid_ref_valid_lengths.inspect} != #{grid_reference.to_s.length}"
-        @location.errors.add(:grid_reference, :length, list: grid_ref_valid_lengths.inspect)
+        @location.errors.add(:grid_reference_form, :length, list: grid_ref_valid_lengths.inspect)
       end unless(grid_reference.blank?)
     end
 

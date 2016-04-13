@@ -3,14 +3,13 @@ DigitalServicesCore::EnrollmentsController.class_eval do
   before_filter :setup_form_object
 
   def create
-    @form = "States::#{@enrollment.state.classify}State::Form".constantize.new(@enrollment.state.classify.constantize.new)
 
     unless @form.validate(params[:enrollment])
-      redirect_to(digital_services_core.enrollment_state_path(@enrollment.state, @enrollment)) && return
+    puts "Ohhhh No"
     end
 
     respond_to do |format|
-      if @form.save_enrollemt(@enrollment)
+      if @form.save
 
         @enrollment.next!
 
@@ -24,22 +23,33 @@ DigitalServicesCore::EnrollmentsController.class_eval do
   end
 
   def update
-    @form = "States::#{@enrollment.state.classify}State::Form".constantize.new(@enrollment)
+    @form = "FloodRiskEngine::Steps::#{@enrollment.state.classify}Form".constantize.factory(@enrollment)
 
     unless @form.validate(params[:enrollment])
+      puts "Failed Validation - #{@form.inspect}"
       redirect_to(digital_services_core.enrollment_state_path(@enrollment.state, @enrollment)) && return
-    end
+    end if(params[:enrollment])
 
     respond_to do |format|
-      if @form.save_enrollemt(@enrollment)
+      if @form.save#(@enrollment)
 
+        puts "Form SAVED - Calling Next - #{@form.inspect}"
         @enrollment.next!
 
         format.html do
           redirect_to(digital_services_core.enrollment_state_path(@enrollment.state, @enrollment)) && return
         end
       else
-        format.html { render :new }
+        puts "Form Could NOT be SAVED - #{@form.inspect}"
+        puts "Errors - #{@form.model.errors.inspect}"
+
+        puts "Just a PROTOTYOPE - CALLING NEXT ANYWAY"
+
+        @enrollment.next!
+
+        format.html {
+          redirect_to(digital_services_core.enrollment_state_path(@enrollment.state, @enrollment)) && return
+        }
       end
     end
   end
@@ -49,7 +59,8 @@ DigitalServicesCore::EnrollmentsController.class_eval do
   def setup_form_object
     @enrollment ||= DigitalServicesCore::Enrollment.new
 
-    @form = "States::#{@enrollment.state.classify}State::FormBuilder".constantize.call(@enrollment)
+    puts "IN setup_form_object - FloodRiskEngine::Steps::#{@enrollment.state.classify}"
+    @form = "FloodRiskEngine::Steps::#{@enrollment.state.classify}Form".constantize.factory(@enrollment)
   end
 
   def enrollment_params

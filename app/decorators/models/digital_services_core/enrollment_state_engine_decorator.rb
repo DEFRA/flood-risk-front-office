@@ -12,7 +12,7 @@ DigitalServicesCore::Enrollment.class_eval do
       :user_type,
       :individual_name,
       :individual_postcode,
-      :individual_address,
+     # :individual_address, - Address is  one form, postcode entry then pick from dropdown
       :main_contact_name,
       :main_contact_telephone,
       :main_contact_email,
@@ -22,7 +22,7 @@ DigitalServicesCore::Enrollment.class_eval do
       :applicant_contact_telephone,
       :applicant_contact_email,
       :reviewing,
-      :declaration,
+      :confirmation,
       :complete
     ]
 
@@ -43,7 +43,6 @@ DigitalServicesCore::Enrollment.class_eval do
 
     # Create a 'next' event for each step
     get_transitions.each_with_index do |t, i|
-      Rails.logger.debug("Creating next transition : #{t} => #{get_transitions[i+1] }")
       break if t == :complete
       transition( { get_transitions[i] => get_transitions[i+1] }.merge(on: :next) )
     end
@@ -52,7 +51,6 @@ DigitalServicesCore::Enrollment.class_eval do
     get_transitions.each_with_index do |t, i|
       next if(t == :complete || i == 0) # no back allowed from here
 
-      Rails.logger.debug("Creating back transition : #{t}")
       transition( {t => get_transitions[i - 1] }.merge(on: :back) )
     end
 

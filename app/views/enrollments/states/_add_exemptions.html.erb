@@ -22,10 +22,10 @@
         <% @form.exemptions.each do |a| %>
           <tr>
             <td class="exemption-description">
-              <span class="bold-large">FRA2</span>
+              <span class="bold-large"><%= a.code %></span>
             </td>
             <td class="exemption-description">
-              <p>The erection of an electrical cable service crossing over a main river</p>
+              <p><%= a.summary %></p>
             </td>
             <td class="exemption-select">
               <label class="form-checkbox" for="checkbox-<%= a.code %>">

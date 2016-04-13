@@ -16,7 +16,7 @@ module StateEngineTest
           :id,
           :states_grid_reference_state,
           states_grid_reference_state: [
-            :grid_reference
+            :grid_reference_form
           ],
           :add_exemptions_id
         ]

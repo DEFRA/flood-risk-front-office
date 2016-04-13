@@ -11,4 +11,8 @@ DigitalServicesCore::Enrollment.class_eval do
 
   has_many :exemptions, through: :enrollment_exemptions, dependent: :restrict_with_exception
   accepts_nested_attributes_for :exemptions
+
+  # The Details/Contact info for the Business/Org applying for Exemption
+  belongs_to :organisation, inverse_of: :enrollment, class_name: "DigitalServicesCore::Organisation"
+  accepts_nested_attributes_for :organisation, update_only: true
 end
