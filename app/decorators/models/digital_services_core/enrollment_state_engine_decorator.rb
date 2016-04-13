@@ -1,7 +1,8 @@
 DigitalServicesCore::Enrollment.class_eval do
 
-  # We use this Array of transitions to dynamically build back and next events for linear journey
   class_attribute :state_transitions
+
+  # The Array of transitions to dynamically build back and next events for linear journey
 
   def self.state_transitions
     @state_transitions ||= [
@@ -12,7 +13,6 @@ DigitalServicesCore::Enrollment.class_eval do
       :user_type,
       :individual_name,
       :individual_postcode,
-     # :individual_address, - Address is  one form, postcode entry then pick from dropdown
       :main_contact_name,
       :main_contact_telephone,
       :main_contact_email,
@@ -35,28 +35,30 @@ DigitalServicesCore::Enrollment.class_eval do
   # On first definition, state_machines will not be defined
   state_machines.clear if respond_to?(:state_machines)
 
+
+  # Set the Initial state here
+
   state_machine initial: :grid_reference do
+
+    # Helper to get list of all transitions making up the journey
 
     def get_transitions
       DigitalServicesCore::Enrollment.state_transitions
     end
 
-    # Create a 'next' event for each step
+    # NEXT - Create a 'next' event for each step
     get_transitions.each_with_index do |t, i|
       break if t == :complete
       transition( { get_transitions[i] => get_transitions[i+1] }.merge(on: :next) )
     end
 
-    # Create a 'back' event for each step
+    # BACK - Create a 'back' event for each step
     get_transitions.each_with_index do |t, i|
       next if(t == :complete || i == 0) # no back allowed from here
-
       transition( {t => get_transitions[i - 1] }.merge(on: :back) )
     end
 
-
-    # Per State Processing
-
+    # Allow any State to jump to reviewing
     event :review do
       transition from: all, to: :reviewing
     end
@@ -67,6 +69,11 @@ DigitalServicesCore::Enrollment.class_eval do
     end
 
     after_transition to: :complete, do: :finalize!
+
+    # Disallow transitions - cannot go back/change anything once Complete
+    before_transition to: any - [:deregistered, :reviewing], from: :complete do
+      raise RuntimeError.new("Transition not allowed - Registration COMPLETE")
+    end
 
   end
 
