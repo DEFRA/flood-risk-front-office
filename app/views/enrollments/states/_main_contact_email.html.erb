@@ -1,0 +1,38 @@
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <%= form.fields_for @form.model do |f| %>
+
+      <header class="text">
+        <h1 class="form-title heading-large" id="groupLabel">
+          <%= set_page_title t('.heading') %>
+        </h1>
+      </header>
+
+      <fieldset>
+        <legend class="visuallyhidden"><%= t('.legend') %></legend>
+
+        <!-- Email address -->
+        <div class="form-group">
+          <label class="form-label" for="email"><%= t('.label') %></label>
+          <p class="form-hint"><%= t('.para_text') %></p>
+          <%= f.text_field 'email_address', class:  'form-control' %>
+
+        </div>
+
+        <!-- Confirm email address -->
+        <div class="form-group">
+          <label class="form-label" for="confirm-email"><%= t('.label1') %></label>
+          <%= f.text_field 'email_address_confirmation', class:  'form-control' %>
+
+        </div>
+
+      </fieldset>
+
+    <% end %>
+
+  </div>
+</div>
+
+

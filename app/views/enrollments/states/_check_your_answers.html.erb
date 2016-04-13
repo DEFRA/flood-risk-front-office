@@ -1,0 +1,116 @@
+
+
+
+
+
+
+<%= form.fields_for @form.model do |f| %>
+
+  <header class="text">
+    <h1 class="form-title heading-large" id="groupLabel">
+      <%= set_page_title t('.heading') %>
+    </h1>
+  </header>
+
+
+  <p class="panel panel-border-wide"><%= t('.para_text') %></p>
+
+  <table class="check-your-answers">
+
+    <thead>
+    <tr>
+      <th colspan="2">
+        <h2 class="heading-medium">
+          Registration details
+        </h2>
+      </th>
+      <th>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>
+        Grid reference
+      </td>
+      <td>
+        ST 58132 72695
+      </td>
+      <td class="change-answer">
+        <%= link_to 'Change Change grid reference', grid_reference_2_url(@enrollment) %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Exemption FRA5
+      </td>
+      <td>
+        Construction of footbridges
+      </td>
+      <td class="change-answer">
+        <%= link_to 'Change Change exemption 4', check_exemptions_url(@enrollment) %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Exemption FRA9
+      </td>
+      <td>
+        Maintenance of structures within the channel of a main river
+      </td>
+      <td class="change-answer">
+        <%= link_to 'Change Change exemption 8', check_exemptions_url(@enrollment) %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Customer type
+      </td>
+      <td>
+        Local authority
+      </td>
+      <td class="change-answer">
+        <%= link_to 'Change Change local authority', user_type_url(@enrollment) %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Person responsible for activity
+      </td>
+      <td>
+        Tom Riddle
+        <br>15 Maple Drive
+        <br> Kendal
+        <br> LA9 5BN
+        <br> Tel: 01539 725 345
+        <br> Email: tom.riddle@email.com
+      </td>
+      <td class="change-answer">
+        <%= link_to 'Change Change contact details', main_contact_name_url(@enrollment) %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Who we will contact
+      </td>
+      <td>
+        Tom Riddle
+        <br> Tel: 03708 506506
+        <br> Email: tom.riddle@email.com
+      </td>
+      <td class="change-answer">
+        <%= link_to 'Change Change contact details', applicant_contact_name_url(@enrollment) %>
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
+
+  <br>
+
+
+
+<% end %>
+
+
+
