@@ -1,0 +1,83 @@
+
+
+  
+
+  
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <%= form.fields_for @form.model do |f| %>
+
+          <header class="text">
+    <h1 class="form-title heading-large" id="groupLabel">
+      <%= set_page_title t('.heading') %>
+    </h1>
+  </header>
+
+
+        <div class="form-group">
+          <fieldset>
+<%=  f.label :local_authorityoption_label, for: 'local_authority', :class => 'block-label' do %>
+ <%= f.radio_button :who_is_legally_responsible_for_the_activity?, 'local_authority', checked: false, id: 'local_authority' %>
+ <%= t 'local_authority_option' %>
+<% end %>
+
+<%=  f.label :limited_companyoption_label, for: 'limited_company', :class => 'block-label' do %>
+ <%= f.radio_button :who_is_legally_responsible_for_the_activity?, 'limited_company', checked: false, id: 'limited_company' %>
+ <%= t 'limited_company_option' %>
+<% end %>
+
+<%=  f.label :limited_liabilityoption_label, for: 'limited_liability', :class => 'block-label' do %>
+ <%= f.radio_button :who_is_legally_responsible_for_the_activity?, 'limited_liability', checked: false, id: 'limited_liability' %>
+ <%= t 'limited_liability_option' %>
+<% end %>
+
+<%=  f.label :individualoption_label, for: 'individual', :class => 'block-label' do %>
+ <%= f.radio_button :who_is_legally_responsible_for_the_activity?, 'individual', checked: false, id: 'individual' %>
+ <%= t 'individual_option' %>
+<% end %>
+
+<%=  f.label :partnershipoption_label, for: 'partnership', :class => 'block-label' do %>
+ <%= f.radio_button :who_is_legally_responsible_for_the_activity?, 'partnership', checked: false, id: 'partnership' %>
+ <%= t 'partnership_option' %>
+<% end %>
+
+<%=  f.label :otheroption_label, for: 'other', :class => 'block-label' do %>
+ <%= f.radio_button :who_is_legally_responsible_for_the_activity?, 'other', checked: false, id: 'other' %>
+ <%= t 'other_option' %>
+<% end %>
+
+<%=  f.label :not_knownoption_label, for: 'not_known', :class => 'block-label' do %>
+ <%= f.radio_button :who_is_legally_responsible_for_the_activity?, 'not_known', checked: false, id: 'not_known' %>
+ <%= t 'not_known_option' %>
+<% end %>
+</fieldset>
+        </div>
+
+        <details style="padding-bottom: 18px;">
+          <summary><span class="summary"><%= t('.text') %></span></summary>
+          <div class="panel panel-border-narrow">
+            <p><%= t('.para_text') %></p>
+            <p><%= t('.para_text1') %></p>
+
+            <ul class="list-bullet">
+              <li><%= t('.list_item') %></li>
+              <li><%= t('.list_item1') %></li>
+              <li><%= t('.list_item2') %></li>
+              <li><%= t('.list_item3') %></li>
+              <li><%= t('.list_item4') %></li>
+              <li><%= t('.list_item5') %></li>
+            </ul>
+          </div>
+        </details>
+
+        
+
+      <% end %>
+
+    </div>
+  </div>
+
+
+

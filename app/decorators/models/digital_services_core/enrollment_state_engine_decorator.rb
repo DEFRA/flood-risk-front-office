@@ -1,3 +1,26 @@
+StateMachines::Machine.class_eval do
+
+  # BACK - Create a 'back' event for each step (apart from first) in journey
+  # You can exclude any other steps with the except list
+  #
+  def create_back_transitions( journey, except = [] )
+    journey.drop(1).each_with_index do |t, i|
+      next if(except.include?(t))
+      transition( {t => journey[i - 1] }.merge(on: :back) )
+    end
+  end
+
+  # NEXT - Create a 'next' event for each step (apart from last) in journey
+  # You can exclude  any other steps with the except list
+  #
+  def create_next_transitions( journey, except = [] )
+    journey[0...-1].each_with_index do |t, i|
+      next if(except.include?(t))
+      transition( { journey[i] => journey[i+1] }.merge(on: :next) )
+    end
+  end
+end
+
 DigitalServicesCore::Enrollment.class_eval do
 
   class_attribute :state_transitions
@@ -10,7 +33,7 @@ DigitalServicesCore::Enrollment.class_eval do
       :grid_reference,
       :add_exemptions,
       :check_exemptions,
-      :user_type,
+      :organisation_type,
       :individual_name,
       :individual_postcode,
       :main_contact_name,
@@ -35,28 +58,11 @@ DigitalServicesCore::Enrollment.class_eval do
   # On first definition, state_machines will not be defined
   state_machines.clear if respond_to?(:state_machines)
 
-
-  # Set the Initial state here
-
   state_machine initial: :grid_reference do
 
-    # Helper to get list of all transitions making up the journey
+    create_back_transitions(DigitalServicesCore::Enrollment.state_transitions, [:complete])
 
-    def get_transitions
-      DigitalServicesCore::Enrollment.state_transitions
-    end
-
-    # NEXT - Create a 'next' event for each step
-    get_transitions.each_with_index do |t, i|
-      break if t == :complete
-      transition( { get_transitions[i] => get_transitions[i+1] }.merge(on: :next) )
-    end
-
-    # BACK - Create a 'back' event for each step
-    get_transitions.each_with_index do |t, i|
-      next if(t == :complete || i == 0) # no back allowed from here
-      transition( {t => get_transitions[i - 1] }.merge(on: :back) )
-    end
+    create_next_transitions(DigitalServicesCore::Enrollment.state_transitions)
 
     # Allow any State to jump to reviewing
     event :review do

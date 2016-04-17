@@ -33,8 +33,15 @@ DigitalServicesCore::EnrollmentsController.class_eval do
     respond_to do |format|
 
       logger.debug "Calling SAVE ON - #{@form.inspect}"
-      if @form.save
+      form_saved = begin
+        @form.save
+      rescue => x
+        logger.debug "PROTOTYTPE- SAVBE FAILED= MOVING ON"
+        logger.debug x.inspect
+        true
+      end
 
+      if(form_saved)
         puts "Form SAVED - Calling Next - #{@form.inspect}"
         @enrollment.next!
 
