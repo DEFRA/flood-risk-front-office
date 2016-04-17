@@ -1,0 +1,47 @@
+<%= form.fields_for @form.model do |f| %>
+
+    <header class="text">
+      <h1 class="form-title heading-large" id="groupLabel">
+        <%= set_page_title t('.heading') %>
+      </h1>
+    </header>
+
+    <table class="check-your-answers">
+      <tbody>
+      <tr>
+        <th>
+          <p class="font-small"><%= t('.para_text') %></p>
+        </th>
+        <td>
+          <span class="bold-small"><%= t('.text') %></span>
+        </td>
+        <td class="change-answer">
+          <%#= link_to 'Change exemption FRA5', add_exemptions_url(@enrollment) %>
+        </td>
+      </tr>
+
+      <tr>
+        <th>
+          <p class="font-small"><%= t('.para_text1') %></p>
+        </th>
+        <td>
+          <span class="bold-small"><%= t('.text1') %></span>
+        </td>
+        <td class="change-answer">
+          <%#= link_to 'Change  exemption FRA9', add_exemptions_url(@enrollment) %>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <br>
+
+    <div class="form-group">
+      <%#= link_to 'Add another exemption', add_exemptions_url(@enrollment) %>
+    </div>
+
+
+<% end %>
+
+
+
