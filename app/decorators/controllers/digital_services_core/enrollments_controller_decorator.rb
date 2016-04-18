@@ -23,7 +23,6 @@ DigitalServicesCore::EnrollmentsController.class_eval do
   end
 
   def update
-    @form = "FloodRiskEngine::Steps::#{@enrollment.state.classify}Form".constantize.factory(@enrollment)
 
     unless @form.validate(params[:enrollment])
       puts "Failed Validation - #{@form.inspect}"

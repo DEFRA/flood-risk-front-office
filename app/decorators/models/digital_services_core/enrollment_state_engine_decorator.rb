@@ -23,13 +23,13 @@ end
 
 DigitalServicesCore::Enrollment.class_eval do
 
-  class_attribute :state_transitions
+  class_attribute :journey
 
   # The Array of transitions to dynamically build back and next events for linear journey
 
-  def self.state_transitions
+  def self.journey
     @state_transitions ||= [
-      :unregistered,
+      :check_location,
       :grid_reference,
       :add_exemptions,
       :check_exemptions,
@@ -58,11 +58,11 @@ DigitalServicesCore::Enrollment.class_eval do
   # On first definition, state_machines will not be defined
   state_machines.clear if respond_to?(:state_machines)
 
-  state_machine initial: :grid_reference do
+  state_machine initial: DigitalServicesCore::Enrollment.journey.first do
 
-    create_back_transitions(DigitalServicesCore::Enrollment.state_transitions, [:complete])
+    create_back_transitions(DigitalServicesCore::Enrollment.journey, [:complete])
 
-    create_next_transitions(DigitalServicesCore::Enrollment.state_transitions)
+    create_next_transitions(DigitalServicesCore::Enrollment.journey)
 
     # Allow any State to jump to reviewing
     event :review do
