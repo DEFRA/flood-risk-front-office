@@ -1,11 +1,20 @@
 module ApplicationHelper
   include DigitalServicesCore::ApplicationHelper
 
+<<<<<<< Updated upstream
+=======
+ # TODO: DELETE ONCE OTHER STATE ENGINE COMES IN
+
+>>>>>>> Stashed changes
   # helper to return the default location of partials for a particular state
   def enrollment_partial_location(state)
     "flood_risk_engine/enrollments/steps/#{state}"
   end
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
   def set_page_title(title)
     return unless title.present?
 
