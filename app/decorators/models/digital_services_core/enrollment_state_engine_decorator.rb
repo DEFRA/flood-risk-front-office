@@ -1,25 +1,4 @@
-StateMachines::Machine.class_eval do
-
-  # BACK - Create a 'back' event for each step (apart from first) in journey
-  # You can exclude any other steps with the except list
-  #
-  def create_back_transitions( journey, except = [] )
-    journey.drop(1).each_with_index do |t, i|
-      next if(except.include?(t))
-      transition( {t => journey[i - 1] }.merge(on: :back) )
-    end
-  end
-
-  # NEXT - Create a 'next' event for each step (apart from last) in journey
-  # You can exclude  any other steps with the except list
-  #
-  def create_next_transitions( journey, except = [] )
-    journey[0...-1].each_with_index do |t, i|
-      next if(except.include?(t))
-      transition( { journey[i] => journey[i+1] }.merge(on: :next) )
-    end
-  end
-end
+require 'state_machines/state_machine_core_ext'
 
 DigitalServicesCore::Enrollment.class_eval do
 
@@ -29,13 +8,23 @@ DigitalServicesCore::Enrollment.class_eval do
 
   def self.journey
     @state_transitions ||= [
+      :unregistered,
       :check_location,
-      :grid_reference,
       :add_exemptions,
       :check_exemptions,
+      :grid_reference,
       :organisation_type,
+
+      # BRANCH
+      :local_authority,
+      :local_authority_postcode,
+
+      :individual_postcode,
       :individual_name,
       :individual_postcode,
+
+
+
       :main_contact_name,
       :main_contact_telephone,
       :main_contact_email,

@@ -1,0 +1,28 @@
+---
+en:
+  flood_risk_engine:
+    enrollments:
+      steps: 
+        unregistered:
+          heading: Register your flood risk activity
+          div_text16: 'Telephone: 03708 506 506'
+          div_text17: 'Minicom: 03702 422 549'
+          div_text18: Monday to Friday, 8am to 6pm
+          list_item: Subsection
+          list_item1: Read the
+          list_item2: "."
+          list_item3: Decide which exemptions apply to your activities.
+          list_item4: Check that each activity will meet the conditions of the relevant
+            exemption.
+          list_item5: Call us on 03708 506 506 to check if your activities are on
+            a main river and if they are near any sensitive areas such as a nature
+            reserve.
+          list_item6: the grid reference where the work will happen
+          list_item7: the name and address of the person or organisation responsible
+            for the work
+          list_item8: for a company, its registration number and registered address
+          list_item9: for a partnership, name and address of all partners
+          list_item10: contact details, if different to the person or organisation
+            responsible
+          para_text: Registering takes around 10 minutes.
+          para_text1: 'You''ll need:'
