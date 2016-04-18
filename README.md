@@ -85,6 +85,22 @@ Note that [mail_safe](https://github.com/myronmarston/mail_safe) maybe also be r
 case any development email will seem to be sent to your global git config email address.
 
 
+## Generating template Views,Forms and Locale Data
+
+There is a thor task configured to run copykit against the river permissions prototype
+
+The prototype can be cloned from https://github.com/EnvironmentAgency/river-permissions-prototype
+
+Make sure you pull the latest version before generating the copykit output. 
+
+The prototype is also versioned so you just point the task at the appropriate app/views folder
+and set your required output path, somewhere temporary so you can revierw the outout befoer copying into FRE e.g. :
+
+```ruby
+thor copykit:river_permissions:convert -i ../river-permissions/app/views/version_1/  -o /tmp/riverperms_1
+```
+
+
 ## Quality
 
 We use [Before Commit](https://github.com/EnvironmentAgency/before_commit) to install and manage a number 

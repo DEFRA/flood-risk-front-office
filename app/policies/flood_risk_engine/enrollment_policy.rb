@@ -1,7 +1,6 @@
 module FloodRiskEngine
   class EnrollmentPolicy
-
-    CRUD_ACTIONS = %i[new create edit update destroy show index].freeze
+    CRUD_ACTIONS = %i(new create edit update destroy show index).freeze
 
     attr_reader :user, :record
 
@@ -23,7 +22,7 @@ module FloodRiskEngine
     end
 
     def update?
-      not record.submitted?
+      !record.submitted?
     end
 
     def edit?
@@ -31,7 +30,7 @@ module FloodRiskEngine
     end
 
     def show_continue_button?
-      not record.submitted?
+      !record.submitted?
     end
 
     def destroy?
@@ -58,6 +57,5 @@ module FloodRiskEngine
         end
       end
     end
-
   end
 end

@@ -55,3 +55,11 @@ app/views/copykit/**
 # CI Reporter JUnit compatible xml files which hold the results of the last
 # rspec run
 /spec/reports
+
+# Had to add these manually, thought they should be auto incldued by before_commit
+.git-hooks/
+.overcommit.yml
+.overcommit_gems.rb
+.overcommit_gems.rb.lock
+.rubocop.yml
+

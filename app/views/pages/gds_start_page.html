@@ -1,0 +1,65 @@
+<div class="breadcrumbs">
+  <ol>
+    <li> <%= link_to 'Home', 'www.gov.uk_url' %> </li>
+    <li> <%= link_to 'Section', 'section_url' %> </li>
+    <li><%= t('.list_item') %></li>
+  </ol>
+</div>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <header class="text">
+      <h1 class="form-title heading-large" id="groupLabel">
+        <%= set_page_title t('.heading') %>
+      </h1>
+    </header>
+
+    <h2 class="heading-medium">Before you start</h2>
+
+    <ul class="list list-number">
+      <li><%= t('.list_item1') %> <%= link_to 'flood risk activities guidance', 'register-your-flood-risk-exemption-environmental-permits_url' %> <%= t('.list_item2') %></li>
+      <li><%= t('.list_item3') %></li>
+      <li><%= t('.list_item4') %></li>
+      <li><%= t('.list_item5') %></li>
+    </ul>
+
+    <p><%= t('.para_text') %></p>
+
+    <p> <%= link_to 'Start now', flood_risk_engine.new_enrollment_path, class: 'button button-start', role: 'button' %> </p>
+
+    <p><%= t('.para_text1') %></p>
+
+    <ul class="list list-bullet">
+      <li><%= t('.list_item6') %></li>
+      <li><%= t('.list_item7') %></li>
+      <li><%= t('.list_item8') %></li>
+      <li><%= t('.list_item9') %></li>
+      <li><%= t('.list_item10') %></li>
+    </ul>
+
+    <div class="contact">
+      <h3 class="heading-medium">Contact the Environment Agency</h3>
+      <%= link_to 'enquiries@environment-agency.gov.uk', 'mailto:enquiries@environment-agency.gov.uk_url' %>
+      <br><%= t('.div_text16') %><br><%= t('.div_text17') %><br><%= t('.div_text18') %>
+    </div>
+
+  </div>
+  <div class="column-third">
+
+    <aside class="govuk-related-items" role="complementary">
+      <h2 class="heading-medium" id="subsection-title">Flood risk activities</h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="font-xsmall">
+          <li> <%= link_to 'Flood risk activities guidance', 'register-your-flood-risk-exemption-environmental-permits_url' %> </li>
+          <li> <%= link_to 'More in Subsection', '#_url', class: 'bold-xsmall' %> </li>
+        </ul>
+      </nav>
+    </aside>
+
+  </div>
+</div>
+
+
+
+
