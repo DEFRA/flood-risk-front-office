@@ -1,0 +1,14 @@
+---
+en:
+  flood_risk_engine:
+    enrollments:
+      steps: 
+        declaration: 
+          heading: Declaration
+          list_item: the information I have provided is true
+          list_item1: the the organisation or individual responsible for the activity
+            has authorised me to register the exemption
+          text: Warning
+          para_text: 'I confirm that:'
+          para_text1: Read the Environment Agency's
+          para_text2: to find out how it uses personal information

@@ -30,7 +30,6 @@ PATH
       rails (~> 4.2)
       reform (~> 2.1)
       reform-rails (~> 0.1)
-      simple_form (~> 3.2)
 
 GEM
   remote: https://rubygems.org/
@@ -275,9 +274,6 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     shellany (0.0.1)
-    simple_form (3.2.1)
-      actionpack (> 4, < 5.1)
-      activemodel (> 4, < 5.1)
     sinatra (1.4.7)
       rack (~> 1.5)
       rack-protection (~> 1.4)

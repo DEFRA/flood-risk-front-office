@@ -1,0 +1,11 @@
+---
+en:
+  flood_risk_engine:
+    enrollments:
+      steps: 
+        main_contact_email: 
+          heading: What’s the email address of the person we should contact?
+          label: Email address
+          label1: Confirm email address
+          legend: Contact email
+          para_text: We’ll send the registration confirmation to this address

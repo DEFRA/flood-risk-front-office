@@ -1,0 +1,9 @@
+---
+en:
+  flood_risk_engine:
+    enrollments:
+      steps: 
+        limited_liability_name: 
+          heading: What's the registered name of the partnership?
+          label: Partnership name
+          legend: Registered partnership name

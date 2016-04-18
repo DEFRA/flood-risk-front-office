@@ -2,6 +2,9 @@ DigitalServicesCore::EnrollmentsController.class_eval do
 
   before_filter :setup_form_object
 
+  def new
+  end
+
   def create
 
     unless @form.validate(params[:enrollment])

@@ -1,0 +1,8 @@
+---
+en:
+  flood_risk_engine:
+    enrollments:
+      steps: 
+        check_your_answers: 
+          heading: Check your answers before completing this registration
+          para_text: We’ll send a copy of these details in the confirmation email.
