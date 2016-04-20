@@ -1,10 +1,9 @@
 module ApplicationHelper
-  include DigitalServicesCore::ApplicationHelper
 
-  def set_page_title(title)
+  def page_title(title)
     return unless title.present?
 
-    stripped_title = title.gsub(/’/, %{'})
+    stripped_title = title.gsub(/’/, %('))
 
     if content_for? :page_title
       content_for :page_title, " | #{stripped_title}"
@@ -15,7 +14,7 @@ module ApplicationHelper
     title
   end
 
-  def submit_button_text(enrollment)
+  def submit_button_text(_enrollment)
     t("global.continue")
   end
 
