@@ -1,6 +1,4 @@
-require 'state_machines/state_machine_core_ext'
-
-DigitalServicesCore::Enrollment.class_eval do
+DatashiftState.journey_plan_class.class_eval do
 
   class_attribute :journey
 
@@ -47,11 +45,11 @@ DigitalServicesCore::Enrollment.class_eval do
   # On first definition, state_machines will not be defined
   state_machines.clear if respond_to?(:state_machines)
 
-  state_machine initial: DigitalServicesCore::Enrollment.journey.first do
+  state_machine initial:  DatashiftState.journey_plan_class.journey.first do
 
-    create_back_transitions(DigitalServicesCore::Enrollment.journey, [:complete])
+    create_back_transitions( DatashiftState.journey_plan_class.journey, [:complete])
 
-    create_next_transitions(DigitalServicesCore::Enrollment.journey)
+    create_next_transitions( DatashiftState.journey_plan_class.journey)
 
     # Allow any State to jump to reviewing
     event :review do

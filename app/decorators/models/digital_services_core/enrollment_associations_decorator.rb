@@ -1,4 +1,4 @@
-DigitalServicesCore::Enrollment.class_eval do
+FloodRiskEngine::Enrollment.class_eval do
 
   self.table_name = "enrollments"
 

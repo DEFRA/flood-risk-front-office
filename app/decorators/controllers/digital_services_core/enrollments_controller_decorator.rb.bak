@@ -1,4 +1,4 @@
-DigitalServicesCore::EnrollmentsController.class_eval do
+DatashiftState::JourneyPlansController.class_eval do
 
   before_filter :setup_form_object
 

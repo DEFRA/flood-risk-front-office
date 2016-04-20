@@ -1,5 +1,6 @@
 module ApplicationHelper
-  include DigitalServicesCore::ApplicationHelper
+
+  include DatashiftState::ApplicationHelper
 
   # TODO: DELETE ONCE OTHER STATE ENGINE COMES IN
   # helper to return the default location of partials for a particular state
