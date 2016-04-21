@@ -1,10 +1,10 @@
 module ApplicationHelper
-  include DigitalServicesCore::ApplicationHelper
 
+  # rubocop:disable Style/AccessorMethodName
   def set_page_title(title)
     return unless title.present?
 
-    stripped_title = title.gsub(/’/, %{'})
+    stripped_title = title.gsub(/’/, %('))
 
     if content_for? :page_title
       content_for :page_title, " | #{stripped_title}"
@@ -14,9 +14,4 @@ module ApplicationHelper
 
     title
   end
-
-  def submit_button_text(enrollment)
-    t("global.continue")
-  end
-
 end
