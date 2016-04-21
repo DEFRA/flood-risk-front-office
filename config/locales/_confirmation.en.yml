@@ -1,0 +1,18 @@
+---
+en:
+  flood_risk_engine:
+    enrollments:
+      steps: 
+        confirmation: 
+          heading: Registration complete
+          list_item: You can begin work on the activity covered by your exemption.
+            Exemptions don’t expire but they only cover one activity at one location.
+          list_item1: The Environment Agency may check the activity you're doing to
+            see if it matches the conditions of your exemption.
+          para_text: "Your reference is:\n            \n            HDJ2123F"
+          para_text1: We've sent a confirmation email to someone@email.com
+          para_text2: You can check the conditions of your exemption in the
+          para_text3: "."
+          para_text4: 'If you need assistance, call the Environment Agency helpline:
+            03708 506506. It''s open Monday to Friday, between 8am and 6pm.'
+          para_text5: "(takes 30 seconds)"

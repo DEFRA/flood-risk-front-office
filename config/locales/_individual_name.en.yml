@@ -1,0 +1,10 @@
+---
+en:
+  flood_risk_engine:
+    enrollments:
+      steps: 
+        individual_name: 
+          heading: Who's carrying out the activity?
+          label: Full name
+          legend: Name of person carrying out the activity
+          para_text: For example, John Smith

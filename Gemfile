@@ -1,8 +1,16 @@
 source 'https://rubygems.org'
 ruby "2.2.3"
 
+# Once the development stable we should move this to the gemspec
+#gem 'digital_services_core', '1.0.0', tag: 'v1.0.0',
+#    git: 'https://github.com/EnvironmentAgency/digital-services-core'
 
-gem 'flood_risk_engine', git: 'https://github.com/EnvironmentAgency/flood-risk-engine', branch: 'develop'
+gem 'datashift_state', path: '../datashift_state'
+#git: 'https://github.com/autotelik/datashift_state'
+
+gem 'flood_risk_engine', path: '../flood-risk-engine'
+#git: 'https://github.com/EnvironmentAgency/flood-risk-engine', branch: 'develop'
+
 
 gem 'pg'
 gem 'reform'
@@ -25,6 +33,9 @@ group :development, :test do
   gem 'bullet' # ActiveRecord N+1 detection
   gem 'factory_girl_rails', '~> 4.6.0', require: false # N.B require is false so factories aren't loaded during e.g db:migrate
   gem 'ffaker', '~> 2.2.0'
+  gem "database_cleaner", "~> 1.5"
+
+  gem 'dotenv-rails', '~> 2.1'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -47,6 +58,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+
 
 
 group :development do

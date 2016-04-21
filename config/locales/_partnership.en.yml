@@ -1,0 +1,21 @@
+---
+en:
+  flood_risk_engine:
+    enrollments:
+      steps: 
+        partnership: 
+          heading: Who's responsible for the activity?
+          div_text14: For example, a business premises name or house number
+          label: Full name
+          label1: Enter a UK postcode
+          label2: Building name or number
+          label3: Street line 1
+          label4: Street line 2 (optional)
+          label5: Town
+          label6: Postcode
+          legend: Who's responsible for the activity?
+          text: For example, BS1 5AH
+          text1: Enter address manually
+          para_text: We need to know the name and home address of all business partners
+            responsible for the activity
+          para_text1: For example, John Smith

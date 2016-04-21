@@ -1,0 +1,103 @@
+
+
+
+
+
+  
+
+
+
+
+  
+
+  
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+      <header class="text">
+    <h1 class="form-title heading-large" id="groupLabel">
+      <%= set_page_title t('.heading') %>
+    </h1>
+  </header>
+
+
+      <p class="panel panel-border-wide"><%= t('.para_text') %> <%= link_to 'Exempt flood risk activities guidance', 'environmental-permitting-regulations-exempt-flood-risk-activities_url', target: 'blank' %> <%= t('.para_text1') %></p>
+
+      <%= form.fields_for @form.model do |f| %>
+
+
+        <style>
+          span.exmpt{
+            font-weight:bold;
+            float:right;
+          }
+
+        label.exemption{
+          background-color:#ededed;
+          border-color:#ededed;
+        }
+
+        @media screen and (min-width: 320px) {
+          label.exemption{
+            width:99%;
+            }
+        }
+
+        </style>
+
+        <div class="form-group">
+          <fieldset>
+            <legend class="visuallyhidden"><%= t('.legend') %></legend>
+
+
+
+            <table summary="exemption-codes" role="presentation" class="exemption-table">
+              <thead>
+              <tr>
+                <th class="exemption-description"><span class="heading-small"><%= t('.text') %></span></th>
+                <th class="exemption-description"><span class="heading-small"><%= t('.text1') %></span></th>
+                <th class="exemption-checkbox"><span class="heading-small"><%= t('.text2') %></span></th>
+              </tr>
+              </thead>
+              <tbody>
+              <% @form.exemptions.each do |a| %>
+                <tr>
+                  <td class="exemption-description">
+                    <span class="bold-large"><%= a.code %></span>
+                  </td>
+                  <td class="exemption-description">
+                    <p><%= a.summary %></p>
+                  </td>
+                  <td class="exemption-select">
+                    <label class="form-checkbox" for="checkbox-<%= a.code %>">
+                      <%= f.radio_button 'add_exemptions_id',
+                                         a.id,
+                                         checked: false,
+                                         id: "a"
+                      %>
+                      <%= a.display %>
+                    </label>
+                  </td>
+                </tr>
+              <% end %>
+              </tbody>
+            </table>
+        
+
+          <p><%= t('.para_text2') %></p>
+
+          </fieldset>
+        </div>
+<!-- // end .form-group -->
+
+        
+
+      <% end %>
+
+    </div>
+  </div>
+
+
+
