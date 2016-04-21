@@ -9,44 +9,23 @@ default: &default
   pool: <%= ENV["DB_POOL"] || 5 %>
   host: <%= Rails.application.secrets.pg_host || 'localhost' %>
   port: <%= Rails.application.secrets.pg_port || 5432 %>
-  database: <%= Rails.application.secrets.pg_database || 'state_engine_test' %>
+  database: <%= Rails.application.secrets.pg_database || 'flood_risk' %>
   username: <%= Rails.application.secrets.pg_username || 'vagrant' %>
   password: <%= Rails.application.secrets.pg_password || 'vagrant' %>
 
-default_users: &default_users
-  <<: *default
-  host: <%= Rails.application.secrets.pg_users_host  || 'localhost' %>
-  port: <%= Rails.application.secrets.pg_users_port || 5432 %>
-  database: <%= Rails.application.secrets.pg_users_database || 'state_engine_test_users' %>
-  username: <%= Rails.application.secrets.pg_users_username || 'vagrant' %>
-  password: <%= Rails.application.secrets.pg_users_password || 'vagrant' %>
 
 development:
   <<: *default
-  database: <%= ENV['PG_DEV_DATABASE'] || 'state_engine_test_dev' %>
-
-users_development:
-  <<: *default_users
-  database: <%= ENV['PG_USERS_DEV_DATABASE'] || 'state_engine_test_users_dev' %>
+  database: <%= ENV['PG_DEV_DATABASE'] || 'flood_risk_dev' %>
 
 test:
   <<: *default
-  database: <%= ENV['PG_TEST_DATABASE'] || 'state_engine_test_test' %>
-
-users_test:
-  <<: *default_users
-  database: <%= ENV['PG_USERS_TEST_DATABASE'] || 'state_engine_test_users_test' %>
+  database: <%= ENV['PG_TEST_DATABASE'] || 'flood_risk_test' %>
 
 local_production:
   <<: *default
-  database: <%= ENV['PG_PROD_DATABASE'] || 'state_engine_test_prod' %>
-
-users_local_production:
-  <<: *default_users
-  database: <%= ENV['PG_USERS_PROD_DATABASE'] || 'state_engine_test_users_prod' %>
+  database: <%= ENV['PG_PROD_DATABASE'] || 'flood_risk_prod' %>
 
 production:
   <<: *default
 
-users_production:
-  <<: *default_users

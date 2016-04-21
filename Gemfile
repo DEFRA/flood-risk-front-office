@@ -16,6 +16,10 @@ gem "reform-rails"
 gem "govuk_template", "~> 0.17.0"        # GDS layout into which we inject content using yield and content_for
 gem "govuk_frontend_toolkit", "~> 4.9.1" # Access to some of the most common styles and scripts used by GDS
 
+gem 'govuk_elements_rails',
+    :git => "https://github.com/ministryofjustice/govuk_elements_rails.git",
+    :submodules => true
+
 gem "pundit", "~> 1.1.0"
 
 group :development, :test do
