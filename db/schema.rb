@@ -11,25 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160415202953) do
+ActiveRecord::Schema.define(version: 20160421220000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "datashift_state_journey_plans", force: :cascade do |t|
-    t.string   "state"
-    t.integer  "status",       default: 0,     null: false
-    t.boolean  "under_review", default: false
-    t.datetime "submitted_at"
-    t.datetime "completed_at"
-    t.string   "token"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
-  end
-
-  add_index "datashift_state_journey_plans", ["completed_at"], name: "index_datashift_state_journey_plans_on_completed_at", using: :btree
-  add_index "datashift_state_journey_plans", ["state"], name: "index_datashift_state_journey_plans_on_state", using: :btree
-  add_index "datashift_state_journey_plans", ["status"], name: "index_datashift_state_journey_plans_on_status", using: :btree
 
   create_table "flood_risk_engine_addresses", force: :cascade do |t|
     t.string   "premises",            limit: 200
@@ -70,16 +55,23 @@ ActiveRecord::Schema.define(version: 20160415202953) do
 
   create_table "flood_risk_engine_enrollments", force: :cascade do |t|
     t.integer  "applicant_contact_id"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
     t.integer  "organisation_id"
     t.string   "step",                 limit: 50
     t.integer  "site_address_id"
+    t.string   "state"
+    t.boolean  "under_review",                    default: false
+    t.datetime "submitted_at"
+    t.datetime "completed_at"
+    t.string   "token"
   end
 
   add_index "flood_risk_engine_enrollments", ["applicant_contact_id"], name: "index_flood_risk_engine_enrollments_on_applicant_contact_id", using: :btree
+  add_index "flood_risk_engine_enrollments", ["completed_at"], name: "index_flood_risk_engine_enrollments_on_completed_at", using: :btree
   add_index "flood_risk_engine_enrollments", ["organisation_id"], name: "index_flood_risk_engine_enrollments_on_organisation_id", using: :btree
   add_index "flood_risk_engine_enrollments", ["site_address_id"], name: "index_flood_risk_engine_enrollments_on_site_address_id", using: :btree
+  add_index "flood_risk_engine_enrollments", ["state"], name: "index_flood_risk_engine_enrollments_on_state", using: :btree
 
   create_table "flood_risk_engine_enrollments_exemptions", force: :cascade do |t|
     t.integer  "enrollment_id",             null: false
