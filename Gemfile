@@ -2,8 +2,7 @@ source "https://rubygems.org"
 ruby "2.2.3"
 
 gem "flood_risk_engine",
-    git: "https://github.com/EnvironmentAgency/flood-risk-engine",
-    branch: "feature/rip-53-check-location"
+    git: "https://github.com/EnvironmentAgency/flood-risk-engine"
 
 gem "copy_kit", path: "../copykit" # git: 'https://github.com/EnvironmentAgency/copykit'
 
