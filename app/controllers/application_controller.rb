@@ -1,4 +1,4 @@
-class ApplicationController < ::DigitalServicesCore::ApplicationController
+class ApplicationController  < DatashiftState::ApplicationController
   include Pundit
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
@@ -9,7 +9,7 @@ class ApplicationController < ::DigitalServicesCore::ApplicationController
     if @enrollment
       @enrollment.errors.add :base, "Cannot update a Complete Exemption Registration"
 
-      redirect_to digital_services_core.enrollment_state_path("complete", @enrollment)
+      redirect_to datashift_state.journey_plan_state_path("complete", @enrollment)
     end
   end
 

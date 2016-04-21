@@ -2,11 +2,14 @@ source 'https://rubygems.org'
 ruby "2.2.3"
 
 # Once the development stable we should move this to the gemspec
-gem 'digital_services_core', '1.0.0', tag: 'v1.0.0',
-    git: 'https://github.com/EnvironmentAgency/digital-services-core'
+#gem 'digital_services_core', '1.0.0', tag: 'v1.0.0',
+#    git: 'https://github.com/EnvironmentAgency/digital-services-core'
+
+gem 'datashift_state', path: '../datashift_state'
+#git: 'https://github.com/autotelik/datashift_state'
 
 gem 'flood_risk_engine', path: '../flood-risk-engine'
-  #git: 'https://github.com/EnvironmentAgency/flood-risk-engine', branch: 'develop'
+#git: 'https://github.com/EnvironmentAgency/flood-risk-engine', branch: 'develop'
 
 
 gem 'pg'
@@ -15,10 +18,6 @@ gem "reform-rails"
 
 gem "govuk_template", "~> 0.17.0"        # GDS layout into which we inject content using yield and content_for
 gem "govuk_frontend_toolkit", "~> 4.9.1" # Access to some of the most common styles and scripts used by GDS
-
-gem 'govuk_elements_rails',
-    :git => "https://github.com/ministryofjustice/govuk_elements_rails.git",
-    :submodules => true
 
 gem "pundit", "~> 1.1.0"
 
@@ -35,6 +34,8 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.6.0', require: false # N.B require is false so factories aren't loaded during e.g db:migrate
   gem 'ffaker', '~> 2.2.0'
   gem "database_cleaner", "~> 1.5"
+
+  gem 'dotenv-rails', '~> 2.1'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -1,6 +1,4 @@
-require 'state_machines/state_machine_core_ext'
-
-DigitalServicesCore::Enrollment.class_eval do
+DatashiftState.journey_plan_class.class_eval do
 
   class_attribute :journey
 
