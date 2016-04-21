@@ -1,4 +1,4 @@
-<% errors = local_assigns[:errors] || form.errors || [] %>
+<% errors = local_assigns[:errors] || @form.errors || [] %>
 <% if errors.any? %>
   <div class="error-summary" role="group" aria-labelledby="groupLabel" tabindex="-1">
 

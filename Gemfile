@@ -1,12 +1,8 @@
 source 'https://rubygems.org'
 ruby "2.2.3"
 
-# Once the development stable we should move this to the gemspec
-#gem 'digital_services_core', '1.0.0', tag: 'v1.0.0',
-#    git: 'https://github.com/EnvironmentAgency/digital-services-core'
-
 gem 'datashift_state', path: '../datashift_state'
-#git: 'https://github.com/autotelik/datashift_state'
+gem 'copy_kit', path: '../copykit'
 
 gem 'flood_risk_engine', path: '../flood-risk-engine'
 #git: 'https://github.com/EnvironmentAgency/flood-risk-engine', branch: 'develop'
