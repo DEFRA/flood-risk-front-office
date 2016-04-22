@@ -29,14 +29,14 @@ class BasePageObject
     FloodRiskEngine::Engine.routes.url_helpers
   end
 
-  # Default - relies on PageObject utilising the 'state' method
+  # Default - relies on PageObject utilising the 'generate_state_helpers' method
   # so we can create correct enrollment object and jump straight to right page
   def visit_page
     find_enrollment
 
-    Rails.logger.debug("RSPEC : VISITING state [#{enrollment.state}] with Enrollment #{enrollment.inspect}")
+    Rails.logger.debug("RSPEC : VISITING state [#{enrollment.step}] with Enrollment #{enrollment.inspect}")
 
-    visit fre_url_helper.enrollment_step_path(enrollment, enrollment.state)
+    visit fre_url_helper.enrollment_step_path(enrollment, expected_state)
 
     self
   end
