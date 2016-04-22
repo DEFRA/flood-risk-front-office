@@ -1,0 +1,34 @@
+language: ruby
+cache: bundler
+
+addons:
+  postgresql: "9.4"
+
+rvm:
+  - 2.2.3
+
+before_script:
+  - bundle exec rake before_commit:run
+  - cp config/database.travis.yml config/database.yml
+  - RAILS_ENV=test bundle exec rake db:create
+  - RAILS_ENV=test bundle exec rake --trace db:migrate
+  - npm install -g htmlhint
+
+script:
+  # - >-
+  #   BUNDLE_PATH=vendor/overcommit_bundle BUNDLE_GEMFILE=.overcommit_gems.rb bundle exec "overcommit --run" &&
+  #   htmlhint -c ./.htmlhintrc ./app/**/*.html.erb &&
+  #   bundle exec "rspec --format progress spec"
+  - >-
+    htmlhint -c ./.htmlhintrc ./app/**/*.html.erb &&
+    bundle exec "rspec --format progress spec"
+
+# Have this option to stop travis-ci building twice. Currently we have travis set to build both
+# PR's and pushes. However this means when we push to a PR we have to wait for Travis to finish
+# 2 builds. If we unticked 'pushes' when the PR was finally merged that would not be built. The
+# brute force approach would be to untick build PR's and just build all pushes. We instead have
+# gone with the approach outlined here http://stackoverflow.com/a/31882307
+branches:
+  only:
+    - master
+    - develop
