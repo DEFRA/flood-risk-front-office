@@ -2,20 +2,6 @@ module ApplicationHelper
 
   include DatashiftState::ApplicationHelper
 
-  # TODO: DELETE ONCE OTHER STATE ENGINE COMES IN
-  # helper to return the default location of partials for a particular state
-  def enrollment_partial_location(state)
-    "flood_risk_engine/enrollments/steps/#{state}"
-  end
-
-
-  # TODO: DELETE ONCE OTHER STATE ENGINE COMES IN
-  # helper to return the default location of partials for a particular state
-  def enrollment_partial_location(state)
-    "flood_risk_engine/enrollments/steps/#{state}"
-  end
-
-
   def set_page_title(title)
     return unless title.present?
 
