@@ -1,0 +1,14 @@
+---
+en:
+  datashift_state:
+    enrollments:
+      steps: 
+        declaration: 
+          heading: Declaration
+          list_item: the information I have provided is true
+          list_item1: I am authorised to register the exemptions by the the organisation
+            or individual responsible
+          text: Warning
+          para_text: 'I confirm that:'
+          para_text1: Read the Environment Agency's
+          para_text2: to find out how it uses personal information

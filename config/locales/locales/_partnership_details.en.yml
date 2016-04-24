@@ -1,0 +1,7 @@
+---
+en:
+  datashift_state:
+    enrollments:
+      steps: 
+        partnership_details: 
+          heading: Add another partner or continue

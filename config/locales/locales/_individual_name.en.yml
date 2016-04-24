@@ -1,0 +1,10 @@
+---
+en:
+  datashift_state:
+    enrollments:
+      steps: 
+        individual_name: 
+          heading: What's the individual’s name?
+          label: Full name
+          legend: Individual’s name?
+          para_text: For example, Jane Smith

@@ -1,0 +1,14 @@
+---
+en:
+  datashift_state:
+    enrollments:
+      steps: 
+        email_someone_else: 
+          heading: Would you like a copy of the registration email sent to someone
+            else?
+          label: Email address for registration copy (optional)
+          label1: Confirm email address if entered above
+          legend: Alternative contact email address
+          para_text: We’ll send a copy of the registration to the main contact. We
+            will also send a copy to another address if you want.
+          para_text1: We’ll send the registration confirmation to this address

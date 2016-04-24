@@ -1,0 +1,13 @@
+---
+en:
+  datashift_state:
+    enrollments:
+      steps: 
+        partnership: 
+          heading: Partner names and addresses
+          label: Full name
+          legend: Who's responsible for the activity?
+          para_text: We need to know the name and home address of all business partners
+            responsible for the activity.
+          para_text1: You must give us the details of at least two partners.
+          para_text2: For example, Jane Smith

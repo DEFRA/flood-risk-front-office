@@ -1,0 +1,17 @@
+---
+en:
+  datashift_state:
+    enrollments:
+      steps: 
+        address: 
+          heading: '{{ title if title else "Title not set" }}'
+          div_text10: For example, a business premises name or house number
+          label: Select address
+          label1: Building name or number
+          label2: Street line 1
+          label3: Street line 2 (optional)
+          label4: Town
+          label5: Postcode
+          legend: Address
+          legend1: Address for manual entry
+          text: Enter address manually

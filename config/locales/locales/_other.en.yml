@@ -1,0 +1,9 @@
+---
+en:
+  datashift_state:
+    enrollments:
+      steps: 
+        other: 
+          heading: What's the name of the organisation?
+          label: Name of charity, trust or other organisation
+          legend: Name of charity, trust or other organisation

@@ -1,9 +1,0 @@
----
-en:
-  flood_risk_engine:
-    enrollments:
-      steps: 
-        other: 
-          heading: What's the business or organisation name?
-          label: Business or organisation name
-          legend: Business or organisation name

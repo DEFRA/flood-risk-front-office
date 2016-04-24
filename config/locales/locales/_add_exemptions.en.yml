@@ -1,0 +1,16 @@
+---
+en:
+  datashift_state:
+    enrollments:
+      steps: 
+        add_exemptions: 
+          heading: "{{ title }}"
+          legend: "{{ title }}"
+          text: Dredging exemptions
+          para_text: |-
+            You can register more than one exemption but they must all be at the same location.
+                    You should check you can meet the conditions for each exemption.
+          para_text1: "."
+          para_text2: No radio buttons
+          para_text3: You can’t register the exemptions for dredging, FRA23 and FRA24,
+            online. Please contact us to register these.

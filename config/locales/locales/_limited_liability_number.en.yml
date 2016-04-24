@@ -1,0 +1,10 @@
+---
+en:
+  datashift_state:
+    enrollments:
+      steps: 
+        limited_liability_number: 
+          heading: What's the registration number of the partnership?
+          label: Registration number
+          legend: Registration number of the partnership
+          para_text: An 8 digit number, or 2 letters followed by a 6 digit number

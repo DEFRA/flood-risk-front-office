@@ -1,0 +1,12 @@
+---
+en:
+  datashift_state:
+    enrollments:
+      steps: 
+        contact_ea: 
+          heading: Contact the Environment Agency
+          div_text10: 'Telephone: 03708 506 506'
+          div_text11: 'Minicom: 03702 422 549'
+          div_text12: Monday to Friday, 8am to 6pm
+          para_text: Please call our helpline to get advice about who might be the
+            organisation or person responsible for your activity.

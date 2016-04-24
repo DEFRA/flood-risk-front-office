@@ -1,0 +1,62 @@
+---
+en:
+  datashift_state:
+    enrollments:
+      steps: 
+        declaration_conditions_page: 
+          heading: Exemption conditions
+          list_item: the length of the footbridge measured from the top of one bank
+            of the main river to the top of the other bank is no more than 8 metres;
+          list_item1: the footbridge has no support in the watercourse, a deck width
+            of no more than 1.5 metres and a kickerboard of no more than 100mm in
+            height;
+          list_item2: the footbridge does not reduce the cross-sectional area of the
+            channel in the main river;
+          list_item3: |-
+            the works do not have a significant adverse effect on species included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006, or by Welsh Ministers under section 42 of that
+                          Act(a), that are not protected species;
+          list_item4: no works take place within 100 metres of any non-agricultural
+            building in the floodplain or another man-made structure on or in the
+            main river;
+          list_item5: the bed of the main river is not affected by the construction;
+          list_item6: the length of bank disturbed by the construction extends to
+            no more than 1 metre on either side of the footbridge;
+          list_item7: the footbridge is securely attached to foundations which are
+            no closer than 1 metre to the edge of the bank;
+          list_item8: construction of the footbridge does not require reinforcement
+            of the bed or banks;
+          list_item9: the approach ramp or steps for the footbridge do not extend
+            more than 4 metres from the landward side of the bank;
+          list_item10: the lowest point of the underside of the bridge is at least
+            600mm higher than the top of both banks of the main river;
+          list_item11: all excavated material not re-used on the site of the works
+            is removed from the floodplain;
+          list_item12: the height of the land at each end of the footbridge is not
+            changed by the construction;
+          list_item13: the works are not carried out in, or within 100 metres of,
+            a water body in England that is part of a main river classified as of
+            high morphological status by the Agency in accordance with the relevant
+            directions; and
+          list_item14: any parapet of the footbridge is of open construction comprising—
+          list_item15: "(i) post and rail;"
+          list_item16: "(ii) postandwiremeshfencingofatleast100mmspacing;or"
+          list_item17: "(iii) post and wire strands."
+          list_item18: the maintenance works do not alter any dimension of the structure;
+          list_item19: the structure is carrying out the functions for which it was
+            originally designed;
+          list_item20: the maintenance works use materials of the same kind as those
+            present in the structure;
+          list_item21: the maintenance works do not occur between 15th March and 15th
+            June inclusive in any year;
+          list_item22: on a main river that is a designated salmonid river, the maintenance
+            works do not occur between 1st October and 14th March inclusive in any
+            year; and
+          list_item23: |-
+            the works do not have a significant adverse effect on species included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006, or by Welsh Ministers under section 42 of that
+                          Act, that are not protected species.
+          para_text: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text1: The maintenance of structures within the channel of a main river
+            other than raised river or sea defences.
+          para_text2: 'For the purposes of this paragraph, the specific conditions
+            are:'

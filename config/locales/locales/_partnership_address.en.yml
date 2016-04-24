@@ -1,0 +1,18 @@
+---
+en:
+  datashift_state:
+    enrollments:
+      steps: 
+        partnership_address: 
+          heading: Who's responsible for the activity?
+          div_text13: For example, a business premises name or house number
+          label: Full name
+          label1: Select address
+          label2: Building name or number
+          label3: Street line 1
+          label4: Street line 2 (optional)
+          label5: Town
+          label6: Postcode
+          legend: Partnership details
+          text: Enter address manually
+          para_text: For example, John Smith

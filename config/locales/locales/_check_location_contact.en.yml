@@ -1,0 +1,15 @@
+---
+en:
+  datashift_state:
+    enrollments:
+      steps: 
+        check_location_contact: 
+          heading: Contact the Environment Agency
+          div_text12: 'Telephone: 03708 506 506'
+          div_text13: 'Minicom: 03702 422 549'
+          div_text14: Monday to Friday, 8am to 6pm
+          para_text: You must contact us to check the location of your activity before
+            your start this registration.
+          para_text1: Call us on 03708 506 506 to check if your activities are on
+            a main river and if they are near any sensitive areas such as a nature
+            reserve.

@@ -1,9 +1,0 @@
----
-en:
-  flood_risk_engine:
-    enrollments:
-      steps: 
-        index: 
-          heading: 'Register your flood risk activity: alpha prototype version 1'
-          para_text: This is a prototype for usability testing only.
-          para_text1: Local authority or public body

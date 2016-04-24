@@ -1,0 +1,15 @@
+---
+en:
+  datashift_state:
+    enrollments:
+      steps: 
+        index: 
+          heading: 'Register your flood risk activity: alpha prototype version 2'
+          para_text: This is a prototype for usability testing only.
+          para_text1: Local authority or public body
+          para_text2: Limited company
+          para_text3: Limited liability partnership
+          para_text4: Individual
+          para_text5: Partnership
+          para_text6: Other
+          para_text7: Unknown

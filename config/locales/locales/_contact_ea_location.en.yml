@@ -1,0 +1,12 @@
+---
+en:
+  datashift_state:
+    enrollments:
+      steps: 
+        contact_ea_location: 
+          heading: You must contact the Environment Agency before you register
+          div_text9: 'Telephone: 03708 506 506'
+          div_text10: 'Minicom: 03702 422 549'
+          div_text11: Monday to Friday, 8am to 6pm
+          para_text: You must contact us before you start this registration to check
+            if your activity is in a sensitive area.

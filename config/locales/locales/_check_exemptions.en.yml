@@ -1,0 +1,15 @@
+---
+en:
+  datashift_state:
+    enrollments:
+      steps: 
+        check_exemptions: 
+          td: 
+            span: 
+              span0: FRA5
+              span1: FRA9
+          heading: Check your exemptions
+          text: FRA5
+          text1: FRA9
+          para_text: Footbridge 8m bank to bank maximum
+          para_text1: Maintenance of structures in the river (not raised defences)

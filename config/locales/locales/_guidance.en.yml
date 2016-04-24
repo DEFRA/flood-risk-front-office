@@ -1,0 +1,660 @@
+---
+en:
+  datashift_state:
+    enrollments:
+      steps: 
+        guidance: 
+          heading: 'Exempt flood risk activities: descriptions and conditions'
+          label: What you were doing
+          label1: What went wrong
+          list_item: the service crossing is within 10° of perpendicular to the direction
+            of flow of the main river;
+          list_item1: the vertical and horizontal clearances of the service crossing
+            comply with the requirements set out in the table below;
+          list_item2: permanent hazard markers are erected on both banks of the main
+            river;
+          list_item3: the bed and banks of the main river are not disturbed by the
+            works; and
+          list_item4: all excavated material not re-used on the site of the works
+            is removed from the floodplain.
+          list_item5: the service crossing is within 10° of perpendicular to the direction
+            of flow in the main river;
+          list_item6: a distance is maintained—
+          list_item7: "(i) of no less than 1.5 metres from the bed of the main river
+            to the top of the service crossing; and"
+          list_item8: "(ii) at the same height above sea level between points that
+            are 5 metres beyond the top of each bank of the main river;"
+          list_item9: the distance from the launch and reception pits to the landward
+            side of each bank of the main river is—
+          list_item10: "(i) 8 metres or more in the case of a non-tidal main river;"
+          list_item11: "(ii) 16 metres or more in the case of a tidal main river;"
+          list_item12: the service crossing does not pass through any bank, culvert,
+            remote defence or river control works on the main river or through any
+            sea defence;
+          list_item13: the service crossing is 50 metres or more upstream of any impoundment
+            or artificially raised channel;
+          list_item14: permanent hazard markers are erected on both banks of the main
+            river;
+          list_item15: all excavated material not re-used on the site of the works
+            is removed from the floodplain;
+          list_item16: the works are not carried out in, or within 100 metres of,
+            a water body in England that is part of a main river classified as of
+            high morphological status by the Agency in accordance with the relevant
+            directions; and
+          list_item17: the bed and banks of the main river are not disturbed by the
+            works.
+          list_item18: the service crossing does not project more than 1 metre horizontally
+            from the structure;
+          list_item19: the service crossing follows the existing cross-sectional profile
+            of the structure to the main river in both normal and flood flow;
+          list_item20: the service crossing does not pass through any bank, culvert,
+            flood defence structure or river control works on the main river or through
+            any sea defence;
+          list_item21: permanent hazard markers are erected on both banks of the main
+            river; and
+          list_item22: |-
+            a notification has not been sent by the regulator to the landowner that the structure has been identified for removal or modification in order to achieve the measures set out in the relevant River Basin Management Plan, within the meaning
+                              of Article 13 of the Water Framework Directive, that are designed to move a water body to good status pursuant to Article 4 of the Water Framework Directive.
+          list_item23: the length of the footbridge measured from the top of one bank
+            of the main river to the top of the other bank is no more than 8 metres;
+          list_item24: the footbridge has no support in the watercourse, a deck width
+            of no more than 1.5 metres and a kickerboard of no more than 100mm in
+            height;
+          list_item25: the footbridge does not reduce the cross-sectional area of
+            the channel in the main river;
+          list_item26: |-
+            the works do not have a significant adverse effect on species included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006, or by Welsh Ministers under section 42 of
+                              that Act(a), that are not protected species;
+          list_item27: no works take place within 100 metres of any non-agricultural
+            building in the floodplain or another man-made structure on or in the
+            main river;
+          list_item28: the bed of the main river is not affected by the construction;
+          list_item29: the length of bank disturbed by the construction extends to
+            no more than 1 metre on either side of the footbridge;
+          list_item30: the footbridge is securely attached to foundations which are
+            no closer than 1 metre to the edge of the bank;
+          list_item31: construction of the footbridge does not require reinforcement
+            of the bed or banks;
+          list_item32: the approach ramp or steps for the footbridge do not extend
+            more than 4 metres from the landward side of the bank;
+          list_item33: the lowest point of the underside of the bridge is at least
+            600mm higher than the top of both banks of the main river;
+          list_item34: all excavated material not re-used on the site of the works
+            is removed from the floodplain;
+          list_item35: the height of the land at each end of the footbridge is not
+            changed by the construction;
+          list_item36: the works are not carried out in, or within 100 metres of,
+            a water body in England that is part of a main river classified as of
+            high morphological status by the Agency in accordance with the relevant
+            directions; and
+          list_item37: any parapet of the footbridge is of open construction comprising—
+          list_item38: "(i) post and rail;"
+          list_item39: "(ii) postandwiremeshfencingofatleast100mmspacing;or"
+          list_item40: "(iii) post and wire strands."
+          list_item41: the scaffolding will be in place for no longer than 4 weeks;
+          list_item42: the scaffolding is not in place between 15th March and 15th
+            June inclusive in any year;
+          list_item43: on a main river that is a designated salmonid river, the scaffolding
+            is not in place between 1st October and 14th March inclusive in any year;
+          list_item44: the scaffolding does not occupy more than 10 metres of a river
+            bank at any one time;
+          list_item45: the scaffolding projects into or over the main river no more
+            than 1.2 metres or no more than 10% of the width of the main river, whichever
+            is less;
+          list_item46: the scaffolding is located no less than 100 metres from any
+            other scaffolding the erection and use of which is reliant on this exemption;
+          list_item47: except where it is unsafe to do so, debris lodged against the
+            scaffolding is removed within 24 hours; and
+          list_item48: any transoms and walking decks are set no lower than 600 mm
+            above water level.
+          list_item49: the duration of the dewatering is no longer than 4 weeks;
+          list_item50: the dewatering is not in place between 15th March and 15th
+            June inclusive in any year;
+          list_item51: on a main river that is a designated salmonid river, the dewatering
+            is not in place between 1st October and 14th March inclusive in any year;
+          list_item52: the dewatering does not affect more than 10 metres of the bank
+            of a main river at any one time;
+          list_item53: the dewatering is not within 8 metres of a flood defence structure
+            or river control works;
+          list_item54: the depth of water adjacent to the dewatered area does not
+            exceed 1.2 metres;
+          list_item55: |-
+            the dewatering does not occur in, or within 500 metres upstream of, a type of habitat included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006(a) or by Welsh Ministers
+                              under section 42 of that Act;
+          list_item56: all reasonable steps are taken to protect aquatic plants and
+            aquatic animals found in the dewatered area;
+          list_item57: the dewatering structure projects into or over the main river
+            no more than 1.2 metres or no more than 10% of the width of the main river,
+            whichever is less;
+          list_item58: |-
+            the works do not have a significant adverse effect on species included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006, or by Welsh Ministers under section 42 of
+                              that Act, that are not protected species;
+          list_item59: all excavated material not re-used on the site of the works
+            is removed from the floodplain;
+          list_item60: the works are not carried out in, or within 100 metres of,
+            a water body in England that is part of a main river classified as of
+            high morphological status by the Agency in accordance with the relevant
+            directions; and
+          list_item61: any pumps used in the dewatering process are fitted with a
+            20mm mesh screen.
+          list_item62: the maintenance works use materials of the same kind as those
+            present in the raised defences and do not alter the shape of those defences
+            or the overall height of the protection afforded by those defences;
+          list_item63: the raised defences are carrying out the functions for which
+            they were originally designed; and
+          list_item64: the works do not disturb the bed or, up to normal ground level,
+            the banks of the main river.
+          list_item65: the maintenance works do not alter any dimension of the structure;
+          list_item66: the structure is carrying out the functions for which it was
+            originally designed;
+          list_item67: the maintenance works use materials of the same kind as those
+            present in the structure;
+          list_item68: the maintenance works do not occur between 15th March and 15th
+            June inclusive in any year;
+          list_item69: on a main river that is a designated salmonid river, the maintenance
+            works do not occur between 1st October and 14th March inclusive in any
+            year; and
+          list_item70: |-
+            the works do not have a significant adverse effect on species included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006, or by Welsh Ministers under section 42 of
+                              that Act, that are not protected species.
+          list_item71: the bay is not located within 100 metres of any other man-made
+            structure on or in the main river;
+          list_item72: the bay is surrounded by a post and rail fence which must project
+            into or over the main river no more than 1.2 metres or 10% of the width
+            of the main river, whichever is less;
+          list_item73: the base of the bay has a surface made of concrete, stone or
+            inert hard core;
+          list_item74: all excavated material not re-used on the site of the works
+            is removed from the floodplain;
+          list_item75: the works do not adversely affect any culvert, remote defence,
+            river control works, sea defence or any raised embankment or wall forming
+            part of the bank of the main river;
+          list_item76: |-
+            the works do not have a significant adverse effect on species included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006, or by Welsh Ministers under section 42 of
+                              that Act, that are not protected species;
+          list_item77: |-
+            he works do not occur in, or within 500 metres upstream of, a type of habitat included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006 or by Welsh Ministers under
+                              section 42 of that Act;
+          list_item78: the works are not carried out in, or within 100 metres of,
+            a water body in England that is part of a main river classified as of
+            high morphological status by the Agency in accordance with the relevant
+            directions; and
+          list_item79: the remainder of the bank is fenced so as to prevent damage
+            to the bank.
+          list_item80: the platform is not located within 50 metres of any other man-made
+            structure;
+          list_item81: the platform projects no more than 1.2m into or over the main
+            river and occupies no more than 2m of bank length;
+          list_item82: the works do not adversely affect any culvert, remote defence,
+            river control works, sea defence or any raised embankment or wall forming
+            part of the bank of the main river;
+          list_item83: that part of the platform which projects over the channel is
+            constructed as a flat deck, with no solid infill beneath the platform,
+            supported on piers or piles of no more than 300mm width;
+          list_item84: |-
+            the works do not have a significant adverse effect on species included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006, or by Welsh Ministers under section 42 of
+                              that Act, that are not protected species;
+          list_item85: |-
+            the works do not occur in, or within 500 metres upstream of, a type of habitat included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006 or by Welsh Ministers under
+                              section 42 of that Act;
+          list_item86: the works are not carried out in, or within 100 metres of,
+            a water body in England that is part of a main river classified as of
+            high morphological status by the Agency in accordance with the relevant
+            directions; and
+          list_item87: any steps cut into the bank are supported by timber risers
+            on the vertical part of the step.
+          list_item88: the headwall is not located within 50 metres of another man-made
+            structure on or in the main river;
+          list_item89: in the case of a headwall to a non-tidal main river, the outfall
+            pipe is aligned to an angle of between 30° and 60° to the direction of
+            flow in the river;
+          list_item90: the diameter of the outfall pipe is less than 300mm;
+          list_item91: the height of the headwall is no more than 1.5 metres or no
+            more than 75% of the height of the bank, whichever is less;
+          list_item92: the total length of bank affected during construction of the
+            headwall is no more than 1.5 metres;
+          list_item93: the headwall, wing walls and apron do not project beyond the
+            line of the bank prior to the works being carried out;
+          list_item94: the headwall is not within 8 metres of a flood defence structure
+            or river control works;
+          list_item95: the outfall pipe does not pass through or under any culvert,
+            remote defence, river control works or sea defence, or any raised embankment
+            or wall forming part of the bank of the main river;
+          list_item96: all excavated material not re-used on the site of the works
+            is removed from the floodplain;
+          list_item97: |-
+            the works do not have a significant adverse effect on species included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006, or by Welsh Ministers under section 42 of
+                              that Act, that are not protected species;
+          list_item98: |-
+            the works do not occur in, or within 200 metres upstream of, a type of habitat included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006 or by Welsh Ministers under
+                              section 42 of that Act;
+          list_item99: the works are not carried out in, or within 100 metres of,
+            a water body in England that is part of a main river classified as of
+            high morphological status by the Agency in accordance with the relevant
+            directions; and
+          list_item100: any pipe that discharges through the headwall does not pass
+            within 8 metres of a flood defence structure.
+          list_item101: the length of bank affected by the works is no more than 10
+            metres;
+          list_item102: the works do not include the use of steel sheet piling, concrete,
+            cement or concrete bagwork, brickwork, gabions or non-biodegradable materials;
+          list_item103: the works do not take place within 50 metres of a bank that
+            has been reinforced;
+          list_item104: the works do not encroach into the channel of the main river
+            beyond the line of the bank prior to the works being carried out;
+          list_item105: when the works are finished, the height of the bank does not
+            exceed the lower of—
+          list_item106: "(i) the height of the bank on either side of the works, and"
+          list_item107: "(ii) the height of the bank prior to the works being carried
+            out;"
+          list_item108: the works are securely fastened to the bank at each end so
+            as to prevent erosion behind the works;
+          list_item109: the works do not involve the use of vehicles or wheeled or
+            tracked machinery on the bed or bank of the main river;
+          list_item110: |-
+            the works do not have a significant adverse effect on species included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006, or by Welsh Ministers under section 42 of
+                              that Act, that are not protected species;
+          list_item111: the works are not carried out in, or within 100 metres of,
+            a water body in England that is part of a main river classified as of
+            high morphological status by the Agency in accordance with the relevant
+            directions; and
+          list_item112: the works are not to a bank consisting of an earth cliff over
+            1 metre in height.
+          list_item113: the works do not involve removal of material from the bed
+            of the main river other than bank slippage;
+          list_item114: the works do not affect more than 10 metres of the bank at
+            any one time;
+          list_item115: the works do not encroach into the channel of the main river
+            beyond the line of the bank prior to the works being carried out;
+          list_item116: when the works are finished, the height of the bank does not
+            exceed the lower of—
+          list_item117: "(i) the height of the bank on either side of the works, and"
+          list_item118: "(ii) the height of the bank prior to the slip or erosion;"
+          list_item119: the works are securely fastened to the bank at each end so
+            as to prevent erosion behind the works;
+          list_item120: any repair of a bank slippage is made using as materials only
+            material that has subsided from that bank;
+          list_item121: any repair of erosion uses materials of the same kind as those
+            present on the relevant site;
+          list_item122: |-
+            the works do not have a significant adverse effect on species included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006, or by Welsh Ministers under section 42 of
+                              that Act(a), that are not protected species;
+          list_item123: the works are not carried out in, or within 100 metres of,
+            a water body in England that is part of a main river classified as of
+            high morphological status by the Agency in accordance with the relevant
+            directions; and
+          list_item124: the works do not involve the use of a vehicle or of wheeled
+            or tracked machinery on the bed or banks of the main river.
+          list_item125: the structure occupies no more than half the width of the
+            cross-sectional area of the channel in the main river and no more than
+            20 metres of the length of the main river;
+          list_item126: no part of the structure is higher than 0.3 metres above the
+            level of the river bed or 25% of the height of the bank (excluding any
+            wall or embankment forming part of the bank), whichever is greater;
+          list_item127: the structure is made from naturally occurring woody material
+            and is securely fastened to the bed of the main river, the bank or both;
+          list_item128: the works are not carried out in, or within 100 metres of,
+            a water body in England that is part of a main river classified as of
+            high morphological status by the Agency in accordance with the relevant
+            directions; and
+          list_item129: no works take place within 100 metres of—
+          list_item130: "(i) a non-agricultural building in the floodplain;"
+          list_item131: "(ii) anothernaturalchannelhabitatstructure;"
+          list_item132: "(iii) stonesorlogsplacedinthemainriverforhabitatenhancement;or
+            (iv) a man-made structure on or in the main river."
+          list_item133: the raft has dimensions of no greater than 1.5 metres x 1
+            metre x 0.15 metre;
+          list_item134: any equipment box used on the raft has a height of no more
+            than 0.75 metre;
+          list_item135: the raft is permanently and securely attached to the bank;
+          list_item136: the raft is installed no less than 100 metres from any other
+            raft;
+          list_item137: when the raft is installed, there are no more than four other
+            rafts within a distance of one kilometre;
+          list_item138: the raft is installed for no more than 12 months and removed
+            immediately if, within that period, it is no longer required; and
+          list_item139: the raft is not installed within 100 metres of any non-agricultural
+            building in the floodplain or another man-made structure on or in the
+            main river.
+          list_item140: the works are only carried out in September or October in
+            any year;
+          list_item141: the works are to no more than 20m2 of gravel per location,
+            with a gap of at least 30 metres between locations;
+          list_item142: the works do not adversely affect the banks or established
+            bed of the main river;
+          list_item143: the works are carried out using only hand tools or machinery
+            carried and operated by one person; and
+          list_item144: |-
+            the works do not occur in, or within 500 metres upstream of, a type of habitat included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006 or by Welsh Ministers under
+                              section 42 of that Act.
+          list_item145: any stones placed in the channel are of a type that occur
+            naturally in the main river and do not exceed 400mm in any dimension;
+          list_item146: any log placed in the channel is less than 2 metres in length,
+            less than 400mm in diameter and oriented at an angle of within 45° to
+            the flow of water;
+          list_item147: any log placed in the channel—
+          list_item148: "(i) is from a type of tree that occurs naturally in the vicinity
+            of the main river; and"
+          list_item149: "(ii) is securely fixed to the bed or bank of the main river;"
+          list_item150: the stones or logs are placed in the channel over no more
+            than 20 metres of the length, and 20% of the width, of the main river;
+          list_item151: |-
+            the placement of stones or logs does not occur in, or within 200 metres upstream of, a type of habitat included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006 or
+                              by Welsh Ministers under section 42 of that Act;
+          list_item152: the works are not carried out in, or within 100 metres of,
+            a water body in England that is part of a main river classified as of
+            high morphological status by the Agency in accordance with the relevant
+            directions; and
+          list_item153: no stones or logs are placed within 100 metres of—
+          list_item154: "(i) a non-agricultural building in the floodplain;"
+          list_item155: "(ii) a natural channel habitat structure;"
+          list_item156: "(iii) an existing emplacement of stones or logs placed in
+            the main river for habitat enhancement; or"
+          list_item157: "(iv) a man-made structure on or in the main river."
+          list_item158: the existing structure is not located on a tidal river;
+          list_item159: the device is permanently and securely attached to the existing
+            structure;
+          list_item160: the width of the device is no more than 5% of the width of
+            the main river; and
+          list_item161: the device does not extend upstream or downstream from the
+            existing structure more than the lesser of—
+          list_item162: "(i) 10 metres; or"
+          list_item163: "(ii) the width of the channel measured between the top of
+            each bank of the main river."
+          list_item164: the construction does not affect the structural integrity
+            of the existing impoundment;
+          list_item165: construction of the notches does not change the water level
+            in the main river by more than 20cm upstream or downstream from the existing
+            structure;
+          list_item166: the existing impoundment is located on a main river with a
+            width of no more than 5 metres measured between the top of each bank;
+          list_item167: the construction does not adversely affect the banks or established
+            bed of the main river; and
+          list_item168: the notch is no more than 0.6 metre in width.
+          list_item169: the works do not affect the structural integrity of the bridge
+            arch or culvert;
+          list_item170: in the case of works within bridge arches, the removal of
+            silt and sand is limited to the removal of accumulated silt and sand on
+            the established bed of the main river;
+          list_item171: |-
+            the works do not occur in, or within 1 kilometre upstream of, a type of habitat included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006 or by Welsh Ministers under
+                              section 42 of that Act;
+          list_item172: |-
+            the works and the subsequent deposition of the removed material do not have a significant adverse effect on species included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities
+                              Act 2006, or by Welsh Ministers under section 42 of that Act, that are not protected species;
+          list_item173: the works do not occur between 15th March and 15th June inclusive
+            in any year;
+          list_item174: on a main river that is a designated salmonid river, the works
+            do not occur between 1st October and 14th March inclusive in any year;
+          list_item175: the works do not expose the structural foundations or footings
+            of the bridge or culvert;
+          list_item176: the works and any equipment used to remove the sand and silt
+            comply with the dredging and removal of silt and sand requirements;
+          list_item177: the works do not involve the use of machinery on the bed or
+            banks of the main river more than 20 metres from the bridge or culvert;
+          list_item178: the works do not involve the use of a vehicle on the bed or
+            banks of the main river;
+          list_item179: the works do not damage the culvert or the banks or bed of
+            the main river; and
+          list_item180: the works are not carried out in, or within 1 kilometre upstream
+            or 500 metres downstream of, a water body that is part of a main river
+            classified as of high morphological status by the Agency in accordance
+            with the relevant directions.
+          list_item181: the works take place no more than 10 metres upstream or downstream
+            from the edge of the structure;
+          list_item182: the removal of silt and sand does not affect the structural
+            integrity of the structure;
+          list_item183: the works do not damage the banks or bed of the main river;
+          list_item184: the works are limited to the removal of accumulated silt and
+            sand on the established bed of the main river;
+          list_item185: the removal of silt and sand does not expose the structural
+            foundations or footings of the structure;
+          list_item186: silt and sand is not removed to below the level of the base
+            of the inside of an adjacent culvert;
+          list_item187: the works do not remove vegetation from the bed or banks of
+            the main river, other than vegetation growing in or through the silt and
+            sand;
+          list_item188: the works do not involve the use of a vehicle or machinery
+            on the bed or banks of the main river;
+          list_item189: |-
+            the removal of silt and sand does not occur in, or within 1 kilometre upstream of, a type of habitat included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006 or by
+                              Welsh Ministers under section 42 of that Act;
+          list_item190: |-
+            the removal of silt and sand and its subsequent deposition do not have a significant adverse effect on species included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act
+                              2006, or by Welsh Ministers under section 42 of that Act, that are not protected species;
+          list_item191: the removal of silt and sand does not occur between 15th March
+            and 15th June inclusive in any year;
+          list_item192: on a main river that is a designated salmonid river, the removal
+            of silt and sand does not occur between 1st October and 14th March inclusive
+            in any year;
+          list_item193: the works and any equipment used to remove the sand and silt
+            comply with the dredging and removal of silt and sand requirements;
+          list_item194: |-
+            the works are not carried out in, or within one kilometre upstream or 500 metres downstream of, a water body that is part of a main river classified as of high morphological status by the Agency in accordance with the relevant directions;
+                              and
+          list_item195: the removal of silt and sand does not occur in a designated
+            sensitive water body.
+          list_item196: the works do not occur in any location where dredging has
+            been carried out within the previous three years;
+          list_item197: the works do not occur in any location on a watercourse where
+            dredging has taken place within 1.5 kilometres upstream or downstream
+            of that location in the previous 12 months;
+          list_item198: the works are completed within three years of registration
+            of the exemption;
+          list_item199: the works do not damage the bed or banks of the main river;
+          list_item200: the dredging does not include the removal of gravel;
+          list_item201: the dredging is limited to the removal of accumulated silt
+            and sand on the established bed of the main river;
+          list_item202: the works do not remove vegetation from the bed or banks of
+            the main river, other than vegetation growing in or through the silt and
+            sand;
+          list_item203: the works do not involve the use of a vehicle or machinery
+            on the bed or banks of the main river;
+          list_item204: |-
+            the works do not occur in, or within one kilometre upstream of, a type of habitat included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006 or by Welsh Ministers under
+                              section 42 of that Act;
+          list_item205: |-
+            the dredging and subsequent deposition of dredged material do not have a significant adverse effect on species included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act
+                              2006, or by Welsh Ministers under section 42 of that Act, that are not protected species;
+          list_item206: the works do not occur between 15th March and 15th June inclusive
+            in any year;
+          list_item207: on a main river that is a designated salmonid river, the works
+            do not occur between 1st October and 14th March inclusive in any year;
+          list_item208: the works and any equipment used comply with the dredging
+            and removal of silt and sand requirements;
+          list_item209: the works are not carried out in, or within 1 kilometre upstream
+            or 500 metres downstream of, a water body that is part of a main river
+            classified as of high morphological status by the Agency in accordance
+            with the relevant directions;
+          list_item210: the works do not occur in a designated sensitive water body;
+          list_item211: on a non-tidal main river, the works do not occur within 8
+            metres of a flood defence structure or river control works; and
+          list_item212: on a tidal main river, the works do not occur within 16 metres
+            of a flood defence structure or sea defence.
+          list_item213: no dredging has been carried out in the previous 12 months
+            in the same main river and property;
+          list_item214: the works are completed within 12 months of registration of
+            the exemption;
+          list_item215: the works do not damage the bed or banks of the main river;
+          list_item216: the dredging does not include the removal of gravel;
+          list_item217: the works do not remove vegetation from the bed or banks of
+            the main river, other than vegetation growing in or through the silt and
+            sand;
+          list_item218: the dredging is limited to the removal of accumulated silt
+            and sand on the established bed of the main river;
+          list_item219: the works do not involve the use of a vehicle or machinery
+            on the bed or banks of the main river;
+          list_item220: |-
+            the works do not occur in, or within 1 kilometre upstream of, a type of habitat included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act 2006 or by Welsh Ministers under
+                              section 42 of that Act;
+          list_item221: |-
+            the dredging and subsequent deposition of dredged material do not have a significant adverse effect on species included in a list published by the Secretary of State under section 41 of the Natural Environment and Rural Communities Act
+                              2006, or by Welsh Ministers under section 42 of that Act, that are not protected species;
+          list_item222: the works do not occur between 15th March and 15th June inclusive
+            in any year;
+          list_item223: on a main river that is a designated salmonid river, the works
+            do not occur between 1st October and 14th March inclusive in any year;
+          list_item224: the works and any equipment used comply with the dredging
+            and removal of silt and sand requirements;
+          list_item225: |-
+            the works are not carried out in, or within 1 kilometre upstream or 500 metres downstream of, a water body that is part of a main river classified as of high morphological status by the Agency in accordance with the relevant directions;
+                              and
+          list_item226: the dredging does not occur in a designated sensitive water
+            body.
+          list_item227: the area of the excavation is no more than 0.1 hectare and
+            takes place at least 100 metres from any other excavation in the floodplain;
+          list_item228: the excavation is no more than 500mm deep at any point;
+          list_item229: where spoil from the excavation is spread on the floodplain,
+            the spoil is spread to a depth of no more than 100mm; and
+          list_item230: the excavation is at least 8 metres from any structure forming
+            part of a flood defence and from the landward side of each bank of the
+            main river.
+          list_item231: the works are not within 8 metres of a main river;
+          list_item232: the dimensions of the flood defences are no more than 1 metre
+            in height and 6 metres in width;
+          list_item233: the defences are located at least 20 metres from any building
+            not owned by the owners of the properties;
+          list_item234: the total area protected by the defences is no more than 150m2
+            for each property;
+          list_item235: the defences are to protect existing buildings; and
+          list_item236: the works are within the existing boundary of the properties.
+          list_item237: the length of bank excavated during construction of the structure
+            is no more than 1.5 metres;
+          list_item238: the height of the structure is no more than 1.5 metres or
+            no more than 75% of the height of the bank, whichever is less;
+          list_item239: the structure is not located within 50 metres of another man-made
+            structure on or in the main river;
+          list_item240: the structure is not located within 8 metres of a flood defence
+            structure or river control works;
+          list_item241: the works are not carried out in, or within 100 metres of,
+            a water body in England that is part of a main river classified as of
+            high morphological status by the Agency in accordance with the relevant
+            directions; and
+          list_item242: the structure does not project beyond the line of the bank
+            prior to the works being carried out.
+          list_item243: the works are to an existing track or path;
+          list_item244: the works do not alter the route or width of the track or
+            path;
+          list_item245: the works do not disturb the bed or banks of any main river;
+          list_item246: the works do not increase the level of the path by more than
+            100mm; and
+          list_item247: when the works are completed, all materials and debris are
+            removed from the site.”
+          list_item248: Built by the
+          text: '1.'
+          text1: '1.1'
+          text2: '2.'
+          text3: '2.1'
+          text4: '3.'
+          text5: '3.1'
+          text6: '4.'
+          text7: '4.1'
+          text8: '5.'
+          text9: '5.1'
+          text10: '6.'
+          text11: '6.1'
+          text12: '7.'
+          text13: '7.1'
+          text14: '8.'
+          text15: '8.1'
+          text16: '9.'
+          text17: '9.1'
+          text18: '10.'
+          text19: '10.1'
+          text20: '11.'
+          text21: '11.1'
+          text22: '12.'
+          text23: '12.1'
+          text24: '13.'
+          text25: '13.1'
+          text26: '14.'
+          text27: '14.1'
+          text28: '15.'
+          text29: '15.1'
+          text30: '16.'
+          text31: '16.1'
+          text32: '17.'
+          text33: '17.1'
+          text34: '18.'
+          text35: '18.1'
+          text36: '19.'
+          text37: '19.1'
+          text38: '20.'
+          text39: '20.1'
+          text40: '21.'
+          text41: '21.1'
+          text42: '22.'
+          text43: '22.1'
+          text44: '23.'
+          text45: '23.1'
+          text46: '24.'
+          text47: '24.1'
+          text48: '25.'
+          text49: '25.1'
+          text50: '26.'
+          text51: '26.1'
+          text52: '27.'
+          text53: '27.1'
+          para_text: GOV.UK uses cookies to make the site simpler.
+          para_text1: |-
+            Published
+                             9 March 2016
+          para_text2: Please read these notes before completing the registration.
+          para_text3: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text4: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text5: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text6: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text7: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text8: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text9: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text10: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text11: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text12: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text13: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text14: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text15: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text16: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text17: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text18: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text19: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text20: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text21: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text22: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text23: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text24: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text25: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text26: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text27: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text28: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text29: 'For the purposes of this paragraph, the specific conditions
+            are:'
+          para_text30: Don’t include personal or financial information, eg your National
+            Insurance number or credit card details.
+          para_text31: All content is available under the
+          para_text32: ", except where otherwise stated"
