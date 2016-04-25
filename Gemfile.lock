@@ -1,6 +1,7 @@
 GIT
   remote: https://github.com/EnvironmentAgency/copykit
-  revision: d62b62a5aa02c68f3d8f6bc6b7f248da816df667
+  revision: cf0d8b5d1c3052c8d1adb226af126f3783771188
+  branch: master
   specs:
     copy_kit (0.1.0)
       actionview (~> 4.2)
@@ -10,7 +11,7 @@ GIT
 
 GIT
   remote: https://github.com/EnvironmentAgency/flood-risk-engine
-  revision: 301fa20459eba506a857323253b89408370f2950
+  revision: 4a388bdac5dd6935301deffdb3cab7727fb4a685
   branch: develop
   specs:
     flood_risk_engine (0.0.1)
@@ -197,6 +198,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    puma (3.4.0)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
     rack (1.6.4)
@@ -221,6 +223,11 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (4.2.6)
       actionpack (= 4.2.6)
       activesupport (= 4.2.6)
@@ -357,8 +364,10 @@ DEPENDENCIES
   launchy
   pg
   poltergeist (~> 1.9.0)
+  puma
   pundit (~> 1.1.0)
   rails (~> 4.2)
+  rails_12factor
   reform
   reform-rails
   rspec-rails (~> 3.4.2)

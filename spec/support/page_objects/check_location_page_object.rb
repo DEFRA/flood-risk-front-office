@@ -1,3 +1,5 @@
+require_relative "../base/base_page_object"
+
 class CheckLocationPageObject < BasePageObject
   state :check_location
 
