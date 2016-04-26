@@ -18,33 +18,34 @@ module PageObjectHelpers
       raise WasteExemptionsRspec::RadioButtonNotFound, "RadioButton #{radio_to_find} not found on page"
     end
 
-    # Try to find a matching Radio button
-    # N.B ASSIGN form so and if found will call SUBMIT too
-    #
-    def find_and_assign(radio_to_find)
-      method = methods.grep(/assign_#{radio_to_find}/).first
-
-      send(method) if method
-
-      raise WasteExemptionsRspec::RadioButtonNotFound, "RadioButton #{radio_to_find} not found on page"
-    end
   end
 
   module ClassMethods
-    # USAGE :
 
     # Enables quick setup of the text you expect to find on a derived PageObject
-    #
     #   expected_page_text "This is the text I expect in my very own Page"
     #
     # Now in FEATURE tests you can test if you are on that particular page with
-    #
     #     expect(page).to be_on_page_object( my_page_object )
     #
     def expected_page_text(text_to_expect)
       instance_eval <<-end_eval
         def on_page_text
           "#{text_to_expect}"
+        end
+      end_eval
+    end
+
+    # Enables quick setup of the text you expect to find on a derived PageObject
+    #   expected_page_text "This is the text I expect in my very own Page"
+    #
+    # Now in FEATURE tests you can test if you are on that particular page with
+    #     expect(page).to be_on_page_object( my_page_object )
+    #
+    def expected_page_locale(locale_key)
+      instance_eval <<-end_eval
+        def on_page_locale_key
+          "#{locale_key}"
         end
       end_eval
     end
@@ -61,9 +62,13 @@ module PageObjectHelpers
     #
     # rubocop:disable Metrics/MethodLength
     #
-    def state(state, page_text_key = "heading", page_text_root = ".flood_risk_engine.enrollments.steps")
-      # Setup helpers to test whether we are 'on this page'
-      expected_page_text I18n.t(".#{page_text_root}.#{state}.#{page_text_key}")
+    def generate_state_helpers(state,
+                               page_text_key = "heading",
+                               page_text_root = ".flood_risk_engine.enrollments.steps")
+
+      expected_page_locale(".#{page_text_root}.#{state}.#{page_text_key}")
+
+      expected_page_text I18n.t(on_page_locale_key)
 
       # create an instance method that points to this pages root path in locales
       class_eval <<-end_eval
@@ -82,7 +87,7 @@ module PageObjectHelpers
 
       # create an instance method that returns the defined state
       class_eval <<-end_eval
-        def expected_natural_state
+        def expected_state
           :#{state}
         end
       end_eval
@@ -112,15 +117,7 @@ module PageObjectHelpers
     #   <% @organisation_types.each do |organisation_type|
     #     <%= form.radio_button  ...  id: "organisation_#{organisation_type.name}"
     #
-    # Setup helpers to get any id or choose any id
-    #
-    # Page object methods created :
-    #
-    #   BusinessTypePage.assign_individual
-    #   BusinessTypePage.assign_partnership
-    # etc
-    #
-    ## rubocop:disable Metrics/MethodLength
+    # Setup helpers to get any id or choose any id, choose and id and submit
     #
     def radio_button_helpers(radio_list)
       # N.B These are class_eval so methods called on a PageObject instance
@@ -154,14 +151,11 @@ module PageObjectHelpers
           end
         CODE
 
-        # Helper methods to CLICK a particular button & SUBMIT Form
-        #
-        #   BusinessTypePage.assign_individual_soletrader
-        #   BusinessTypePage.assign_partnership
-        # etc
+        # Helper methods to CLICK a particular button & SUBMIT Form in one
+        #   BusinessTypePage.advance_via_radio_partnership
         #
         class_eval <<-CODE, __FILE__, __LINE__ + 1
-          def assign_#{radio}
+          def advance_via_radio_#{radio}
             send("choose_#{radio}")
             submit
           end

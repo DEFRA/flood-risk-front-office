@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 ruby "2.2.3"
 
-gem "flood_risk_engine", git: "https://github.com/EnvironmentAgency/flood-risk-engine", branch: 'develop'
+gem "flood_risk_engine", git: "https://github.com/EnvironmentAgency/flood-risk-engine", branch: "develop"
 
-gem "copy_kit", git: 'https://github.com/EnvironmentAgency/copykit'
+gem "copy_kit", git: "https://github.com/EnvironmentAgency/copykit"
 
 gem "pg"
 gem "reform"
