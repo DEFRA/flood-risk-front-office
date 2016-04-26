@@ -26,7 +26,6 @@ To initialise git flow for the project, you need to run:
     git flow init # choose the defaults
     git checkout develop
 
-
 ### Local Installation
 
 #### Local system dependencies
@@ -91,7 +90,7 @@ There is a thor task configured to run copykit against the river permissions pro
 
 The prototype can be cloned from https://github.com/EnvironmentAgency/river-permissions-prototype
 
-Make sure you pull the latest version before generating the copykit output. 
+Make sure you pull the latest version before generating the copykit output.
 
 The prototype is also versioned so you just point the task at the appropriate app/views folder
 and set your required output path, somewhere temporary so you can revierw the outout befoer copying into FRE e.g. :
@@ -103,7 +102,7 @@ thor copykit:river_permissions:convert -i ../river-permissions/app/views/version
 
 ## Quality
 
-We use [Before Commit](https://github.com/EnvironmentAgency/before_commit) to install and manage a number 
+We use [Before Commit](https://github.com/EnvironmentAgency/before_commit) to install and manage a number
 of tools such as rubocop, brakeman, and i18n-tasks to help maintain quality, reusable code.
 
 ### Potential Gotcha

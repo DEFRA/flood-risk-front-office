@@ -1,7 +1,6 @@
 module ApplicationHelper
 
-  # rubocop:disable Style/AccessorMethodName
-  def set_page_title(title)
+  def page_title(title)
     return unless title.present?
 
     stripped_title = title.gsub(/’/, %('))
