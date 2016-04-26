@@ -60,13 +60,17 @@ module PageObjectHelpers
     #
     #   create_related_enrollment - returns an Enrollment object from appropriate factory: page_<state>
     #
+    # Method create_related_enrollment expects to find a related Factory called: 'page_#{state}'
+    # The factory to use can be varied with options[:enrollment_factory]
+
     # rubocop:disable Metrics/MethodLength
     #
-    def generate_state_helpers(state,
-                               page_text_key = "heading",
-                               page_text_root = ".flood_risk_engine.enrollments.steps")
+    def generate_state_helpers(state, options = {})
+      page_text_key = options[:page_text_key] || "heading"
+      page_text_root = options[:page_text_key] || ".flood_risk_engine.enrollments.steps"
+      enrolment_factory = options[:enrollment_factory] || "page_#{state}"
 
-      expected_page_locale(".#{page_text_root}.#{state}.#{page_text_key}")
+      expected_page_locale("#{page_text_root}.#{state}.#{page_text_key}")
 
       expected_page_text I18n.t(on_page_locale_key)
 
@@ -77,11 +81,14 @@ module PageObjectHelpers
         end
       end_eval
 
-      # create an instance method that can be used to generate an Enrollment in right state
+      # Create an instance method that can be used to generate an Enrollment in right state
+      # N.B Expects to find a Factory called :
+      #      page_#{state}"
+      #
       class_eval <<-end_eval
         def create_related_enrollment
-          Rails.logger.debug("RSPEC : PageObject - create_related_enrollment :page_#{state}")
-          FactoryGirl.create(:page_#{state})
+          Rails.logger.debug("RSPEC : PageObject - create_related_enrollment :#{enrolment_factory}")
+          FactoryGirl.create(:#{enrolment_factory})
         end
       end_eval
 
