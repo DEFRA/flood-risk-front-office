@@ -3,7 +3,13 @@ ruby "2.2.3"
 
 gem "flood_risk_engine", git: "https://github.com/EnvironmentAgency/flood-risk-engine", branch: "develop"
 
+<<<<<<< HEAD
 gem "copy_kit", git: "https://github.com/EnvironmentAgency/copykit"
+=======
+gem "copy_kit",
+    git: "https://github.com/EnvironmentAgency/copykit",
+    branch: "master"
+>>>>>>> develop
 
 gem "pg"
 gem "reform"
@@ -82,4 +88,9 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem "web-console", "~> 2.0"
+end
+
+group :production do
+  gem "rails_12factor" # Required for Heroku - can be removed when Heroku apps decommissioned
+  gem "puma"           # Required for Heroku - can be removed when Heroku apps decommissioned
 end
