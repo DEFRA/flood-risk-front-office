@@ -4,6 +4,15 @@ RSpec.describe "Page check_location" do
   let(:page_object) { CheckLocationPageObject.new }
 
   context "Page Object" do
+    it "has state helpers setup to check page text" do
+      expect(CheckLocationPageObject.on_page_locale_key).to include "flood_risk_engine.enrollments.steps"
+      expect(CheckLocationPageObject.on_page_text).to_not be_blank
+    end
+
+    it "has state helpers setup to confirm the state we are testing" do
+      expect(page_object.expected_state).to eq :check_location
+    end
+
     it "renders the correct starting point" do
       page_object.visit_page
       expect(page).to be_on_page_object page_object
@@ -18,7 +27,7 @@ RSpec.describe "Page check_location" do
   end
 
   context "Navigation " do
-    scenario "Check Location: Back link navigation - answers should be remembered", duff: true do
+    scenario "Check Location: Back link navigation - answers should be remembered" do
       page_object.advance_page
 
       pending "story for next page"
@@ -46,10 +55,18 @@ RSpec.describe "Page check_location" do
       page_object.submit
       expect(page).to be_on_page_object page_object
 
-      expect(page).to have_text "You have 1 error"
-      expect(page).to have_text I18n.t("errors.you_must_make_selection")
+      expect(page).to have_text t("errors.problems_to_fix")
+      expect(page).to have_text t("errors.select_yes_or_no")
 
-      expect(page).to have_error_anchors "base"
+      expect(page).to have_error_anchors :location_check
+    end
+
+    scenario "When choose no redirected to static help page" do
+      page_object.advance_via_radio_no_option
+
+      path = FloodRiskEngine.config.redirection_url_on_location_unchecked
+
+      expect(page).to have_current_path(path)
     end
   end
 end

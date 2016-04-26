@@ -1,19 +1,12 @@
 require_relative "../base/base_page_object"
 
 class CheckLocationPageObject < BasePageObject
-  state :check_location
+  generate_state_helpers :check_location
 
-  # the ids of radio buttons on the form - creates helpers like
-  #     verify_nothing_selected, assign_yes_option
+  # The ids of radio buttons on the form - creates helpers like
+  #     verify_nothing_selected, choose_yes_option, advance_via_radio_yes_option
   #
   radio_button_helpers [:yes_option, :no_option]
-
-  # this is actually the root page, prior to the real journey
-  def visit_page
-    find_enrollment
-
-    visit root_path
-  end
 
   def yes_checked?
     expect(find('#yes_option')).to be_checked
@@ -25,6 +18,6 @@ class CheckLocationPageObject < BasePageObject
 
   def advance_page(yes = true)
     visit_page unless current_path && has_text?(CheckLocationPageObject.on_page_text)
-    yes ? assign_yes_option : assign_no_option
+    yes ? advance_via_radio_yes_option : advance_via_radio_no_option
   end
 end
