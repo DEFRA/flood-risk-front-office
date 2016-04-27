@@ -1,6 +1,6 @@
 <div class="breadcrumbs">
   <ol>
-    <li> <%= link_to 'Home', 'www.gov.uk_url' %> </li>
+    <li> <%= link_to 'Home', root_url %> </li>
     <li> <%= link_to 'Section', 'section_url' %> </li>
     <li><%= t('.list_item') %></li>
   </ol>
@@ -23,6 +23,12 @@
       <li><%= t('.list_item4') %></li>
       <li><%= t('.list_item5') %></li>
     </ul>
+
+    <p>
+      <span class="bold-small"><%= t('.dredging_header') %></span>
+      <br>
+      <%= t('.dredging_text') %>
+    </p>
 
     <p><%= t('.para_text') %></p>
 
@@ -51,8 +57,10 @@
       <h2 class="heading-medium" id="subsection-title">Flood risk activities</h2>
       <nav role="navigation" aria-labelledby="subsection-title">
         <ul class="font-xsmall">
-          <li> <%= link_to 'Flood risk activities guidance', 'register-your-flood-risk-exemption-environmental-permits_url' %> </li>
-          <li> <%= link_to 'More in Subsection', '#_url', class: 'bold-xsmall' %> </li>
+          <li> <%= link_to 'Flood risk activities guidance',
+            "https://www.gov.uk/guidance/register-your-flood-risk-exemption-environmental-permits" %>
+          </li>
+          <li> <%= link_to 'More', '#_url', class: 'bold-xsmall' %> </li>
         </ul>
       </nav>
     </aside>
