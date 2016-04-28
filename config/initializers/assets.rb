@@ -4,7 +4,7 @@
 Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( gov.uk_logotype_crown.svg )
-Rails.application.config.assets.precompile += %w( application-ie6.css application-ie7.css application-ie8.css )
+Rails.application.config.assets.precompile += %w( elements-page-ie6.css elements-page-ie7.css elements-page-ie8.css )
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
