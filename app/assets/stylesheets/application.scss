@@ -58,3 +58,132 @@
   height: 35px;
   background-image: image-url("icon-important.png");
 }
+
+//
+// Styles below this point are copied from application.css in the prototype
+//
+.check-your-answers td {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  vertical-align: top;
+}
+
+@media (min-width: 641px) {
+  .check-your-answers td {
+    font-size: 19px;
+    line-height: 1.3157894737;
+  }
+}
+
+.check-your-answers .change-answer {
+  text-align: right;
+  font-weight: bold;
+  padding-right: 0;
+}
+
+.unbranded {
+  background: #fff;
+}
+
+.unbranded * {
+  font-family: Arial !important;
+}
+
+.unbranded #footer {
+  border: 0;
+  background: #fff;
+}
+
+.govuk-related-items {
+  margin-top: 30px;
+  border-top: 10px solid #005ea5;
+  padding-top: 5px;
+}
+
+.govuk-related-items .heading-medium {
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+}
+
+.govuk-related-items li {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+.form-postcode {
+  width: 8em;
+}
+
+details summary {
+  margin-bottom: 30px;
+}
+
+.postcode-prefix {
+  display: block;
+  line-height: 1.31579;
+  margin-bottom: 0.5em;
+}
+
+span.postcode {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+span.exmpt {
+  font-weight: bold;
+  float: right;
+  margin-right: -3em;
+}
+
+label.exemption {
+  background-color: #ededed;
+  border-color: #ededed;
+  padding-right: 4em;
+}
+
+@media (min-width: 641px) {
+  label.exemption {
+    width: 99%;
+  }
+}
+
+.ea-footer {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 14px;
+  line-height: 1.14286;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@media (min-width: 641px) {
+  .ea-footer {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.ea-footer li {
+  font-size: 14px;
+  line-height: 1.14286;
+  font-weight: 400;
+  text-transform: none;
+  margin-right: 10px;
+}
+
+@media (min-width: 641px) {
+  .ea-footer li {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.ea-footer .inline {
+  display: inline;
+}
