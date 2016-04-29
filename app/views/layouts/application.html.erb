@@ -5,6 +5,7 @@
     <!--[if IE 8]><%= stylesheet_link_tag "elements-page-ie8" %><![endif]-->
     <meta name="format-detection" content="telephone=no" />
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
 <% end %>
 
 <% page_title t(:global_proposition_header) %>
