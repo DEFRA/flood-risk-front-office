@@ -11,13 +11,14 @@ GIT
 
 GIT
   remote: https://github.com/EnvironmentAgency/flood-risk-engine
-  revision: 6003cee8e657caf58857fc24c70ef0d69f9bc586
+  revision: 45907c43299ec5a318bcaef017585d1339aba6d1
   branch: develop
   specs:
     flood_risk_engine (0.0.1)
-      dibber (~> 0.4)
+      dibber (~> 0.5)
       dotenv-rails (~> 2.1)
       finite_machine (~> 0.10)
+      jquery-rails (~> 4.1)
       rails (~> 4.2)
       reform (~> 2.1)
       reform-rails (~> 0.1)
@@ -108,7 +109,7 @@ GEM
     debug_inspector (0.0.2)
     declarative (0.0.7)
       uber (>= 0.0.15)
-    dibber (0.4.0)
+    dibber (0.5.0)
     diff-lcs (1.2.5)
     disposable (0.2.6)
       declarative (~> 0.0.6)
