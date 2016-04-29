@@ -12,7 +12,7 @@ before_script:
   - cp config/database.travis.yml config/database.yml
   - RAILS_ENV=test bundle exec rake db:create
   - RAILS_ENV=test bundle exec rake --trace db:migrate
-  - npm install -g htmlhint
+  #- npm install -g htmlhint
 
 script:
   # - >-
@@ -20,7 +20,6 @@ script:
   #   htmlhint -c ./.htmlhintrc ./app/**/*.html.erb &&
   #   bundle exec "rspec --format progress spec"
   - >-
-    htmlhint -c ./.htmlhintrc ./app/**/*.html.erb &&
     bundle exec "rspec --format progress spec"
 
 # Have this option to stop travis-ci building twice. Currently we have travis set to build both
