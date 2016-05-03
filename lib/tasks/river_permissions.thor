@@ -18,12 +18,15 @@ module Copykit
         c.main_flow_model = 'enrollment'
         c.form_id = 'f'
         c.remove_html_tags = ['main']
+        c.remove_form = true
+
         c.form_template = :reform_style_template
         c.remove_back_links = true
         c.remove_button_links = true
         c.remove_submit = true
         c.reform_template = :step_reform_form
         c.module_name = "FloodRiskEngine"
+        c.page_title_method = "page_title"
 
         c.views_as_partials = true
 
