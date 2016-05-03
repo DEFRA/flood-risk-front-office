@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/EnvironmentAgency/copykit
-  revision: 8eb59cfcd8ae4728cff244e713f060cbff5110d2
+  revision: d3ccae3f179078e811db0087daef2e5ebb372c2f
   branch: master
   specs:
     copy_kit (0.1.0)
@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: https://github.com/EnvironmentAgency/flood-risk-engine
-  revision: 6e525b4d5745b16068b145ade4bcb2962794e911
+  revision: 9981584a265f8538da24ba1a89a99d0cdfed0390
   branch: develop
   specs:
     flood_risk_engine (0.0.1)
@@ -65,14 +65,14 @@ GEM
     archive-zip (0.7.0)
       io-like (~> 0.3.0)
     arel (6.0.3)
-    before_commit (0.7.0)
+    before_commit (0.8.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     bullet (5.0.0)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.9.0)
-    byebug (8.2.4)
+    byebug (8.2.5)
     capybara (2.6.2)
       addressable
       mime-types (>= 1.16)
@@ -170,9 +170,10 @@ GEM
     json (1.8.3)
     launchy (2.4.3)
       addressable (~> 2.3)
-    listen (3.1.1)
-      rb-fsevent (>= 0.9.3)
-      rb-inotify (>= 0.9.7)
+    listen (3.1.3)
+      rb-fsevent (~> 0.9, >= 0.9.7)
+      rb-inotify (~> 0.9, >= 0.9.7)
+      ruby_dep (~> 1.2)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     lumberjack (1.0.10)
@@ -272,6 +273,7 @@ GEM
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
     ruby-progressbar (1.8.0)
+    ruby_dep (1.2.0)
     rubyzip (1.2.0)
     safe_yaml (1.0.4)
     sass (3.4.22)
