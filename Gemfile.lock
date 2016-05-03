@@ -65,7 +65,7 @@ GEM
     archive-zip (0.7.0)
       io-like (~> 0.3.0)
     arel (6.0.3)
-    before_commit (0.7.0)
+    before_commit (0.8.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
