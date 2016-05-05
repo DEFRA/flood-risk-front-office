@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.2.3"
+ruby "2.3.1"
 
 gem "flood_risk_engine", git: "https://github.com/EnvironmentAgency/flood-risk-engine", branch: "develop"
 
