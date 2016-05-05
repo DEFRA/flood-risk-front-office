@@ -15,19 +15,19 @@ rvm:
 bundler_args: --binstubs=./bundler_stubs
 
 before_script:
-  - bundle exec rake before_commit:run
+  - npm install -g jshint coffeelint htmlhint csslint # overcommit packages
   - cp config/database.travis.yml config/database.yml
   - RAILS_ENV=test bundle exec rake db:create
-  - RAILS_ENV=test bundle exec rake --trace db:migrate
-  - npm install -g htmlhint
+  - bundle exec rake --trace before_commit:run_without_checks
 
 script:
-  # - >-
-  #   BUNDLE_PATH=vendor/overcommit_bundle BUNDLE_GEMFILE=.overcommit_gems.rb bundle exec "overcommit --run" &&
-  #   htmlhint -c ./.htmlhintrc ./app/**/*.html.erb &&
-  #   bundle exec "rspec --format progress spec"
-  - >-
-    bundle exec "rspec --format progress spec"
+  - htmlhint -c ./.htmlhintrc ./app/**/*.html.erb
+  - git config --global user.email test@example.com # overcommit Author
+  - git config --global user.name "Test Example" # overcommit Author
+  - BUNDLE_GEMFILE=.overcommit_gems.rb bundle exec overcommit --run
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec "rspec --format progress spec"
+
 
 # Have this option to stop travis-ci building twice. Currently we have travis set to build both
 # PR's and pushes. However this means when we push to a PR we have to wait for Travis to finish
