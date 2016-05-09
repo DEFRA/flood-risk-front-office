@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: https://github.com/EnvironmentAgency/flood-risk-engine
-  revision: 8c4ca4a706b311d0a7b1c5f697bb449f64d53606
+  revision: 12b8ab0d8b82fe010aaab8c11dbccb6687974357
   branch: develop
   specs:
     flood_risk_engine (0.0.1)
@@ -19,9 +19,11 @@ GIT
       dotenv-rails (~> 2.1)
       finite_machine (~> 0.10)
       jquery-rails (~> 4.1)
+      phonelib (~> 0.6)
       rails (~> 4.2)
       reform (~> 2.1)
       reform-rails (~> 0.1)
+      validates_email_format_of (~> 1.6)
 
 GEM
   remote: https://rubygems.org/
@@ -193,6 +195,7 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     pg (0.18.4)
+    phonelib (0.6.0)
     poltergeist (1.9.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -323,6 +326,8 @@ GEM
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
     uniform_notifier (1.9.0)
+    validates_email_format_of (1.6.3)
+      i18n
     vcr (3.0.1)
     web-console (2.3.0)
       activemodel (>= 4.0)
