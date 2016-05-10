@@ -11,10 +11,11 @@ GIT
 
 GIT
   remote: https://github.com/EnvironmentAgency/flood-risk-engine
-  revision: 12b8ab0d8b82fe010aaab8c11dbccb6687974357
+  revision: 13c2b5b7f3bd59fbc9200150494600dbe246d130
   branch: develop
   specs:
     flood_risk_engine (0.0.1)
+      activerecord-session_store (~> 0.1)
       dibber (~> 0.5)
       dotenv-rails (~> 2.1)
       finite_machine (~> 0.10)
@@ -57,6 +58,10 @@ GEM
       activemodel (= 4.2.6)
       activesupport (= 4.2.6)
       arel (~> 6.0)
+    activerecord-session_store (0.1.2)
+      actionpack (>= 4.0.0, < 5)
+      activerecord (>= 4.0.0, < 5)
+      railties (>= 4.0.0, < 5)
     activesupport (4.2.6)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
