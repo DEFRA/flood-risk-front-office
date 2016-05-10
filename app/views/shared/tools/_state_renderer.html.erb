@@ -1,9 +1,12 @@
 <% if(Rails.env.development? && ENV['ADD_STATE_JUMPER_TOOLBAR'] == 'true') %>
-  <div id="dev_tool_bar">
-    <ul>
-      <li>
-        <%= link_to 'CorrespContactName', main_app.build_and_display_path(:page_correspondence_contact_name) %>
-      </li>
-    </ul>
-  </div>
+<div id="dev_tool_bar">
+  <ul>
+    <li>
+      <%= link_to 'LA Postcode', main_app.build_and_display_path(:page_local_authority_postcode) %>
+      <%= link_to 'LA Address', main_app.build_and_display_path(:page_local_authority_address) %>
+      <%= link_to 'CorrContactName', main_app.build_and_display_path(:page_correspondence_contact_name) %>
+      <%= link_to 'CorrContactEmail', main_app.build_and_display_path(:page_correspondence_contact_email) %>
+    </li>
+  </ul>
+</div>
 <% end %>
