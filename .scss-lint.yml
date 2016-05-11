@@ -1,0 +1,7 @@
+linters:
+  SingleLinePerSelector:
+    enabled: false
+
+  BorderZero:
+    enabled: true
+    convention: none # or "zero"
