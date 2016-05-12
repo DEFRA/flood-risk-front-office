@@ -42,7 +42,8 @@ group :test do
   gem "vcr", "~> 3.0.1"
   gem "webmock", "~> 1.24.2"
   gem "simplecov", "~> 0.11", require: false # Tool for checking code coverage
-  gem "ci_reporter_rspec", "~> 1.0.0", require: false # Enables generation of reports so test coerage displayed in readme
+  gem "ci_reporter_rspec", "~> 1.0.0", require: false
+  gem "codeclimate-test-reporter", require: false # Allow test coverage to be reported for codeclimate for displaying in the readme
 end
 
 group :development do

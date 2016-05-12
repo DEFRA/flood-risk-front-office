@@ -1,7 +1,9 @@
 # Flood Risk Exemptions Service
 
-[![Build Status](https://travis-ci.org/EnvironmentAgency/flood-risk-front-office.svg?branch=develop)](https://travis-ci.org/EnvironmentAgency/flood-risk-front-office) [![security](https://hakiri.io/github/EnvironmentAgency/flood-risk-front-office/develop.svg)](https://hakiri.io/github/EnvironmentAgency/flood-risk-front-office/develop)
-
+[![Build Status](https://travis-ci.org/EnvironmentAgency/flood-risk-front-office.svg?branch=develop)](https://travis-ci.org/EnvironmentAgency/flood-risk-front-office)
+[![security](https://hakiri.io/github/EnvironmentAgency/flood-risk-front-office/develop.svg)](https://hakiri.io/github/EnvironmentAgency/flood-risk-front-office/develop)
+[![Code Climate](https://codeclimate.com/github/EnvironmentAgency/flood-risk-front-office/badges/gpa.svg)](https://codeclimate.com/github/EnvironmentAgency/flood-risk-front-office)
+[![Test Coverage](https://codeclimate.com/github/EnvironmentAgency/flood-risk-front-office/badges/coverage.svg)](https://codeclimate.com/github/EnvironmentAgency/flood-risk-front-office)
 
 ## Development Environment
 

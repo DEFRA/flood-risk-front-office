@@ -108,6 +108,8 @@ GEM
       ci_reporter (~> 2.0)
       rspec (>= 2.14, < 4)
     cliver (0.3.2)
+    codeclimate-test-reporter (0.5.2)
+      simplecov (>= 0.7.1, < 1.0.0)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     concurrent-ruby (1.0.2)
@@ -355,6 +357,7 @@ DEPENDENCIES
   capybara-email (~> 2.5.0)
   chromedriver-helper (= 1.0.0)
   ci_reporter_rspec (~> 1.0.0)
+  codeclimate-test-reporter
   database_cleaner (~> 1.5.1)
   dotenv-rails (~> 2.1)
   factory_girl_rails (~> 4.6.0)

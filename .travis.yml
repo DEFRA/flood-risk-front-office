@@ -28,6 +28,14 @@ script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec "rspec --format progress spec"
 
+# This section was added as per https://docs.travis-ci.com/user/code-climate/
+# To protect our codeclimate stats rather than adding the Codeclimate API key for this project
+# in the open we used this guide https://docs.travis-ci.com/user/encryption-keys/ to encryt the
+# value. Essentially install travis gem, then run `travis encrypt <my_code_climate_api_key>`
+addons:
+  code_climate:
+    repo_token:
+      secure: "MVx6bPhKifyvRcQq2V9YdQ1xy/mBGwrya7DKsQl1p/wtfUacB3OrO5gukJm0JCuU+x5eD8gWt/vAr1+DDGA6d0d4G6lkSTZ7cHoczMyRUXjGPRNhUyjNn3eLLVjUtfBNaKAKW/FZfBp+vqY8vnetG5CWcG9y+6jBWznvqk3lfQYtToZp4GPJiBrqLuhSxQYgTCk+j9IUxVV50pQM0jL9aGpeqKFE7poGz+4NqeGhYHsf+JmclFbCVjPljnA22cujb2zEl8OIR7+Xe6who3ddQYCBGy/qZQ8ASJHFIkc3cjN0cm9o7fsROjn9X5R5TOtlzp0EL5gbe1MUdWxe0a3fQVmL4ibm9v/k1OhqgWV9QaJfC1xdJeoct4R1gFtEFE3ZX0e4yDQn2DqVId80oDH8vGh2NRYhhUMfK1etgkMoqElHnoYdTTfu5c+4U0p8f9zWWAtlooqZaJhGOf59rgkzQ12huCswgWW9LcDxX4hEBHMjfc/mX6muWaKSlmcAeDkEVvk10e6mIW6ErUDtAyrntWWEp4PPnRrPmiNE+vQLyCtaGnzmguSqwOHwxanqnhvSZm6kNXAvBOOxvZPl5fMeDpPNbUO07uJ5bp+uN4Hzj+/5rpqX3idfqbO6Vw/J+OEjU9aso1aa+Av+Mp+KFmnEGANYmV9bT/HBl7r50zqXIgo="
 
 # Have this option to stop travis-ci building twice. Currently we have travis set to build both
 # PR's and pushes. However this means when we push to a PR we have to wait for Travis to finish
