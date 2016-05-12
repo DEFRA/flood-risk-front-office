@@ -41,8 +41,11 @@ gem "turbolinks"
 gem "jbuilder", "~> 2.0"
 # bundle exec rake doc:rails generates the API under doc/api.
 gem "sdoc", "~> 0.4.0", group: :doc
+# Our capistrano scripts expect whenever (for scheduling cron jobs) to be available
+gem "whenever", "~> 0.9.4", require: false
 
 group :development, :test do
+  gem "puma" # Replacement for webrick in development
   gem "rspec-rails", "~> 3.4.2"
   gem "byebug" # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "spring" # Spring speeds up development by keeping your application
@@ -55,8 +58,8 @@ group :development, :test do
   # N.B require is false so factories aren't loaded during e.g db:migrate
   gem "factory_girl_rails", "~> 4.6.0", require: false
   gem "faker"
-
   gem "before_commit", "~> 0.6"
+  gem "quiet_assets", "~> 1.1"
 end
 
 group :test do
@@ -88,5 +91,7 @@ end
 
 group :production do
   gem "rails_12factor" # Required for Heroku - can be removed when Heroku apps decommissioned
-  gem "puma"           # Required for Heroku - can be removed when Heroku apps decommissioned
+  # Use Passenger as our web-server/app-server
+  # (e.g. on AWS via Upstart, Heroku via Procfile)
+  gem "passenger", "~> 5.0.28", require: "phusion_passenger/rack_handler"
 end
