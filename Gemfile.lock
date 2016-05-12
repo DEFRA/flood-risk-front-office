@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: https://github.com/EnvironmentAgency/flood-risk-engine
-  revision: 1e19615d93531873ab8a5b0721f926c5697742ae
+  revision: c8c689db5dea114b909b3e85fa64a9dfe00971cd
   branch: develop
   specs:
     flood_risk_engine (0.0.1)
@@ -20,6 +20,7 @@ GIT
       dotenv-rails (~> 2.1)
       finite_machine (~> 0.10)
       jquery-rails (~> 4.1)
+      os_map_ref (~> 0.4)
       phonelib (~> 0.6)
       rails (~> 4.2)
       reform (~> 2.1)
@@ -199,6 +200,7 @@ GEM
     notiffany (0.0.8)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    os_map_ref (0.4.0)
     pg (0.18.4)
     phonelib (0.6.0)
     poltergeist (1.9.0)
