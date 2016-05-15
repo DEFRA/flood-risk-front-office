@@ -4,4 +4,8 @@ en:
   backto_start_link: Back
   global:
     continue: Continue
-  global_proposition_header: Register your flood risk activity
+  global_proposition_header: Register your flood risk activity exemptions
+  global:
+    footer_support_text: footer_support_text
+    helpline_telephone_number: helpline_telephone_number
+    helpline_telephone_number_uri: helpline_telephone_number_uri
