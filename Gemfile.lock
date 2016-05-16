@@ -80,7 +80,7 @@ GEM
     bullet (5.0.0)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.9.0)
-    byebug (8.2.5)
+    byebug (9.0.3)
     capybara (2.6.2)
       addressable
       mime-types (>= 1.16)
@@ -288,7 +288,7 @@ GEM
       rspec-mocks (~> 3.4.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
-    ruby-progressbar (1.8.0)
+    ruby-progressbar (1.8.1)
     ruby_dep (1.2.0)
     rubyzip (1.2.0)
     safe_yaml (1.0.4)
