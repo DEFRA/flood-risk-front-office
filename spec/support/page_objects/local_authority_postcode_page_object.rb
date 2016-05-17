@@ -9,6 +9,10 @@ class LocalAuthorityPostcodePage < BasePageObject
     "local_authority_postcode_post_code"
   end
 
+  def valid_but_no_results_postcode
+    "BS99 9XX"
+  end
+
   def fill_page_with(post_code)
     @post_code_filled_wth = post_code
     fill_in form_field, with: post_code
@@ -27,6 +31,5 @@ class LocalAuthorityPostcodePage < BasePageObject
   def advance_page
     advance_page_with "BS1 5AH"
   end
-
 
 end

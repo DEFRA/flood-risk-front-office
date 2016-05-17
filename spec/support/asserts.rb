@@ -1,3 +1,5 @@
+# rubocop:disable all
+
 RSpec.configure do |_config|
   # USAGE :
   #
@@ -36,19 +38,19 @@ EOS
       next if field.is_a?(Symbol) && expected.is_a?(Hash)
 
       record_value = [field].flatten.inject(record) do |object, method|
-        object.send(method) if(object.respond_to?(method))
+        object.send(method) if object.respond_to?(method)
       end
 
-      if(record_value.is_a?(BigDecimal) && expected.is_a?(String)) ||
-        (record_value.is_a?(Date) && expected.is_a?(String))
+      if (record_value.is_a?(BigDecimal) && expected.is_a?(String)) ||
+         (record_value.is_a?(Date) && expected.is_a?(String))
 
         record_value = record_value.to_s
 
-      elsif(expected.is_a?(Fixnum) && record_value.is_a?(String))
+      elsif expected.is_a?(Fixnum) && record_value.is_a?(String)
         # could be an enum index => being converted to its string form
         # .. so check if it responds to enum methods
-        next if(record.class.respond_to?(field.pluralize) &&
-                record.respond_to?("#{record_value}?"))
+        next if record.class.respond_to?(field.pluralize) &&
+                record.respond_to?("#{record_value}?")
       end
 
       expect_string_or_regexp record_value, expected,
@@ -66,3 +68,5 @@ EOS
     end
   end
 end
+
+# rubocop:enable all

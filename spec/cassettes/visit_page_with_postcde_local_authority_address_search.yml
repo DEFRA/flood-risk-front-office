@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://addressfacade.cloudapp.net/address-service/v1/addresses/postcode?client-id=example%20team1&key=client1&postcode=BS99%209XX
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0.rc2 (linux-gnu x86_64) ruby/2.3.1p112
+      Host:
+      - addressfacade.cloudapp.net
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 May 2016 12:48:11 GMT
+      Content-Type:
+      - application/json
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAFWOywrCMBBF/2XArqSp7hooouhSEdwURMqYRCzGJGQmRRH/
+        3eBj4fLcB5wHsGe0a2R1NgSyGgMxRn4HIF2ydgzG6T9Ose/Yd5RCsL2JIOHM
+        HEgKgaEvfdQOnTKU4mDupfJluohgMSdimAjUOhqiDMETK6/NzMZmtSl+2Cx2
+        dT2aVnXbFle85XGyTM2kqgqNjGS4WW7n8NE4RX/tVLZwnDWI0zEX3wvI/eH5
+        Aq8XGp3hAAAA
+    http_version: 
+  recorded_at: Tue, 17 May 2016 13:44:50 GMT
+recorded_with: VCR 3.0.1

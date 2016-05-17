@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 16 May 2016 16:57:21 GMT
+      - Tue, 17 May 2016 12:12:04 GMT
       Content-Type:
       - application/json
       Content-Encoding:
@@ -45,5 +45,5 @@ http_interactions:
         5iA7sVpS9OqesoKgr0g4w7MLfB7YOs63RZI613l2e+M6u3yTrbLCWcbpx7+P
         akQ2Tumc+F+HRKbYI28ZzeahN//jjPrOf8nm2+tPfl0PxCEEAAA=
     http_version: 
-  recorded_at: Mon, 16 May 2016 17:56:06 GMT
+  recorded_at: Tue, 17 May 2016 13:08:17 GMT
 recorded_with: VCR 3.0.1

@@ -46,7 +46,7 @@ module FloodRiskEngine
 
         expect(page).to be_on_page_object page_object
 
-        expect( find_field( page_object.form_field ).value).to be_blank
+        expect(find_field(page_object.form_field).value).to be_blank
       end
     end
 
@@ -68,8 +68,6 @@ module FloodRiskEngine
           expect(page).to have_error_anchors :post_code
         end
       end
-
     end
-
   end
 end
