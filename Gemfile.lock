@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: https://github.com/EnvironmentAgency/flood-risk-engine
-  revision: e1f16d582d391ec125d098681fea3efd7ee9400e
+  revision: 9f692ac4b7aa2563d9a1f52df45d7ff42b2f4c4d
   branch: develop
   specs:
     flood_risk_engine (0.0.1)
@@ -19,6 +19,7 @@ GIT
       dibber (~> 0.5)
       dotenv-rails (~> 2.1)
       finite_machine (~> 0.10)
+      has_secure_token (~> 1.0.0)
       jquery-rails (~> 4.1)
       os_map_ref (~> 0.4)
       phonelib (~> 0.6)
@@ -165,6 +166,8 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
+    has_secure_token (1.0.0)
+      activerecord (>= 3.0)
     hashdiff (0.3.0)
     high_voltage (3.0.0)
     i18n (0.7.0)
