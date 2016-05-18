@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: https://github.com/EnvironmentAgency/flood-risk-engine
-  revision: 573ed6eb8e6cd4b9a39bfb747c3d8ab73481b33e
+  revision: e1f16d582d391ec125d098681fea3efd7ee9400e
   branch: develop
   specs:
     flood_risk_engine (0.0.1)
@@ -201,7 +201,7 @@ GEM
     notiffany (0.0.8)
       nenv (~> 0.1)
       shellany (~> 0.0)
-    os_map_ref (0.4.0)
+    os_map_ref (0.4.1)
     passenger (5.0.28)
       rack
       rake (>= 0.8.1)
