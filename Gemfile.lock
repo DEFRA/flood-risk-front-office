@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: https://github.com/EnvironmentAgency/flood-risk-engine
-  revision: 9f692ac4b7aa2563d9a1f52df45d7ff42b2f4c4d
+  revision: f87942c7c5ff02fe5a774373cd84c478d65f96b3
   branch: develop
   specs:
     flood_risk_engine (0.0.1)
