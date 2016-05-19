@@ -1,22 +1,24 @@
 <% content_for(:head) do %>
-    <!--[if gt IE 8]><!--><%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %><!--<![endif]-->
-    <!--[if IE 6]><%= stylesheet_link_tag "elements-page-ie6" %><![endif]-->
-    <!--[if IE 7]><%= stylesheet_link_tag "elements-page-ie7" %><![endif]-->
-    <!--[if IE 8]><%= stylesheet_link_tag "elements-page-ie8" %><![endif]-->
-    <meta name="format-detection" content="telephone=no" />
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <%= csrf_meta_tags %>
+  <!--[if gt IE 8]><!--><%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %><!--<![endif]-->
+  <!--[if IE 6]><%= stylesheet_link_tag "elements-page-ie6" %><![endif]-->
+  <!--[if IE 7]><%= stylesheet_link_tag "elements-page-ie7" %><![endif]-->
+  <!--[if IE 8]><%= stylesheet_link_tag "elements-page-ie8" %><![endif]-->
+  <meta name="format-detection" content="telephone=no" />
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
 <% end %>
 
 <% page_title t(:global_proposition_header) %>
 
 <% content_for :header_class, 'with-proposition' %>
 <% content_for :proposition_header do %>
-    <div class="header-proposition">
-      <div class="content">
-        <span id="proposition-name"><%= t(:global_proposition_header) %></span>
-      </div>
+  <div class="header-proposition">
+    <div class="content">
+      <nav id="proposition-menu">
+        <%= link_to  t(:global_proposition_header), main_app.root_path,id: "proposition-name" %>
+      </nav>
     </div>
+  </div>
 <% end %>
 
 <%
@@ -26,28 +28,28 @@
 %>
 
 <% content_for(:content) do %>
-    <main id="content" role="main">
+  <main id="content" role="main">
 
-      <div class="phase-banner-alpha">
-        <p>
-          <strong class="phase-tag">ALPHA</strong>
-          <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
-        </p>
-      </div>
+    <div class="phase-banner-alpha">
+      <p>
+        <strong class="phase-tag">ALPHA</strong>
+        <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+      </p>
+    </div>
 
-      <%= yield %>
-    </main>
+    <%= yield %>
+  </main>
 <% end %>
 
 <% content_for :body_end do %>
 <% end %>
 
 <% content_for :footer_top do %>
-    <div class="ea-footer">
-      <p><%= t('global.footer_support_text') %> <%= link_to t("global.helpline_telephone_number"), "tel:#{t "global.helpline_telephone_number_uri" }" %></p>
-      <ul>
-      </ul>
-    </div>
+  <div class="ea-footer">
+    <p><%= t('global.footer_support_text') %> <%= link_to t("global.helpline_telephone_number"), "tel:#{t "global.helpline_telephone_number_uri" }" %></p>
+    <ul>
+    </ul>
+  </div>
 <% end %>
 
 <%-# LAST: RENDER main GDS template -%>
