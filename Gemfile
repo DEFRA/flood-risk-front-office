@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 ruby "2.3.1"
 
-gem "flood_risk_engine", git: "https://github.com/EnvironmentAgency/flood-risk-engine", branch: "develop"
-
-gem "ea-address_lookup", git: "https://github.com/EnvironmentAgency/ea-address_lookup"
+gem "flood_risk_engine",
+    git: "https://github.com/EnvironmentAgency/flood-risk-engine",
+    branch: "develop"
 
 gem "copy_kit",
     git: "https://github.com/EnvironmentAgency/copykit",
