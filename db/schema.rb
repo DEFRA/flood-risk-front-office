@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160523140334) do
+ActiveRecord::Schema.define(version: 20160526153044) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,9 +44,11 @@ ActiveRecord::Schema.define(version: 20160523140334) do
     t.integer  "addressable_id"
     t.string   "addressable_type"
     t.string   "uprn"
+    t.string   "token"
   end
 
   add_index "flood_risk_engine_addresses", ["addressable_id", "addressable_type"], name: "by_addressable", using: :btree
+  add_index "flood_risk_engine_addresses", ["token"], name: "index_flood_risk_engine_addresses_on_token", unique: true, using: :btree
   add_index "flood_risk_engine_addresses", ["uprn"], name: "index_flood_risk_engine_addresses_on_uprn", using: :btree
 
   create_table "flood_risk_engine_contacts", force: :cascade do |t|
@@ -110,10 +112,12 @@ ActiveRecord::Schema.define(version: 20160523140334) do
     t.string   "easting"
     t.string   "northing"
     t.string   "grid_reference"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.integer  "locatable_id"
     t.string   "locatable_type"
+    t.text     "description"
+    t.string   "dredging_length"
   end
 
   add_index "flood_risk_engine_locations", ["locatable_id", "locatable_type"], name: "by_locatable", using: :btree

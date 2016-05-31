@@ -1,3 +1,4 @@
+=begin - Page removed
 require "rails_helper"
 
 RSpec.describe "Page check_location" do
@@ -101,3 +102,4 @@ RSpec.describe "Page check_location" do
     end
   end
 end
+=end # Page removed

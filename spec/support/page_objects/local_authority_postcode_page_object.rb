@@ -18,18 +18,24 @@ class LocalAuthorityPostcodePage < BasePageObject
     fill_in form_field, with: post_code
   end
 
+  def default_search_postcode
+    "BS1 5AH"
+  end
+
   def fill_page
-    fill_page_with("BS1 5AH")
+    fill_page_with default_search_postcode
   end
 
   def advance_page_with(post_code)
     visit_page
     fill_page_with(post_code)
-    submit
+    VCR.use_cassette("local_authority_postcode_page_search for #{post_code}") do
+      submit
+    end
   end
 
   def advance_page
-    advance_page_with "BS1 5AH"
+    advance_page_with default_search_postcode
   end
 
 end

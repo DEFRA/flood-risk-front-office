@@ -28,7 +28,7 @@ module FloodRiskEngine
 
     context "Given I'm on the LocalAuthority Postcode page" do
       before(:each) do
-        page_object.visit_page
+       # page_object.visit_page
       end
 
       scenario "When I enter a valid postcode I navigate to next page which displays post code and addresses" do
@@ -39,14 +39,14 @@ module FloodRiskEngine
     end
 
     context "When revisiting this page, via back button or review page " do
-      scenario "Then the post code should not display any previous entry" do
+      scenario "Then the post code should display the previous entry" do
         page_object.advance_page
 
         page_object.click_back_link
 
         expect(page).to be_on_page_object page_object
 
-        expect(find_field(page_object.form_field).value).to be_blank
+        expect(find_field(page_object.form_field).value).to eq page_object.default_search_postcode
       end
     end
 
@@ -69,14 +69,14 @@ module FloodRiskEngine
         end
       end
 
-      describe "When I enter a valid postcode, and Postcode lookup is available to query", duff: true do
-        scenario "And lookup returns no addresses" do
+      describe "When I enter a valid postcode, and Postcode lookup is available to query" do
+        scenario "And lookup returns no addresses", duff: true do
           page_object.advance_page_with(page_object.valid_but_no_results_postcode)
 
           expect(page).to be_on_page_object page_object # 1. Display postcode entry page again
 
           # 2. Echo entered postcode into lookup box (so user can check/edit postcode)
-          expect(page).to have_text page_object.valid_but_no_results_postcode
+          expect(find_field(page_object.form_field).value).to eq page_object.valid_but_no_results_postcode
 
           # 3. Add error message:
           expect(page).to have_text t("flood_risk_engine.validation_errors.postcode.no_addresses_found")

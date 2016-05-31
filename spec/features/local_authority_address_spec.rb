@@ -31,7 +31,7 @@ module FloodRiskEngine
         page_object.visit_page
       end
 
-      scenario "When I enter a valid address I navigate to next page" do
+      scenario "When valid UK UPRN is selected via drop down, Then the selected address's saved against Enrollment" do
         page_object.advance_page
 
         enrollment = Enrollment.last
@@ -44,6 +44,52 @@ module FloodRiskEngine
 
         expect(page).to have_text t("flood_risk_engine.enrollments.steps.#{enrollment.step}.heading")
       end
+
+
+      scenario "When I click the manual entry link, Then I can enter my address fields", duff: true do
+        page_object.click_manual_entry
+
+        base_locale = "flood_risk_engine.enrollments.addresses"
+
+        manual_entry_header = "#{base_locale}.new.heading.default"
+
+        expect(page).to have_text t(manual_entry_header)
+
+=begin
+  <div id="form_group_premises" role="group" aria-labelledby="groupLabel" class="form-group">
+    <label class="form-label" for="address_premises">
+      Building name or number
+      <span class="form-hint">For example, a business premises name or house number</span>
+</label>    <input class="form-control" type="text" name="address[premises]" id="address_premises" />
+</div>
+  <div id="form_group_street_address" role="group" aria-labelledby="groupLabel" class="form-group">
+    <label class="form-label" for="address_street_address">Street line 1</label>
+    <input class="form-control" type="text" name="address[street_address]" id="address_street_address" />
+</div>
+  <div id="form_group_locality" role="group" aria-labelledby="groupLabel" class="form-group">
+    <label class="form-label" for="address_locality">Street line 2 (optional)</label>
+    <input class="form-control" type="text" name="address[locality]" id="address_locality" />
+</div>
+  <div id="form_group_city" role="group" aria-labelledby="groupLabel" class="form-group">
+    <label class="form-label" for="address_city">Town or city</label>
+    <input class="form-control" type="text" name="address[city]" id="address_city" />
+</div></fieldset>
+=end
+        premises_text = t("#{base_locale}.form.premises.label")
+
+        expect(page).to have_css("label[for=address_premises]", text: premises_text, visible: true)
+
+        fill_in "address_premises", with: "99"
+        fill_in "address_street_address", with: "There and back again Lane"
+        fill_in "address_locality", with: "Nowhere"
+        fill_in "address_city", with: "Brizzle"
+
+        page_object.submit
+
+        expect(page).to be_on_page_object_klass CorrespondenceContactNamePage
+
+      end
+
     end
 
     context "When revisiting this page, via back button or review page " do

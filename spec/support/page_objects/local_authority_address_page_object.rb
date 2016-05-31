@@ -36,7 +36,7 @@ class LocalAuthorityAddressPage < BasePageObject
   def visit_page_with(postcode)
     find_enrollment
 
-    VCR.use_cassette("visit_page_with_postcde_local_authority_address_search") do
+    VCR.use_cassette("visit_page_with_postcde_#{postcode}_local_authority_address_search") do
       LocalAuthorityPostcodePage.new.advance_page_with(postcode)
     end
     self
@@ -51,7 +51,7 @@ class LocalAuthorityAddressPage < BasePageObject
   end
 
   def manual_address_link_text
-    I18n.t(on_page_locale_key + ".manual_entry")
+    I18n.t("flood_risk_engine.enrollments.addresses.manual_entry")
   end
 
   def expected_no_address_error
@@ -65,6 +65,10 @@ class LocalAuthorityAddressPage < BasePageObject
     option
   end
 
+  def click_manual_entry
+    click_on manual_address_link_text
+  end
+
   def advance_page
     advance_page_with(2)
   end
@@ -72,7 +76,7 @@ class LocalAuthorityAddressPage < BasePageObject
   def advance_page_with(idx = 2)
     visit_page unless current_path && has_text?(self.class.on_page_text)
 
-    VCR.use_cassette("advance_page_local_authority_address_search") do
+    VCR.use_cassette("advance_page_local_authority_address_search_#{idx}") do
       select_option_address_index(idx)
       submit
     end
