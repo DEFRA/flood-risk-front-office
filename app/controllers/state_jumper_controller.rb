@@ -19,7 +19,10 @@ unless Rails.env.production?
 
       Rails.logger.debug("State jumper called - building Enrollment from factory #{params['factory']}")
       enrollment = FactoryGirl.create(params["factory"])
+
       state = params["state"] || enrollment.current_step
+      Rails.logger.debug("Jumping #{enrollment.inspect} to STATE [#{state}]")
+
       redirect_to flood_risk_engine.enrollment_step_path(enrollment, state)
     end
 

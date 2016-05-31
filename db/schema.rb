@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160518091908) do
+ActiveRecord::Schema.define(version: 20160523140334) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,11 +74,16 @@ ActiveRecord::Schema.define(version: 20160518091908) do
     t.integer  "organisation_id"
     t.string   "step",                      limit: 50
     t.integer  "correspondence_contact_id"
+    t.string   "token"
+    t.integer  "secondary_contact_id"
+    t.string   "reference_number",          limit: 12
   end
 
   add_index "flood_risk_engine_enrollments", ["applicant_contact_id"], name: "index_flood_risk_engine_enrollments_on_applicant_contact_id", using: :btree
   add_index "flood_risk_engine_enrollments", ["correspondence_contact_id"], name: "fre_enrollments_correspondence_contact_id", using: :btree
   add_index "flood_risk_engine_enrollments", ["organisation_id"], name: "index_flood_risk_engine_enrollments_on_organisation_id", using: :btree
+  add_index "flood_risk_engine_enrollments", ["reference_number"], name: "index_flood_risk_engine_enrollments_on_reference_number", unique: true, using: :btree
+  add_index "flood_risk_engine_enrollments", ["token"], name: "index_flood_risk_engine_enrollments_on_token", unique: true, using: :btree
 
   create_table "flood_risk_engine_enrollments_exemptions", force: :cascade do |t|
     t.integer  "enrollment_id",             null: false
@@ -138,6 +143,7 @@ ActiveRecord::Schema.define(version: 20160518091908) do
   add_foreign_key "flood_risk_engine_address_searches", "flood_risk_engine_enrollments", column: "enrollment_id"
   add_foreign_key "flood_risk_engine_contacts", "flood_risk_engine_organisations", column: "partnership_organisation_id"
   add_foreign_key "flood_risk_engine_enrollments", "flood_risk_engine_contacts", column: "applicant_contact_id"
+  add_foreign_key "flood_risk_engine_enrollments", "flood_risk_engine_contacts", column: "secondary_contact_id"
   add_foreign_key "flood_risk_engine_enrollments", "flood_risk_engine_organisations", column: "organisation_id"
   add_foreign_key "flood_risk_engine_enrollments_exemptions", "flood_risk_engine_enrollments", column: "enrollment_id"
   add_foreign_key "flood_risk_engine_enrollments_exemptions", "flood_risk_engine_exemptions", column: "exemption_id"
