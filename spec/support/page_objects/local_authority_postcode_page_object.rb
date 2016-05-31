@@ -6,7 +6,7 @@ class LocalAuthorityPostcodePage < BasePageObject
   attr_reader :post_code_filled_wth
 
   def form_field
-    "local_authority_postcode_post_code"
+    "local_authority_postcode_postcode"
   end
 
   def valid_but_no_results_postcode

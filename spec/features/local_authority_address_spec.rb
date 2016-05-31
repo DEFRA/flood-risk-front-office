@@ -68,22 +68,6 @@ module FloodRiskEngine
         expect(page).to have_text page_object.expected_no_address_error
         expect(page).to have_error_anchors :uprn
       end
-
-      describe "When I enter a valid postcode, and Postcode lookup is available to query", duff: true do
-        scenario "And lookup returns no addresses" do
-          page_object.visit_page_with(page_object.valid_but_no_results_postcode)
-
-          expect(page).to be_on_page_object page_object # 1. Display postcode entry page again
-
-          # 2. Echo entered postcode into lookup box (so user can check/edit postcode)
-          expect(page).to have_text page_object.valid_but_no_results_postcode
-
-          # 3. Add error message:
-          expect(page).to have_text t("flood_risk_engine.validation_errors.postcode.no_addresses_found")
-
-          # 4. Add link to manual entry page with link text: "Enter address manually"
-        end
-      end
     end
   end
 end
