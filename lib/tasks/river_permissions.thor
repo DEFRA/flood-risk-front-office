@@ -8,14 +8,20 @@ module Copykit
 
     desc "convert", "Convert River Permsisions node prototype to Rails"
 
-    method_option :input, :aliases => '-i', required: true, :desc => "Path to the River Permsisions node Views"
-    method_option :output, :aliases => '-o', required: true, :desc => "Path to create new River Permsisions Rails Views"
+    method_option :input, :aliases => '-i',
+                  default: '../river-permissions-prototype/app/views/version_3/', :desc => "Path to the  node Views"
+
+    method_option :output, :aliases => '-o',
+                  default: 'tmp/copy_kit/output', :desc => "Path to create new River Permissions Rails Views"
 
     def convert
 
       CopyKit::Configuration.configure do |c|
+
+        c.module_name = "FloodRiskEngine"
         c.verbose = true
         c.main_flow_model = 'enrollment'
+
         c.form_id = 'f'
         c.remove_html_tags = ['main']
         c.remove_form = true
@@ -25,7 +31,7 @@ module Copykit
         c.remove_button_links = true
         c.remove_submit = true
         c.reform_template = :step_reform_form
-        c.module_name = "FloodRiskEngine"
+
         c.page_title_method = "page_title"
 
         c.views_as_partials = true
