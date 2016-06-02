@@ -19,6 +19,8 @@ module Copykit
       CopyKit::Configuration.configure do |c|
 
         c.module_name = "FloodRiskEngine"
+        c.sub_modules = "Steps"
+
         c.verbose = true
         c.main_flow_model = 'enrollment'
 
