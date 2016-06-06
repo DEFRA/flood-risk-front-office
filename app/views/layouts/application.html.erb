@@ -27,6 +27,12 @@
   end
 %>
 
+<%
+  content_for(:body_start) do
+    render("shared/google_analytics", google_tag: ENV["GOOGLE_TAG"])
+  end if ENV["GOOGLE_TAG"]
+%>
+
 <% content_for(:content) do %>
   <main id="content" role="main">
 
