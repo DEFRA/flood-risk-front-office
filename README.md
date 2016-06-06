@@ -57,6 +57,9 @@ Duplicate ```./env.example``` and rename the copy as ```./env```
 
 Open it and update SECRET_KEY_BASE and settings for database, email etc.
 
+If Google analytics is required, uncomment the line ```GOOGLE_TAG=ABC-DEFGHI```
+and replace ABC-DEFGHI with the required Google tag.
+
 #### Start the service _(local)_
 
 To start the service locally simply run:
