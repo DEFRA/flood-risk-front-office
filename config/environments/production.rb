@@ -76,4 +76,25 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # These are the minimum settings
+  smtp = {
+    address: ENV["EMAIL_HOST"],
+    port: ENV["EMAIL_PORT"]
+  }
+
+  if ENV["EMAIL_USERNAME"].present?
+    smtp[:user_name] = ENV["EMAIL_USERNAME"]
+    smtp[:authentication] = :plain
+    smtp[:password] = ENV["EMAIL_PASSWORD"]
+  end
+
+  if ENV["EMAIL_HOST"] == "smtp.sendgrid.net"
+    smtp[:enable_starttls_auto] = true
+    smtp[:ssl] = true
+  end
+
+  smtp[:domain] = ENV["EMAIL_APP_DOMAIN"] if ENV["EMAIL_APP_DOMAIN"].present?
+
+  config.action_mailer.smtp_settings = smtp
 end
