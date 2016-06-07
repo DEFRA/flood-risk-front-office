@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: https://github.com/EnvironmentAgency/flood-risk-engine
-  revision: 3b62045142a9580a0d23c976d9f231adedcfd876
+  revision: 50f8197ec9cc65cdfca897fba1ebdd18493e2c5f
   branch: develop
   specs:
     flood_risk_engine (0.0.1)
@@ -225,14 +225,15 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mini_portile2 (2.0.0)
+    mini_portile2 (2.1.0)
     minitest (5.9.0)
     multi_json (1.12.1)
     nenv (0.3.0)
     nesty (1.0.2)
     netrc (0.11.0)
-    nokogiri (1.6.7.2)
-      mini_portile2 (~> 2.0.0.rc2)
+    nokogiri (1.6.8)
+      mini_portile2 (~> 2.1.0)
+      pkg-config (~> 1.1.7)
     notiffany (0.1.0)
       nenv (~> 0.1)
       shellany (~> 0.0)
@@ -242,6 +243,7 @@ GEM
       rake (>= 0.8.1)
     pg (0.18.4)
     phonelib (0.6.1)
+    pkg-config (1.1.7)
     poltergeist (1.9.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
