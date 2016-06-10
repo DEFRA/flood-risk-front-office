@@ -1,0 +1,14 @@
+// The govuk_elements_rails gem (https://github.com/alphagov/govuk_elements_rails)
+// allows us to pull in govuk_elements, a collection of sass and js building blocks.
+// Using this gem makes it easier for us to update to the latest version of govuk_elements.
+//
+// Note that govuk_elements_rails will bring in the govuk_frontend_toolkit
+// (as a dependency) but not govuk_template, which we need to specify in the Gemfile.
+// There is a fair bit to understand about how the 3 projects are related and loaded.
+// Pulling in govuk-elements.scss here will pull in all sass at:
+// https://github.com/alphagov/govuk_elements/blob/master/public/sass/_govuk-elements.scss
+@import 'govuk-elements';
+@import 'partials/forms';
+@import 'partials/footer';
+@import 'partials/static_pages';
+@import 'partials/check_your_answers';
