@@ -5,10 +5,6 @@ gem "flood_risk_engine",
     git: "https://github.com/EnvironmentAgency/flood-risk-engine",
     branch: "develop"
 
-gem "copy_kit",
-    git: "https://github.com/EnvironmentAgency/copykit",
-    branch: "master"
-
 gem "pg"
 gem "reform"
 gem "reform-rails"
