@@ -1,16 +1,25 @@
 <% if(Rails.env.development? && ENV['ADD_STATE_JUMPER_TOOLBAR'] == 'true') %>
-<div id="dev_tool_bar">
-  <ul>
-    <li>
-      <%= link_to 'OrgType', main_app.build_and_display_path(:page_user_type) %>
-      <%= link_to 'LA Postcode', main_app.build_and_display_path(:page_local_authority_postcode) %>
-      <%= link_to 'LA Address', main_app.build_and_display_path(:page_local_authority_address) %>
-      <%= link_to 'Ltd Comp', main_app.build_and_display_path(:page_limited_company_number) %>
-      <%= link_to 'CorrContactName', main_app.build_and_display_path(:page_correspondence_contact_name) %>
-      <%= link_to 'CorrContactEmail', main_app.build_and_display_path(:page_correspondence_contact_email) %>
-      <%= link_to 'Decl', main_app.build_and_display_path(:page_declaration) %>
-      <%= link_to 'Confirm', main_app.build_and_display_path(:page_confirmation) %>
-    </li>
-  </ul>
-</div>
+  <div id="dev_tool_bar">
+    <ul>
+      <li>
+        <%= link_to 'OrgType', main_app.build_and_display_path(:page_user_type) %>
+
+        <%= link_to 'LA Postcode', main_app.build_and_display_path(:page_local_authority_postcode) %>
+        <%= link_to 'LA Address', main_app.build_and_display_path(:page_local_authority_address) %>
+
+        <%= link_to 'Ltd C Num', main_app.build_and_display_path(:page_limited_company_number) %>
+        <%= link_to 'Ltd C Name', main_app.build_and_display_path(:page_limited_company_name) %>
+        <%= link_to 'Ltd C Postcode', main_app.build_and_display_path(:page_limited_company_postcode) %>
+        <%= link_to 'Ltd C Address', main_app.build_and_display_path(:page_limited_company_address) %>
+
+        <%= link_to 'Inv Name', main_app.build_and_display_path(:page_individual_name) %>
+
+        <%= link_to 'CorrContactName', main_app.build_and_display_path(:page_correspondence_contact_name) %>
+        <%= link_to 'CorrContactEmail', main_app.build_and_display_path(:page_correspondence_contact_email) %>
+
+        <%= link_to 'LA Decl', main_app.build_and_display_path(:page_declaration) %>
+        <%= link_to 'Confirm', main_app.build_and_display_path(:page_confirmation) %>
+      </li>
+    </ul>
+  </div>
 <% end %>

@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: https://github.com/EnvironmentAgency/flood-risk-engine
-  revision: 59f074aa242741ed63802a699757362023e7f03e
+  revision: 1dc005afae70f47bf3575d275474f3f44037c029
   branch: develop
   specs:
     flood_risk_engine (0.0.1)
@@ -26,6 +26,7 @@ GIT
       has_secure_token (~> 1.0.0)
       high_voltage (~> 3.0)
       jquery-rails (>= 3.1)
+      nokogiri (>= 1.6.8)
       os_map_ref (~> 0.4)
       phonelib (~> 0.6)
       rails (~> 4.2)
@@ -372,8 +373,6 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
-    turbolinks (2.5.3)
-      coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uber (0.0.15)
@@ -457,7 +456,6 @@ DEPENDENCIES
   spring-commands-rspec
   stackprof
   test_after_commit (~> 1.0.0)
-  turbolinks
   uglifier (>= 1.3.0)
   vcr (~> 3.0.1)
   web-console (~> 2.0)
