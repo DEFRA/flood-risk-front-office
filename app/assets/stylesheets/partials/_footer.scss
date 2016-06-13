@@ -1,35 +1,31 @@
-
+// Footer links list
 .ea-footer {
+  padding-right: 15px; // TODO - can we use govuk_frontend_toolkit preset variables instead of hard coded pixels ?
   font-size: 14px;
-  font-weight: 400;
   line-height: 1.14286;
-  padding-left: 15px;
-  padding-right: 15px;
+  font-weight: 400;
   text-transform: none;
-
-  .ea-footer li {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.14286;
-    margin-right: 10px;
-    text-transform: none;
-  }
-
-  .inline {
-    display: inline;
-  }
 }
-
-@media (min-width: 641px) {
+@media (min-width: 641px){
   .ea-footer {
+    padding-right: 30px;
     font-size: 16px;
     line-height: 1.25;
-    padding-left: 30px;
-    padding-right: 30px;
-
-    .ea-footer li {
-      font-size: 16px;
-      line-height: 1.25;
-    }
   }
+}
+.ea-footer li {
+  font-size: 14px;
+  line-height: 1.14286;
+  font-weight: 400;
+  text-transform: none;
+  margin-right: 10px;
+}
+@media (min-width: 641px) {
+  .ea-footer li {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+.ea-footer .inline {
+  display: inline;
 }

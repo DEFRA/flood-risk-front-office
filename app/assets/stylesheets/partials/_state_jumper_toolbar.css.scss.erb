@@ -1,0 +1,24 @@
+/* A simple toolbar for navigating states in DEV only - NOT FOR PRODUCTION */
+
+<% unless(Rails.env.production?) %>
+
+#dev_tool_bar ul
+{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+#dev_tool_bar ul li { display: inline; }
+
+#dev_tool_bar ul li a
+{
+  font-size: 10px;
+  text-decoration: none;
+  padding: .2em 1em;
+  color: #fff;
+  background-color: #036;
+}
+
+<% end %>

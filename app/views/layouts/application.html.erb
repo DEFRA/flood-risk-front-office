@@ -36,9 +36,9 @@
 <% content_for(:content) do %>
   <main id="content" role="main">
 
-    <div class="phase-banner-alpha">
-      <p>
-        <strong class="phase-tag">ALPHA</strong>
+      <div class="phase-banner-beta">
+        <p>
+          <strong class="phase-tag">BETA</strong>
         <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
       </p>
     </div>
@@ -51,11 +51,7 @@
 <% end %>
 
 <% content_for :footer_top do %>
-  <div class="ea-footer">
-    <p><%= t('global.footer_support_text') %> <%= link_to t("global.helpline_telephone_number"), "tel:#{t "global.helpline_telephone_number_uri" }" %></p>
-    <ul>
-    </ul>
-  </div>
+  <%= render("shared/footer") %>
 <% end %>
 
 <%-# LAST: RENDER main GDS template -%>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160601092629) do
+ActiveRecord::Schema.define(version: 20160603150808) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,14 +71,15 @@ ActiveRecord::Schema.define(version: 20160601092629) do
 
   create_table "flood_risk_engine_enrollments", force: :cascade do |t|
     t.integer  "applicant_contact_id"
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
     t.integer  "organisation_id"
     t.string   "step",                      limit: 50
     t.integer  "correspondence_contact_id"
     t.string   "token"
     t.integer  "secondary_contact_id"
     t.string   "reference_number",          limit: 12
+    t.integer  "status",                               default: 0, null: false
   end
 
   add_index "flood_risk_engine_enrollments", ["applicant_contact_id"], name: "index_flood_risk_engine_enrollments_on_applicant_contact_id", using: :btree
