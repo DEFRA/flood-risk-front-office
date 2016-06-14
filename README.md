@@ -86,22 +86,11 @@ Start mailcatcher with `$ mailcatcher` and navigate to
 Note that [mail_safe](https://github.com/myronmarston/mail_safe) maybe also be running in which
 case any development email will seem to be sent to your global git config email address.
 
+## Automatically generating views, forms and locale files during development
 
-## Generating template Views,Forms and Locale Data
-
-There is a thor task configured to run copykit against the river permissions prototype
-
-The prototype can be cloned from https://github.com/EnvironmentAgency/river-permissions-prototype
-
-Make sure you pull the latest version before generating the copykit output.
-
-The prototype is also versioned so you just point the task at the appropriate app/views folder
-and set your required output path, somewhere temporary so you can revierw the outout befoer copying into FRE e.g. :
-
-```ruby
-thor copykit:river_permissions:convert -i ../river-permissions/app/views/version_1/  -o /tmp/riverperms_1
-```
-
+Please see the [copy_kit gem](https://github.com/EnvironmentAgency/copykit)
+if, during development, you would like to automatically create soure files for this project based on the
+[River permissions prototype](https://github.com/EnvironmentAgency/river-permissions-prototype).
 
 ## Quality
 
