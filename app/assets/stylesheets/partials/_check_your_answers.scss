@@ -1,4 +1,12 @@
 
+table.check-your-answers {
+  margin-bottom:$gutter;
+  th{
+    font-weight: 400;
+    font-size:19px
+  }
+}
+
 .check-your-answers td {
   font-family: "nta", Arial, sans-serif;
   font-size: 16px;

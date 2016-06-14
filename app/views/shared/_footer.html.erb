@@ -1,0 +1,11 @@
+<div class="ea-footer">
+  <p>
+    <%= t('flood_risk_engine.shared.footer.support_text') %>
+    <%= link_to t("flood_risk_engine.shared.footer..helpline_telephone_number"),
+                "tel: #{t "flood_risk_engine.shared.footer.helpline_telephone_number_uri" }" %>
+  </p>
+  <ul>
+    <li class="inline"><%= link_to 'Privacy', page_path('privacy_policy'),  target: "_blank" %></li>
+    <li class="inline"><%= link_to 'Cookies', page_path('cookies'),  target: "_blank" %></li>
+  </ul>
+</div>

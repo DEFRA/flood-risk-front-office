@@ -19,23 +19,30 @@ span.postcode {
   text-transform: uppercase;
 }
 
-span.exmpt {
-  float: right;
-  font-weight: bold;
-  margin-right: -3em;
+
+span.exmpt
+{
+  font-weight:bold;
+  float:right;
+  margin-right:-3em;
 }
 
-label.exemption {
-  background-color: #ededed;
-  border-color: #ededed;
+label.exemption
+{
+  background-color:#ededed;
+  border-color:#ededed;
   padding-right: 4em;
 }
 
-@media (min-width: 641px) {
-  label.exemption {
-    width: 99%;
+@media screen and (min-width: 320px)
+{
+  label.exemption
+  {
+    width: 66.6666666667%;
   }
 }
+
+
 
 .form-control {
   @include box-sizing(border-box);

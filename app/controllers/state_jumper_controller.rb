@@ -12,6 +12,7 @@ unless Rails.env.production?
 
   class StateJumperController < ApplicationController
 
+    # rubocop:disable all
     def build_and_display
       # Get weird problems with factories with has_many associations, when they've already been used,
       # so while obviously not very efficient, this seems to prevent that issue
@@ -23,8 +24,11 @@ unless Rails.env.production?
       state = params["state"] || enrollment.current_step
       Rails.logger.debug("Jumping #{enrollment.inspect} to STATE [#{state}]")
 
+      cookies.encrypted[:journey_token] = { value: enrollment.token }
+
       redirect_to flood_risk_engine.enrollment_step_path(enrollment, state)
     end
+    # rubocop:enable all
 
   end
 
