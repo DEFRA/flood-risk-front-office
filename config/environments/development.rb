@@ -54,4 +54,13 @@ Rails.application.configure do
     authentication: :plain,
     enable_starttls_auto: true
   }
+
+  if defined? Bullet
+    config.after_initialize do
+      Bullet.enable = true # enable Bullet gem
+      Bullet.alert = false # pop up a JavaScript alert in the browser
+      Bullet.bullet_logger = true # log to the Bullet log file
+      Bullet.console = true # log warnings to your browser's console.log
+    end
+  end
 end
