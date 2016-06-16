@@ -13,3 +13,10 @@
     margin-bottom: 10px;
   }
 }
+
+table.cookies-table {
+  margin:$gutter-half 0;
+  td {
+    vertical-align:top;
+  }
+}
