@@ -11,15 +11,13 @@
 // about supported directives.
 //
 //= require jquery
+//= require details.polyfill
 //= require jquery_ujs
 //= require flood_risk_engine/application
 //= require govuk/selection-buttons
 //= require show_hide
-//
-
 
 $(document).ready(function() {
-
   // Use GOV.UK selection-buttons.js to set selected
   // and focused states for block labels
   var $blockLabels = $(".block-label input[type='radio'], .block-label input[type='checkbox']");
@@ -30,5 +28,4 @@ $(document).ready(function() {
   var toggleContent = new ShowHideContent();
   toggleContent.showHideRadioToggledContent();
   toggleContent.showHideCheckboxToggledContent();
-
 });

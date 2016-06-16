@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/EnvironmentAgency/flood-risk-engine
-  revision: 7c2ce2fda1fe2672307daa87a57c75e128db123d
+  revision: 42ac3b6b33964ec373e53cef57432301883ada09
   branch: develop
   specs:
     flood_risk_engine (0.0.1)
@@ -134,7 +134,7 @@ GEM
       representable (>= 2.4.0, <= 3.1.0)
       uber
     docile (1.1.5)
-    domain_name (0.5.20160310)
+    domain_name (0.5.20160615)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.1.1)
     dotenv-rails (2.1.1)
