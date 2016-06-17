@@ -15,8 +15,17 @@
 }
 
 table.cookies-table {
-  margin:$gutter-half 0;
+  margin: $gutter-half 0;
   td {
-    vertical-align:top;
+    vertical-align: top;
+  }
+}
+
+.contact {
+  border-left: 1px solid #bfc1c3;
+  padding-left: 15px;
+
+  span.type {
+    display: block;
   }
 }
