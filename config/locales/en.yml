@@ -5,4 +5,9 @@ en:
   global_proposition_header: Register your flood risk activity
   global:
     continue: Continue
+  layouts:
+    application:
+      beta: BETA
+      feedback: This is a new service – your %{link} will help us to improve it.
+      feedback_link: feedback
 

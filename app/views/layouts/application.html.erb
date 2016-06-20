@@ -36,10 +36,20 @@
 <% content_for(:content) do %>
   <main id="content" role="main">
 
-      <div class="phase-banner-beta">
-        <p>
-          <strong class="phase-tag">BETA</strong>
-        <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    <div class="phase-banner-beta">
+      <p>
+        <strong class="phase-tag"><%= t(".beta")  %></strong>
+        <span>
+          <%= t(
+                ".feedback",
+                link: link_to(
+                  t(".feedback_link"),
+                  FloodRiskEngine.feedback_page_url,
+                  target: "_blank"
+                )
+              ).html_safe
+          %>
+        </span>
       </p>
     </div>
 
