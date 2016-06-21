@@ -349,6 +349,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  airbrake (~> 5.3)
   before_commit (~> 0.6)
   bullet
   byebug

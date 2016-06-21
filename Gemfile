@@ -53,4 +53,5 @@ end
 group :production do
   gem "rails_12factor" # Required for Heroku - can be removed when Heroku apps decommissioned
   gem "passenger", "~> 5.0.28", require: "phusion_passenger/rack_handler" # Use Passenger as our web-server/app-server (e.g. on AWS via Upstart, Heroku via Procfile)
+  gem "airbrake", "~> 5.3" # Airbrake catches exceptions, sends them to https://dst-errbit.herokuapp.com
 end
