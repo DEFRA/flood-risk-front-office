@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/EnvironmentAgency/flood-risk-engine
-  revision: e3f704b7762b6fd15c89197e1502aeb70cb99863
+  revision: da578efd9ed10a89557fb200245c247b93fe105c
   branch: develop
   specs:
     flood_risk_engine (0.0.1)
@@ -19,8 +19,8 @@ GIT
       os_map_ref (~> 0.4)
       phonelib (~> 0.6)
       rails (~> 4.2)
-      reform (~> 2.1)
-      reform-rails (~> 0.1)
+      reform (= 2.1.0)
+      reform-rails (= 0.1.0)
       uk_postcode (~> 2.1)
       validates_email_format_of (~> 1.6)
       virtus (~> 1.0)
@@ -121,7 +121,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     dibber (0.5.0)
     diff-lcs (1.2.5)
-    disposable (0.3.0)
+    disposable (0.2.6)
       declarative (~> 0.0.6)
       representable (>= 2.4.0, <= 3.1.0)
       uber
@@ -244,13 +244,11 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (11.2.2)
-    reform (2.2.1)
-      disposable (>= 0.3.0, < 0.4.0)
+    reform (2.1.0)
+      disposable (>= 0.2.2, < 0.3.0)
       representable (>= 2.4.0, < 3.1.0)
       uber (~> 0.0.11)
-    reform-rails (0.1.2)
-      activemodel (>= 3.2)
-      reform (>= 2.2.0.rc1)
+    reform-rails (0.1.0)
     representable (3.0.0)
       declarative (~> 0.0.5)
       uber (~> 0.0.15)
