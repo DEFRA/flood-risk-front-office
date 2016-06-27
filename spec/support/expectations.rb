@@ -106,7 +106,7 @@ end
 RSpec::Matchers.define :have_nothing_selected do
   match do |page_object|
     page_object.class.radio_button_ids.each do |id|
-      expect(find('#' + id)).to_not be_checked
+      expect(find("#" + id)).to_not be_checked
     end
   end
 end
