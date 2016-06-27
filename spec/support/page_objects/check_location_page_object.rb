@@ -9,11 +9,11 @@ class CheckLocationPageObject < BasePageObject
   radio_button_helpers [:yes_option, :no_option]
 
   def yes_checked?
-    expect(find('#yes_option')).to be_checked
+    expect(find("#yes_option")).to be_checked
   end
 
   def no_checked?
-    expect(find('#no_option')).to_not be_checked
+    expect(find("#no_option")).to_not be_checked
   end
 
   def advance_page(yes = true)

@@ -1,10 +1,10 @@
 GIT
   remote: https://github.com/EnvironmentAgency/flood-risk-engine
-  revision: da578efd9ed10a89557fb200245c247b93fe105c
+  revision: d036e5a20fabe31201dc09ec4010a0bc10394750
   branch: develop
   specs:
     flood_risk_engine (0.0.1)
-      activerecord-session_store (~> 0.1)
+      activerecord-session_store (~> 1.0)
       airbrake (~> 5.3.0)
       airbrake-ruby (~> 1.3.2)
       dibber (~> 0.5)
@@ -57,10 +57,12 @@ GEM
       activemodel (= 4.2.6)
       activesupport (= 4.2.6)
       arel (~> 6.0)
-    activerecord-session_store (0.1.2)
-      actionpack (>= 4.0.0, < 5)
-      activerecord (>= 4.0.0, < 5)
-      railties (>= 4.0.0, < 5)
+    activerecord-session_store (1.0.0)
+      actionpack (>= 4.0, < 5.1)
+      activerecord (>= 4.0, < 5.1)
+      multi_json (~> 1.11, >= 1.11.2)
+      rack (>= 1.5.2, < 3)
+      railties (>= 4.0, < 5.1)
     activesupport (4.2.6)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
@@ -117,7 +119,7 @@ GEM
       safe_yaml (~> 1.0.0)
     database_cleaner (1.5.3)
     debug_inspector (0.0.2)
-    declarative (0.0.7)
+    declarative (0.0.8)
       uber (>= 0.0.15)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
