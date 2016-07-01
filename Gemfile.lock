@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/EnvironmentAgency/flood-risk-engine
-  revision: dca074af2ab68522030ef71929fe61584cb2d454
+  revision: 5718e1558b6dcd7f6fe68ac73a0a95f6af51fd92
   branch: develop
   specs:
     flood_risk_engine (0.0.1)
@@ -80,7 +80,7 @@ GEM
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
-    before_commit (0.8.1)
+    before_commit (0.8.2)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
