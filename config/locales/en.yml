@@ -2,7 +2,7 @@
 en:
   back: Back
   backto_start_link: Back
-  global_proposition_header: Register your flood risk activity
+  global_proposition_header: Register a flood risk activity
   global:
     continue: Continue
   layouts:
@@ -10,4 +10,3 @@ en:
       beta: BETA
       feedback: This is a new service – your %{link} will help us to improve it.
       feedback_link: feedback
-
