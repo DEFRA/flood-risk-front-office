@@ -44,7 +44,7 @@
                 ".feedback",
                 link: link_to(
                   t(".feedback_link"),
-                  FloodRiskEngine.feedback_page_url,
+                  ::ApplicationHelper.feedback_survey_url(content_for(:page_title)),
                   target: "_blank"
                 )
               ).html_safe
