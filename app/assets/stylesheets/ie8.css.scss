@@ -1,0 +1,16 @@
+// add exemptions styling - mainly to position FRA code
+span.exmpt {
+  font-weight: 700;
+  float: right;
+  margin-right: -80px;
+  display: block;
+  zoom: 1;
+  position: relative;
+}
+
+label.exemption {
+  background-color: #ededed;
+  border-color: #ededed;
+  padding-right: 100px;
+  width: 66.6666666667%;
+}

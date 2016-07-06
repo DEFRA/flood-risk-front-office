@@ -1,8 +1,6 @@
 <% content_for(:head) do %>
   <!--[if gt IE 8]><!--><%= stylesheet_link_tag "application", media: "all" %><!--<![endif]-->
-  <!--[if IE 6]><%= stylesheet_link_tag "elements-page-ie6" %><![endif]-->
-  <!--[if IE 7]><%= stylesheet_link_tag "elements-page-ie7" %><![endif]-->
-  <!--[if IE 8]><%= stylesheet_link_tag "elements-page-ie8" %><![endif]-->
+  <!--[if IE 8]><%= stylesheet_link_tag "ie8" %><![endif]-->
   <meta name="format-detection" content="telephone=no" />
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
