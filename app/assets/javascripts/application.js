@@ -13,7 +13,7 @@
 //= require jquery
 //= require details.polyfill
 //= require jquery_ujs
-//= require flood_risk_engine/application
+//= require flood_risk_engine
 //= require govuk/selection-buttons
 //= require show_hide
 
