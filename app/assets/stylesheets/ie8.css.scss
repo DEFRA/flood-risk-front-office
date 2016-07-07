@@ -18,3 +18,38 @@ label.exemption {
 #content {
   margin: 0 auto;
 }
+
+// IE8 doesn't support media queries so we have to redefine these input
+// widths here instead.
+
+.form-control-char-auto { // intended for select options that have pre-populated text
+  width: auto;
+}
+
+.form-control-char-50 {
+  width: 26em;
+}
+
+.form-control-char-35 {
+  width: 18.5em;
+}
+
+.form-control-char-25 {
+  width: 13.5em;
+}
+
+.form-control-char-15 {
+  width: 8.5em;
+}
+
+.form-control-char-10 {
+  width: 6em;
+}
+
+.form-control-char-5 {
+  width: 3.5em;
+}
+
+.form-control-char-3 {
+  width: 2.5em;
+}
