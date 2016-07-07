@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160615130330) do
+ActiveRecord::Schema.define(version: 20160629131906) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,18 @@ ActiveRecord::Schema.define(version: 20160615130330) do
   add_index "flood_risk_engine_addresses", ["token"], name: "index_flood_risk_engine_addresses_on_token", unique: true, using: :btree
   add_index "flood_risk_engine_addresses", ["uprn"], name: "index_flood_risk_engine_addresses_on_uprn", using: :btree
 
+  create_table "flood_risk_engine_comments", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
+    t.text     "content"
+    t.string   "event"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "flood_risk_engine_comments", ["commentable_type", "commentable_id"], name: "commentable_idx", using: :btree
+
   create_table "flood_risk_engine_contacts", force: :cascade do |t|
     t.integer  "contact_type",                            default: 0,  null: false
     t.integer  "title",                                   default: 0,  null: false
@@ -86,16 +98,16 @@ ActiveRecord::Schema.define(version: 20160615130330) do
 
   create_table "flood_risk_engine_enrollments", force: :cascade do |t|
     t.integer  "applicant_contact_id"
-    t.datetime "created_at",                                       null: false
-    t.datetime "updated_at",                                       null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
     t.integer  "organisation_id"
     t.string   "step",                      limit: 50
     t.integer  "correspondence_contact_id"
     t.string   "token"
     t.integer  "secondary_contact_id"
     t.string   "reference_number",          limit: 12
-    t.integer  "status",                               default: 0, null: false
     t.integer  "updated_by_user_id"
+    t.datetime "submitted_at"
   end
 
   add_index "flood_risk_engine_enrollments", ["applicant_contact_id"], name: "index_flood_risk_engine_enrollments_on_applicant_contact_id", using: :btree
@@ -106,11 +118,13 @@ ActiveRecord::Schema.define(version: 20160615130330) do
   add_index "flood_risk_engine_enrollments", ["updated_by_user_id"], name: "index_flood_risk_engine_enrollments_on_updated_by_user_id", using: :btree
 
   create_table "flood_risk_engine_enrollments_exemptions", force: :cascade do |t|
-    t.integer  "enrollment_id",             null: false
-    t.integer  "exemption_id",              null: false
-    t.integer  "status",        default: 0
+    t.integer  "enrollment_id",                        null: false
+    t.integer  "exemption_id",                         null: false
+    t.integer  "status",               default: 0
     t.datetime "expires_at"
     t.datetime "valid_from"
+    t.boolean  "asset_found",          default: false
+    t.boolean  "salmonid_river_found", default: false
   end
 
   add_index "flood_risk_engine_enrollments_exemptions", ["enrollment_id", "exemption_id"], name: "fre_enrollments_exemptions_enrollment_id_exemption_id", unique: true, using: :btree
@@ -184,17 +198,6 @@ ActiveRecord::Schema.define(version: 20160615130330) do
   add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true, using: :btree
   add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at", using: :btree
 
-  create_table "user_versions", force: :cascade do |t|
-    t.string   "item_type",  null: false
-    t.integer  "item_id",    null: false
-    t.string   "event",      null: false
-    t.string   "whodunnit"
-    t.text     "object"
-    t.datetime "created_at"
-  end
-
-  add_index "user_versions", ["item_type", "item_id"], name: "index_user_versions_on_item_type_and_item_id", using: :btree
-
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
     t.string   "encrypted_password",                 default: "", null: false
@@ -235,6 +238,17 @@ ActiveRecord::Schema.define(version: 20160615130330) do
   end
 
   add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
+
+  create_table "versions", force: :cascade do |t|
+    t.string   "item_type",  null: false
+    t.integer  "item_id",    null: false
+    t.string   "event",      null: false
+    t.string   "whodunnit"
+    t.text     "object"
+    t.datetime "created_at"
+  end
+
+  add_index "versions", ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id", using: :btree
 
   add_foreign_key "flood_risk_engine_address_searches", "flood_risk_engine_enrollments", column: "enrollment_id"
   add_foreign_key "flood_risk_engine_contacts", "flood_risk_engine_organisations", column: "partnership_organisation_id"
