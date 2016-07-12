@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/EnvironmentAgency/flood-risk-engine
-  revision: 7ae5733d05dd036b4ce497051c29fc98a6a863f4
+  revision: 5538e558cab8ca5c460d3d67f815985ff0f1dd63
   branch: develop
   specs:
     flood_risk_engine (0.0.1)
@@ -85,7 +85,7 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
-    bullet (5.1.0)
+    bullet (5.1.1)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.10.0)
     byebug (9.0.5)
@@ -151,7 +151,7 @@ GEM
     factory_girl_rails (4.6.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
-    faker (1.6.3)
+    faker (1.6.5)
       i18n (~> 0.5)
     ffi (1.9.10)
     finite_machine (0.11.3)
