@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/EnvironmentAgency/flood-risk-engine
-  revision: e142cab4ef150a2e24d5edfba426aeefcc7e619a
+  revision: adc741c484c660028de277943588fb7cd0e8a03d
   branch: develop
   specs:
     flood_risk_engine (0.0.1)
@@ -21,6 +21,7 @@ GIT
       rails (~> 4.2)
       reform (= 2.1.0)
       reform-rails (= 0.1.0)
+      sucker_punch (~> 2.0.2)
       uk_postcode (~> 2.1)
       validates_email_format_of (~> 1.6)
       virtus (~> 1.0)
@@ -308,6 +309,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    sucker_punch (2.0.2)
+      concurrent-ruby (~> 1.0.0)
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
