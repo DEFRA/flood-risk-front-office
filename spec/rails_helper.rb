@@ -104,6 +104,9 @@ RSpec.configure do |config|
 
   # Enables shortcut, t() instead of I18n.t() in tests
   config.include AbstractController::Translation
+
+  # Allow lookups to EA::AddressLookup to be mocked
+  config.include EA::AddressLookup::TestHelper::RspecMocks
 end
 
 VCR.configure do |c|
