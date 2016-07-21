@@ -22,9 +22,9 @@ CodeClimate::TestReporter.start
 require 'simplecov'
 SimpleCov.start 'rails' do
   # Exclude files here
-  # add_filter '...'
+  add_filter 'app/controllers/state_jumper_controller.rb'
+  add_filter 'app/controllers/application_controller.rb'
 end
-
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
