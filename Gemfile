@@ -33,14 +33,7 @@ end
 group :test do
   gem "capybara", "~> 2.6.2"
   gem "poltergeist", "~> 1.9.0" # Needed for headless testing with Javascript or pages that ref external sites
-  gem "selenium-webdriver", "~> 2.53.0"
-  gem "chromedriver-helper", "1.0.0"
   gem "capybara-email", "~> 2.5.0"
-  gem "launchy", require: false # save_and_open_page
-  gem "shoulda-matchers", "~> 3.1.1", require: false
-  gem "database_cleaner", "~> 1.5.1"
-  gem "vcr", "~> 3.0.1"
-  gem "webmock", "~> 1.24.2"
   gem "simplecov", "~> 0.11.2", require: false # Tool for checking code coverage
   gem "ci_reporter_rspec", "~> 1.0.0", require: false
   gem "codeclimate-test-reporter", "~> 0.5.2", require: false # Allow test coverage to be reported for codeclimate for displaying in the readme

@@ -6,9 +6,7 @@ Rails.application.routes.draw do
     get '/state_jumper/:factory/(:state)', :to => 'state_jumper#build_and_display', :as => :build_and_display
   end
 
-  # Root currently defined as a Static page  - defined in config/initializers/high_voltage.rb
-  # This is a Temporary Measure for show and tell etc - The real home page will be hosted on gov uk
-  # and eventually point to our real root
-  #
+  # Root currently defined as a static page - see config/initializers/high_voltage.rb
+  # If that page is ever moved to the engine, root will need to change to eg
   # root to: "flood_risk_engine/enrollments#new"
 end
