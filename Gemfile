@@ -4,7 +4,8 @@ ruby "2.3.1"
 
 gem "flood_risk_engine",
     git: "https://github.com/EnvironmentAgency/flood-risk-engine",
-    tag: "v1.0.0"
+    branch: "feature/RIP_143_check_answers_change_link"
+# tag: "v1.0.0" replaced :Tag with a :branch in order to test https://github.com/EnvironmentAgency/flood-risk-engine/pull/241
 
 gem "rails", "4.2.7"
 gem "pg", "~> 0.18.4"

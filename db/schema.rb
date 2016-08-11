@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160713141801) do
+ActiveRecord::Schema.define(version: 201607111338823) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -109,6 +109,7 @@ ActiveRecord::Schema.define(version: 20160713141801) do
     t.datetime "submitted_at"
     t.integer  "reference_number_id"
     t.integer  "updated_by_user_id"
+    t.boolean  "in_review"
   end
 
   add_index "flood_risk_engine_enrollments", ["applicant_contact_id"], name: "index_flood_risk_engine_enrollments_on_applicant_contact_id", using: :btree
@@ -255,6 +256,7 @@ ActiveRecord::Schema.define(version: 20160713141801) do
     t.string   "role_names"
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
+    t.string   "unique_session_id",      limit: 20
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
