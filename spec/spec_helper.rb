@@ -19,11 +19,11 @@ require "codeclimate-test-reporter"
 CodeClimate::TestReporter.start
 
 # Code coverage hook
-require 'simplecov'
-SimpleCov.start 'rails' do
+require "simplecov"
+SimpleCov.start "rails" do
   # Exclude files here
-  add_filter 'app/controllers/state_jumper_controller.rb'
-  add_filter 'app/controllers/application_controller.rb'
+  add_filter "app/controllers/state_jumper_controller.rb"
+  add_filter "app/controllers/application_controller.rb"
 end
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
@@ -68,15 +68,15 @@ RSpec.configure do |config|
   #   - http://myronmars.to/n/dev-blog/2014/05/notable-changes-in-rspec-3#new__config_option_to_disable_rspeccore_monkey_patching
   config.disable_monkey_patching!
 
-  # Many RSpec users commonly either run the entire suite or an individual
-  # file, and it's useful to allow more verbose output when running an
-  # individual spec file.
-  if config.files_to_run.one?
-    # Use the documentation formatter for detailed output,
-    # unless a formatter has already been configured
-    # (e.g. via a command-line flag).
-    config.default_formatter = 'doc'
-  end
+  # # Many RSpec users commonly either run the entire suite or an individual
+  # # file, and it's useful to allow more verbose output when running an
+  # # individual spec file.
+  # if config.files_to_run.one?
+  #   # Use the documentation formatter for detailed output,
+  #   # unless a formatter has already been configured
+  #   # (e.g. via a command-line flag).
+  #   config.default_formatter = "doc"
+  # end
 
   # Print the 10 slowest examples and example groups at the
   # end of the spec run, to help surface which specs are running
