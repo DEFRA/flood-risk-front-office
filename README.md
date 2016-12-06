@@ -1,9 +1,16 @@
-# Flood Risk Exemptions Service
+# Flood Risk Front Office
 
 [![Build Status](https://travis-ci.org/EnvironmentAgency/flood-risk-front-office.svg?branch=develop)](https://travis-ci.org/EnvironmentAgency/flood-risk-front-office)
 [![security](https://hakiri.io/github/EnvironmentAgency/flood-risk-front-office/develop.svg)](https://hakiri.io/github/EnvironmentAgency/flood-risk-front-office/develop)
 [![Code Climate](https://codeclimate.com/github/EnvironmentAgency/flood-risk-front-office/badges/gpa.svg)](https://codeclimate.com/github/EnvironmentAgency/flood-risk-front-office)
 [![Test Coverage](https://codeclimate.com/github/EnvironmentAgency/flood-risk-front-office/badges/coverage.svg)](https://codeclimate.com/github/EnvironmentAgency/flood-risk-front-office)
+
+A Ruby on Rails application delivering the _Flood risk
+activity exemptions_ service.
+
+This is a thin, host application which merely mounts and provides styling for the
+[flood_risk_engine](https://github.com/EnvironmentAgency/flood-risk-engine)
+Rails engine. The engine is responsible for the service implementation.
 
 ## Development Environment
 

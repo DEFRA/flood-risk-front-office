@@ -6,7 +6,7 @@ gem "flood_risk_engine",
     git: "https://github.com/EnvironmentAgency/flood-risk-engine",
     tag: "v1.0.0"
 
-gem "rails", "4.2.7"
+gem "rails", "4.2.7.1"
 gem "pg", "~> 0.18.4"
 gem "govuk_template", "~> 0.17.0" # GDS layout into which we inject content using yield and content_for
 gem "govuk_frontend_toolkit", "~> 4.12.0" # Access to some of the most common styles and scripts used by GDS
