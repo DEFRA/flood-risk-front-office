@@ -4,7 +4,7 @@ ruby "2.3.1"
 
 gem "flood_risk_engine",
     git: "https://github.com/EnvironmentAgency/flood-risk-engine",
-    tag: "v1.0.0"
+    tag: "v1.0.1"
 
 gem "rails", "4.2.7.1"
 gem "pg", "~> 0.18.4"
