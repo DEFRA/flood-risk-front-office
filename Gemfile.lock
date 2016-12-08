@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/EnvironmentAgency/flood-risk-engine
-  revision: 16fbde254277aec1513bca15de2e9e87d0d254b5
-  branch: master
+  revision: eab66c2e2efd2c1da37bd23bf655b65173de0564
+  tag: v1.0.1
   specs:
     flood_risk_engine (1.0.1)
       activerecord-session_store (~> 1.0)
@@ -372,4 +372,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.12.5
+   1.13.6
