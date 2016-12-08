@@ -8,7 +8,7 @@ gem "dotenv-rails", "~> 2.1"
 
 gem "flood_risk_engine",
     git: "https://github.com/EnvironmentAgency/flood-risk-engine",
-    branch: "master"
+    tag: "v1.0.1"
 
 gem "govuk_elements_rails", "~> 1.2.1"
 # Access to some of the most common styles and scripts used by GDS
