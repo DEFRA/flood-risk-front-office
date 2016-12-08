@@ -4,82 +4,69 @@
 [![security](https://hakiri.io/github/EnvironmentAgency/flood-risk-front-office/develop.svg)](https://hakiri.io/github/EnvironmentAgency/flood-risk-front-office/develop)
 [![Code Climate](https://codeclimate.com/github/EnvironmentAgency/flood-risk-front-office/badges/gpa.svg)](https://codeclimate.com/github/EnvironmentAgency/flood-risk-front-office)
 [![Test Coverage](https://codeclimate.com/github/EnvironmentAgency/flood-risk-front-office/badges/coverage.svg)](https://codeclimate.com/github/EnvironmentAgency/flood-risk-front-office)
+[![Dependency Status](https://dependencyci.com/github/EnvironmentAgency/flood-risk-engine/badge)](https://dependencyci.com/github/EnvironmentAgency/flood-risk-engine)
 
-A Ruby on Rails application delivering the _Flood risk
-activity exemptions_ service.
+A Ruby on Rails application delivering the [Flood risk activity exemptions service](https://register-flood-risk-exemption.service.gov.uk).
 
-This is a thin, host application which merely mounts and provides styling for the
-[flood_risk_engine](https://github.com/EnvironmentAgency/flood-risk-engine)
-Rails engine. The engine is responsible for the service implementation.
+This is a thin, host application which merely mounts and provides styling for the [flood_risk_engine](https://github.com/EnvironmentAgency/flood-risk-engine) rails engine. The engine is responsible for the service implementation.
 
-## Development Environment
+## Prerequisites
 
-## Install global system dependencies
+Please make sure the following are installed:
 
-The following system dependencies are required, regardless of how you install the development environment.
+- [Ruby 2.3.1](https://www.ruby-lang.org) installed for example via [RVM](https://rvm.io) or [Rbenv](https://github.com/sstephenson/rbenv/blob/master/README.md)
+- [Bundler](http://bundler.io/)
+- [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [Postgresql](http://www.postgresql.org/download)
+- [Phantomjs](https://github.com/teampoltergeist/poltergeist#installing-phantomjs)
 
-* [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* [git-flow](https://github.com/nvie/gitflow/wiki/Installation)
+## Installation
 
-### Obtain the source code
+Clone the repository and install its gem dependencies:
 
-Clone the repository, copying the project into a working directory:
+```bash
+git clone https://github.com/EnvironmentAgency/flood-risk-front-office.git
+cd flood-risk-front-office
+bundle
+```
 
-    git clone https://github.com/EnvironmentAgency/flood-risk-front-office.git
-    cd flood-risk-front-office
+### .env
 
-We use "git flow" to manage development and features branches.
-To initialise git flow for the project, you need to run:
+The project uses the [dotenv](https://github.com/bkeepers/dotenv) gem to load environment variables when the app starts. **Dotenv** expects to find a `.env` file in the project root.
 
-    git checkout -t origin/master
-    git flow init # choose the defaults
-    git checkout develop
+Duplicate `.env.example` and rename the copy as `.env`
 
-### Local Installation
+Open it and update `SECRET_KEY_BASE` and the settings for database, email etc.
 
-#### Local system dependencies
+If Google analytics is required, uncomment the line `GOOGLE_TAG=ABC-DEFGHI` and replace ABC-DEFGHI with the required Google tag.
 
-* [Ruby 2.2.x](https://www.ruby-lang.org) (e.g. via [RVM](https://rvm.io) or [Rbenv](https://github.com/sstephenson/rbenv/blob/master/README.md))
-* [Postgresql](http://www.postgresql.org/download)
-* [Phantomjs](https://github.com/teampoltergeist/poltergeist#installing-phantomjs) (test specs)
-
-#### Application gems _(local)_
-
-Run the following to download the app dependencies ([rubygems](https://www.ruby-lang.org/en/libraries/))
-
-    cd <flood-risk-front-office-project-directory>
-    gem install bundler
-    bundle install
-
-#### Databases _(local)_
+### Database
 
 The usual rails commands can be used to manage the databases for example
 
-    bundle exec rake db:create
-    bundle exec rake db:migrate db:seed
+```bash
+bundle exec rake db:create
+bundle exec rake db:migrate
+bundle exec rake db:seed
+```
 
-#### .env configuration file
+Add `RAILS_ENV=test` to the commands when preparing the test database.
 
-The project uses the [dotenv](https://github.com/bkeepers/dotenv) gem which allows enviroment variables to be loaded from a ```.env``` configuration file in the project root.
+## Running the app
 
-Duplicate ```./env.example``` and rename the copy as ```./env```
+To start the service locally run
 
-Open it and update SECRET_KEY_BASE and settings for database, email etc.
-
-If Google analytics is required, uncomment the line ```GOOGLE_TAG=ABC-DEFGHI```
-and replace ABC-DEFGHI with the required Google tag.
-
-#### Start the service _(local)_
-
-To start the service locally simply run:
-
-    bundle exec rails server
+```bash
+bundle exec rails s
+```
 
 You can then access the web site at http://localhost:3000
 
-#### Intercepting email in development
+## Email
 
-You can use mailcatcher to trap and view outgoing email.
+### Intercepting email in development
+
+You can use [Mailcatcher](https://mailcatcher.me/) to intercept emails sent out during development.
 
 Make sure you have the following in your `.env` or `.env.development` file:
 
@@ -89,39 +76,35 @@ Make sure you have the following in your `.env` or `.env.development` file:
     EMAIL_HOST='localhost'
     EMAIL_PORT='1025'
 
-Start mailcatcher with `$ mailcatcher` and navigate to
-[http://127.0.0.1:1080](http://127.0.0.1:1080) in your browser.
+Install **Mailcatcher** (`gem install mailcatcher`) and run it by just calling `mailcatcher`
 
-Note that [mail_safe](https://github.com/myronmarston/mail_safe) maybe also be running in which
-case any development email will seem to be sent to your global git config email address.
+Then navigate to [http://127.0.0.1:1080](http://127.0.0.1:1080) in your browser.
 
-## Automatically generating views, forms and locale files during development
-
-Please see the [copy_kit gem](https://github.com/EnvironmentAgency/copykit)
-if, during development, you would like to automatically create soure files for this project based on the
-[River permissions prototype](https://github.com/EnvironmentAgency/river-permissions-prototype).
-
-## Quality
-
-We use [Before Commit](https://github.com/EnvironmentAgency/before_commit) to install and manage a number
-of tools such as rubocop, brakeman, and i18n-tasks to help maintain quality, reusable code.
-
-### Potential Gotcha
-
-We found an issue in some cases. When run ad-hoc via ```overcommit --run``` it uses your local/rvm ruby. When it runs via the actual git pre-commit hook, it may pick up your system Ruby first.
-
-If this is an issue you may need to ensure the gem is installed in both your [rvm](https://rvm.io/) ruby and system ruby.
+> Note that [mail_safe](https://github.com/myronmarston/mail_safe) maybe also be running in which case any development email will seem to be sent to your global git config email address.
 
 ## Tests
 
-We use [RSpec](http://rspec.info/) for unit testing.
+We use [RSpec](http://rspec.info/) and focus on feature tests in this project that go through the journey for each organisation type (unit testing is done in [flood _risk_engine](https://github.com/EnvironmentAgency/flood-risk-engine) and acceptance tests in [Flood risk acceptance tests](https://github.com/EnvironmentAgency/flood-risk-acceptance-tests)).
 
-### Test database seeding
+To run [Rubocop](https://github.com/bbatsov/rubocop) and the test suite
 
-To execute the unit tests simply enter:
+```bash
+bundle exec rake
+```
 
-    rspec
+To run just the tests
 
+```bash
+bundle exec rake spec
+```
+
+## Quality and conventions
+
+The project is linked to [Travis CI](https://travis-ci.org/EnvironmentAgency/flood-risk-front-office) and all pushes to the **GitHub** are automatically checked.
+
+The checks include running all tests plus **Rubocop**, but also tools like [HTLMHint](https://github.com/yaniswang/HTMLHint) and [i18n-tasks](https://github.com/glebm/i18n-tasks). Check the `.travis.yml` for full details, specifically the `before_script:` section.
+
+It is left to each developer to setup their environment such that these checks all pass before presenting their code for review and merging.
 
 ## Contributing to this project
 

@@ -16,22 +16,6 @@ ActiveRecord::Schema.define(version: 20160713141801) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "enrollment_exports", force: :cascade do |t|
-    t.date     "from_date",                    null: false
-    t.date     "to_date",                      null: false
-    t.string   "created_by",                   null: false
-    t.string   "file_name",                    null: false
-    t.integer  "state",            default: 0, null: false
-    t.text     "failure_text"
-    t.integer  "record_count"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
-    t.integer  "date_field_scope", default: 0
-  end
-
-  add_index "enrollment_exports", ["created_at"], name: "index_enrollment_exports_on_created_at", using: :btree
-  add_index "enrollment_exports", ["file_name"], name: "index_enrollment_exports_on_file_name", unique: true, using: :btree
-
   create_table "flood_risk_engine_address_searches", force: :cascade do |t|
     t.integer  "enrollment_id", null: false
     t.string   "postcode"
@@ -120,20 +104,17 @@ ActiveRecord::Schema.define(version: 20160713141801) do
   add_index "flood_risk_engine_enrollments", ["updated_by_user_id"], name: "index_flood_risk_engine_enrollments_on_updated_by_user_id", using: :btree
 
   create_table "flood_risk_engine_enrollments_exemptions", force: :cascade do |t|
-    t.integer  "enrollment_id",                                  null: false
-    t.integer  "exemption_id",                                   null: false
-    t.integer  "status",                         default: 0
+    t.integer  "enrollment_id",                        null: false
+    t.integer  "exemption_id",                         null: false
+    t.integer  "status",               default: 0
     t.datetime "expires_at"
     t.datetime "valid_from"
-    t.boolean  "asset_found",                    default: false
-    t.boolean  "salmonid_river_found",           default: false
-    t.integer  "accept_reject_decision_user_id"
-    t.datetime "accept_reject_decision_at"
+    t.boolean  "asset_found",          default: false
+    t.boolean  "salmonid_river_found", default: false
     t.integer  "deregister_reason"
-    t.integer  "assistance_mode",                default: 0
+    t.integer  "assistance_mode",      default: 0
   end
 
-  add_index "flood_risk_engine_enrollments_exemptions", ["accept_reject_decision_user_id"], name: "by_change_user", using: :btree
   add_index "flood_risk_engine_enrollments_exemptions", ["deregister_reason"], name: "by_deregister_reason", using: :btree
   add_index "flood_risk_engine_enrollments_exemptions", ["enrollment_id", "exemption_id"], name: "fre_enrollments_exemptions_enrollment_id_exemption_id", unique: true, using: :btree
 
@@ -208,17 +189,6 @@ ActiveRecord::Schema.define(version: 20160713141801) do
 
   add_index "flood_risk_engine_water_management_areas", ["code"], name: "fre_water_boundary_areas_code", unique: true, using: :btree
 
-  create_table "roles", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "resource_id"
-    t.string   "resource_type"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
-  add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
-
   create_table "sessions", force: :cascade do |t|
     t.string   "session_id", null: false
     t.text     "data"
@@ -228,74 +198,6 @@ ActiveRecord::Schema.define(version: 20160713141801) do
 
   add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true, using: :btree
   add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at", using: :btree
-
-  create_table "users", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",                 default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.integer  "sign_in_count",                      default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.string   "invitation_token"
-    t.datetime "invitation_created_at"
-    t.datetime "invitation_sent_at"
-    t.datetime "invitation_accepted_at"
-    t.integer  "invitation_limit"
-    t.integer  "invited_by_id"
-    t.string   "invited_by_type"
-    t.integer  "invitations_count",                  default: 0
-    t.integer  "failed_attempts",                    default: 0,  null: false
-    t.string   "unlock_token"
-    t.text     "disabled_comment"
-    t.datetime "disabled_at"
-    t.datetime "locked_at"
-    t.string   "role_names"
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
-  end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["invitation_token"], name: "index_users_on_invitation_token", unique: true, using: :btree
-  add_index "users", ["invitations_count"], name: "index_users_on_invitations_count", using: :btree
-  add_index "users", ["invited_by_id", "invited_by_type"], name: "index_users_on_invited_by_id_and_invited_by_type", using: :btree
-  add_index "users", ["invited_by_id"], name: "index_users_on_invited_by_id", using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-
-  create_table "users_roles", id: false, force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "role_id"
-  end
-
-  add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
-
-  create_table "version_associations", force: :cascade do |t|
-    t.integer "version_id"
-    t.string  "foreign_key_name", null: false
-    t.integer "foreign_key_id"
-  end
-
-  add_index "version_associations", ["foreign_key_name", "foreign_key_id"], name: "index_version_associations_on_foreign_key", using: :btree
-  add_index "version_associations", ["version_id"], name: "index_version_associations_on_version_id", using: :btree
-
-  create_table "versions", force: :cascade do |t|
-    t.string   "item_type",       null: false
-    t.integer  "item_id",         null: false
-    t.string   "event",           null: false
-    t.string   "whodunnit"
-    t.text     "object"
-    t.datetime "created_at"
-    t.string   "status"
-    t.string   "whodunnit_email"
-    t.string   "ip"
-    t.string   "user_agent"
-    t.integer  "transaction_id"
-  end
-
-  add_index "versions", ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id", using: :btree
-  add_index "versions", ["transaction_id"], name: "index_versions_on_transaction_id", using: :btree
 
   add_foreign_key "flood_risk_engine_address_searches", "flood_risk_engine_enrollments", column: "enrollment_id"
   add_foreign_key "flood_risk_engine_contacts", "flood_risk_engine_organisations", column: "partnership_organisation_id"
@@ -307,6 +209,4 @@ ActiveRecord::Schema.define(version: 20160713141801) do
   add_foreign_key "flood_risk_engine_organisations", "flood_risk_engine_contacts", column: "contact_id"
   add_foreign_key "flood_risk_engine_partners", "flood_risk_engine_contacts", column: "contact_id"
   add_foreign_key "flood_risk_engine_partners", "flood_risk_engine_organisations", column: "organisation_id"
-  add_foreign_key "users_roles", "roles"
-  add_foreign_key "users_roles", "users"
 end

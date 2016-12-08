@@ -1,48 +1,58 @@
 language: ruby
 cache: bundler
 
-addons:
-  postgresql: "9.4"
+rvm:
+  - 2.3.1
+
+# Travis CI clones repositories to a depth of 50 commits, which is only really
+# useful if you are performing git operations.
+# https://docs.travis-ci.com/user/customizing-the-build/#Git-Clone-Depth
+git:
+  depth: 3
 
 # We need nodejs version >= 4 to be compatible with htmlhint >= 0.9.13
 # This overwrites the system node  0.10.x
 before_install:
   - nvm install node
 
-rvm:
-  - 2.3.1
-
-bundler_args: --binstubs=./bundler_stubs
-
 before_script:
-  - npm install -g jshint coffeelint htmlhint csslint # overcommit packages
+  # We install and run these checks first prior to the data migrations in order
+  # 'fail fast'. There is no point in running the migrations if these checks
+  # fail.
+  # Install and run brakeman. We always go with the latest (unlike rubocop where
+  # we include the dependency in the project tied to a version) because we want
+  # to check the project against the latest known vulnerabilities.
+  - gem install brakeman --no-ri --no-rdoc
+  - brakeman
+  # Install and run i18n-tasks.
+  - gem install i18n-tasks -v 0.9.6 --no-ri --no-rdoc
+  # TO FIX: Running this will report approx 275 missing keys. This is because of
+  # the way we have used translations in the project. Initial attempts to use
+  # magic comments (see https://github.com/glebm/i18n-tasks#fine-tuning) has not
+  # brought forth a solution so until this matter is investigated further and
+  # resolved this check needs to be left out of the build.
+  # - i18n-tasks missing
+  - i18n-tasks unused
+  # Install and run overcommit.
+  - gem install overcommit -v 0.37.0 --no-ri --no-rdoc
+  - overcommit --sign
+  - overcommit --run
+  # Install and run htmlhint
+  - npm install -g htmlhint
+  - htmlhint ./app/**/*.html.erb
+  # Replace database.yml with database.travis.yml (but leave filename as
+  # database.yml). database.travis.yml is the config needed for Travis, and it
+  # needs to be in place before we run the migrations.
   - cp config/database.travis.yml config/database.yml
   - RAILS_ENV=test bundle exec rake db:create
-  - bundle exec rake --trace before_commit:run_without_checks
-
-script:
-  - htmlhint -c ./.htmlhintrc ./app/**/*.html.erb
-  - git config --global user.email test@example.com # overcommit Author
-  - git config --global user.name "Test Example" # overcommit Author
-  - BUNDLE_GEMFILE=.overcommit_gems.rb bundle exec overcommit --run
   - RAILS_ENV=test bundle exec rake db:migrate --trace
-  - bundle exec "rspec --format progress spec"
 
 # This section was added as per https://docs.travis-ci.com/user/code-climate/
 # To protect our codeclimate stats rather than adding the Codeclimate API key for this project
 # in the open we used this guide https://docs.travis-ci.com/user/encryption-keys/ to encryt the
 # value. Essentially install travis gem, then run `travis encrypt <my_code_climate_api_key>`
 addons:
+  postgresql: "9.4"
   code_climate:
     repo_token:
       secure: "MVx6bPhKifyvRcQq2V9YdQ1xy/mBGwrya7DKsQl1p/wtfUacB3OrO5gukJm0JCuU+x5eD8gWt/vAr1+DDGA6d0d4G6lkSTZ7cHoczMyRUXjGPRNhUyjNn3eLLVjUtfBNaKAKW/FZfBp+vqY8vnetG5CWcG9y+6jBWznvqk3lfQYtToZp4GPJiBrqLuhSxQYgTCk+j9IUxVV50pQM0jL9aGpeqKFE7poGz+4NqeGhYHsf+JmclFbCVjPljnA22cujb2zEl8OIR7+Xe6who3ddQYCBGy/qZQ8ASJHFIkc3cjN0cm9o7fsROjn9X5R5TOtlzp0EL5gbe1MUdWxe0a3fQVmL4ibm9v/k1OhqgWV9QaJfC1xdJeoct4R1gFtEFE3ZX0e4yDQn2DqVId80oDH8vGh2NRYhhUMfK1etgkMoqElHnoYdTTfu5c+4U0p8f9zWWAtlooqZaJhGOf59rgkzQ12huCswgWW9LcDxX4hEBHMjfc/mX6muWaKSlmcAeDkEVvk10e6mIW6ErUDtAyrntWWEp4PPnRrPmiNE+vQLyCtaGnzmguSqwOHwxanqnhvSZm6kNXAvBOOxvZPl5fMeDpPNbUO07uJ5bp+uN4Hzj+/5rpqX3idfqbO6Vw/J+OEjU9aso1aa+Av+Mp+KFmnEGANYmV9bT/HBl7r50zqXIgo="
-
-# Have this option to stop travis-ci building twice. Currently we have travis set to build both
-# PR's and pushes. However this means when we push to a PR we have to wait for Travis to finish
-# 2 builds. If we unticked 'pushes' when the PR was finally merged that would not be built. The
-# brute force approach would be to untick build PR's and just build all pushes. We instead have
-# gone with the approach outlined here http://stackoverflow.com/a/31882307
-branches:
-  only:
-    - master
-    - develop
