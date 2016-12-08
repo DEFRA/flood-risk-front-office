@@ -25,8 +25,8 @@ Please make sure the following are installed:
 Clone the repository and install its gem dependencies:
 
 ```bash
-git clone https://github.com/EnvironmentAgency/flood-risk-engine.git
-cd flood-risk-engine
+git clone https://github.com/EnvironmentAgency/flood-risk-front-office.git
+cd flood-risk-front-office
 bundle
 ```
 
