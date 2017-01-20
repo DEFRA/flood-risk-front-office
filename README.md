@@ -1,14 +1,14 @@
 # Flood Risk Front Office
 
-[![Build Status](https://travis-ci.org/EnvironmentAgency/flood-risk-front-office.svg?branch=develop)](https://travis-ci.org/EnvironmentAgency/flood-risk-front-office)
-[![security](https://hakiri.io/github/EnvironmentAgency/flood-risk-front-office/develop.svg)](https://hakiri.io/github/EnvironmentAgency/flood-risk-front-office/develop)
-[![Code Climate](https://codeclimate.com/github/EnvironmentAgency/flood-risk-front-office/badges/gpa.svg)](https://codeclimate.com/github/EnvironmentAgency/flood-risk-front-office)
-[![Test Coverage](https://codeclimate.com/github/EnvironmentAgency/flood-risk-front-office/badges/coverage.svg)](https://codeclimate.com/github/EnvironmentAgency/flood-risk-front-office)
-[![Dependency Status](https://dependencyci.com/github/EnvironmentAgency/flood-risk-engine/badge)](https://dependencyci.com/github/EnvironmentAgency/flood-risk-engine)
+[![Build Status](https://travis-ci.org/DEFRA/flood-risk-front-office.svg?branch=develop)](https://travis-ci.org/DEFRA/flood-risk-front-office)
+[![Code Climate](https://codeclimate.com/github/DEFRA/flood-risk-front-office/badges/gpa.svg)](https://codeclimate.com/github/DEFRA/flood-risk-front-office)
+[![Test Coverage](https://codeclimate.com/github/DEFRA/flood-risk-front-office/badges/coverage.svg)](https://codeclimate.com/github/DEFRA/flood-risk-front-office)
+[![security](https://hakiri.io/github/DEFRA/flood-risk-front-office/develop.svg)](https://hakiri.io/github/DEFRA/flood-risk-front-office/develop)
+[![Dependency Status](https://dependencyci.com/github/DEFRA/flood-risk-engine/badge)](https://dependencyci.com/github/DEFRA/flood-risk-engine)
 
 A Ruby on Rails application delivering the [Flood risk activity exemptions service](https://register-flood-risk-exemption.service.gov.uk).
 
-This is a thin, host application which merely mounts and provides styling for the [flood_risk_engine](https://github.com/EnvironmentAgency/flood-risk-engine) rails engine. The engine is responsible for the service implementation.
+This is a thin, host application which merely mounts and provides styling for the [flood_risk_engine](https://github.com/DEFRA/flood-risk-engine) rails engine. The engine is responsible for the service implementation.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ Please make sure the following are installed:
 Clone the repository and install its gem dependencies:
 
 ```bash
-git clone https://github.com/EnvironmentAgency/flood-risk-front-office.git
+git clone https://github.com/DEFRA/flood-risk-front-office.git
 cd flood-risk-front-office
 bundle
 ```
@@ -84,7 +84,7 @@ Then navigate to [http://127.0.0.1:1080](http://127.0.0.1:1080) in your browser.
 
 ## Tests
 
-We use [RSpec](http://rspec.info/) and focus on feature tests in this project that go through the journey for each organisation type (unit testing is done in [flood _risk_engine](https://github.com/EnvironmentAgency/flood-risk-engine) and acceptance tests in [Flood risk acceptance tests](https://github.com/EnvironmentAgency/flood-risk-acceptance-tests)).
+We use [RSpec](http://rspec.info/) and focus on feature tests in this project that go through the journey for each organisation type (unit testing is done in [flood _risk_engine](https://github.com/DEFRA/flood-risk-engine) and acceptance tests in [Flood risk acceptance tests](https://github.com/DEFRA/flood-risk-acceptance-tests)).
 
 To run [Rubocop](https://github.com/bbatsov/rubocop) and the test suite
 
@@ -100,7 +100,7 @@ bundle exec rake spec
 
 ## Quality and conventions
 
-The project is linked to [Travis CI](https://travis-ci.org/EnvironmentAgency/flood-risk-front-office) and all pushes to the **GitHub** are automatically checked.
+The project is linked to [Travis CI](https://travis-ci.org/DEFRA/flood-risk-front-office) and all pushes to the **GitHub** are automatically checked.
 
 The checks include running all tests plus **Rubocop**, but also tools like [HTLMHint](https://github.com/yaniswang/HTMLHint) and [i18n-tasks](https://github.com/glebm/i18n-tasks). Check the `.travis.yml` for full details, specifically the `before_script:` section.
 
