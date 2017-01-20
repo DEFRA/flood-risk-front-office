@@ -7,7 +7,7 @@ ruby "2.3.1"
 gem "dotenv-rails", "~> 2.1"
 
 gem "flood_risk_engine",
-    git: "https://github.com/EnvironmentAgency/flood-risk-engine",
+    git: "https://github.com/DEFRA/flood-risk-engine",
     tag: "v1.0.2"
 
 gem "govuk_elements_rails", "~> 1.2.1"
