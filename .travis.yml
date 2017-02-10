@@ -24,28 +24,32 @@ before_script:
   # to check the project against the latest known vulnerabilities.
   - gem install brakeman --no-ri --no-rdoc
   - brakeman
-  # Install and run i18n-tasks.
-  - gem install i18n-tasks -v 0.9.6 --no-ri --no-rdoc
-  # TO FIX: Running this will report approx 275 missing keys. This is because of
-  # the way we have used translations in the project. Initial attempts to use
-  # magic comments (see https://github.com/glebm/i18n-tasks#fine-tuning) has not
-  # brought forth a solution so until this matter is investigated further and
-  # resolved this check needs to be left out of the build.
-  # - i18n-tasks missing
-  - i18n-tasks unused
   # Install and run overcommit.
+  # This will run the following checks
+  #   - YamlSyntax
+  #   - TrailingWhitespace
+  #   - HardTabs
   - gem install overcommit -v 0.37.0 --no-ri --no-rdoc
   - overcommit --sign
   - overcommit --run
   # Install and run htmlhint
   - npm install -g htmlhint
   - htmlhint ./app/**/*.html.erb
+  # Run rubocop. Its installed as a dependency (hence no install step) as this
+  # allows projects to control the version they are using (rather than getting)
+  # surprise build failurs.
+  - bundle exec rubocop
   # Replace database.yml with database.travis.yml (but leave filename as
   # database.yml). database.travis.yml is the config needed for Travis, and it
   # needs to be in place before we run the migrations.
   - cp config/database.travis.yml config/database.yml
   - RAILS_ENV=test bundle exec rake db:create
   - RAILS_ENV=test bundle exec rake db:migrate --trace
+
+# If you need to review the Rails logs on travis you can uncomment the following
+# script:
+  # - ls spec/dummy/log
+  # - cat spec/dummy/log/*
 
 # This section was added as per https://docs.travis-ci.com/user/code-climate/
 # To protect our codeclimate stats rather than adding the Codeclimate API key for this project

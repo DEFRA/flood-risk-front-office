@@ -1,15 +1,6 @@
 source "https://rubygems.org"
 ruby "2.3.1"
 
-# Automatically loads environment variables from .env into ENV. Specified here
-# rather than in the group in case any of the gems we add depend on env
-# variables being available
-gem "dotenv-rails", "~> 2.1"
-
-gem "flood_risk_engine",
-    git: "https://github.com/DEFRA/flood-risk-engine",
-    tag: "v1.0.2"
-
 gem "govuk_elements_rails", "~> 1.2.1"
 # Access to some of the most common styles and scripts used by GDS
 gem "govuk_frontend_toolkit", "~> 4.12.0"
@@ -24,15 +15,32 @@ gem "jquery-rails", "~> 4.1.1"
 # Use Postgres for the DB
 gem "pg", "~> 0.18.4"
 gem "pundit", "~> 1.1.0"
+# Mutes assets pipeline log messages
+gem "quiet_assets", "~> 1.1"
 gem "rails", "4.2.7.1"
-
 # Use SCSS for stylesheets
 gem "sass-rails", "~> 5.0.4"
 # Use Uglifier as compressor for JavaScript assets
-gem "uglifier", ">= 1.3.0"
-# Our capistrano scripts expect whenever (for scheduling cron jobs) to be
-# available
-gem "whenever", "~> 0.9.4", require: false
+gem "uglifier", "~> 3.0"
+
+gem "flood_risk_engine",
+    git: "https://github.com/DEFRA/flood-risk-engine",
+    branch: "master"
+
+# Automatically loads environment variables from .env into ENV. Specified here
+# rather than in the group in case any of the gems we add depend on env
+# variables being available
+gem "dotenv-rails", "~> 2.1.1", groups: [:development, :test]
+
+group :development do
+  # Pretty prints objects in console. Usage `$ ap some_object`
+  gem "awesome_print"
+  # A toy SMTP server run on port 1025 catching emails, displaying them on
+  # http://localhost:1080.
+  gem "mailcatcher", "~> 0.6"
+  # Used to ensure the code base matches our agreed styles and conventions
+  gem "rubocop", "~> 0.47"
+end
 
 group :development, :test do
   # ActiveRecord N+1 detection
@@ -40,16 +48,13 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   # console
   gem "byebug"
+  # Provides Rails integration for factory_girl. Enables "build_dummy_data"
+  # functionality in dev
   # N.B require is false so factories aren't loaded during e.g db:migrate
-  gem "factory_girl_rails", "~> 4.6.0", require: false
-  gem "faker", "~> 1.6.5"
-  # Replacement for webrick in development
-  gem "puma"
-  # Mutes assets pipeline log messages
-  gem "quiet_assets", "~> 1.1"
+  gem "factory_girl_rails", "~> 4.6", require: false
+  # Used to generate fake data e.g. in the specs
+  gem "faker", "~> 1.7"
   gem "rspec-rails", "~> 3.4.2"
-  # Ensure we are meeting agreed style and consistency rules in the project
-  gem "rubocop", "~> 0.45.0"
 end
 
 group :test do
@@ -62,13 +67,6 @@ group :test do
   gem "poltergeist", "~> 1.9.0"
   # Tool for checking code coverage
   gem "simplecov", "~> 0.11.2", require: false
-end
-
-group :development do
-  # Displays view/sql rendering times in development, top left in browser
-  gem "rack-mini-profiler", "~> 0.10"
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem "web-console", "~> 2.0"
 end
 
 group :production do

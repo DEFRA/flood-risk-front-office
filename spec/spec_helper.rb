@@ -11,21 +11,33 @@
 # a separate helper file that requires the additional dependencies and performs
 # the additional setup, and require it from the spec files that actually need
 # it.
-#
-# The `.rspec` file also contains a few flags that are not defaults but that
-# users commonly want.
 
+# Code coverage hooks
 require "codeclimate-test-reporter"
 CodeClimate::TestReporter.start
 
-# Code coverage hook
 require "simplecov"
 SimpleCov.start "rails" do
-  # Exclude files here
+  # any custom configs like groups and filters can be here at a central place
+  # Standard filters
+  add_filter "/spec/"
+  add_filter "/db/"
+
+  # Project filters
+  # The state jumper controller is just used to create dummy enrolments at a particular
+  # point in the journey as a time saver. We are happy there is no test coverage
+  # for it.
   add_filter "app/controllers/state_jumper_controller.rb"
-  add_filter "app/controllers/application_controller.rb"
 end
 
+# Set faker so it uses British formats for postcodes, telephone numbers etc.
+# Moved to spec_helper as not always taking effect before factories are built,
+# so moved to earlier in load path.
+require "faker"
+Faker::Config.locale = "en-GB"
+
+# The `.rspec` file also contains a few flags that are not defaults but that
+# users commonly want.
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
