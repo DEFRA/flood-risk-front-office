@@ -16,6 +16,7 @@
 //= require flood_risk_engine
 //= require govuk/selection-buttons
 //= require show_hide
+//= require keyboard_select_scroll
 
 $(document).ready(function() {
   // Use GOV.UK selection-buttons.js to set selected
