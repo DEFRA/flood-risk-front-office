@@ -192,7 +192,7 @@ GEM
       rack
       rake (>= 0.8.1)
     pg (0.18.4)
-    phonelib (0.6.15)
+    phonelib (0.6.16)
     poltergeist (1.9.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
