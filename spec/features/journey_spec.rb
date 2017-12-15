@@ -7,12 +7,12 @@ RSpec.feature "Journey for organisation", type: :feature do
     work_flow = FloodRiskEngine::WorkFlow::Definitions.send(organisation_type.to_sym)
 
     scenario "'#{organisation_type}' via steps: #{work_flow.to_sentence}" do
-      enrollment = FactoryGirl.create :enrollment, "with_#{organisation_type}".to_sym
+      enrollment = FactoryBot.create :enrollment, "with_#{organisation_type}".to_sym
 
       if organisation_type == "partnership"
         # Partnerships need a couple of partners for the journey to complete
-        enrollment.organisation.partners << FactoryGirl.create(:partner_with_contact)
-        enrollment.organisation.partners << FactoryGirl.create(:partner_with_contact)
+        enrollment.organisation.partners << FactoryBot.create(:partner_with_contact)
+        enrollment.organisation.partners << FactoryBot.create(:partner_with_contact)
       end
 
       # This test checks that the journey works from start to finish. As each
