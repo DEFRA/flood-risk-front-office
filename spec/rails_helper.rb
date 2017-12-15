@@ -6,7 +6,7 @@ require File.expand_path("../../config/environment", __FILE__)
 require "rspec/rails"
 
 # Add additional requires below this line. Rails is not loaded until this point!
-require "factory_girl_rails"
+require "factory_bot_rails"
 require "capybara/poltergeist"
 Capybara.javascript_driver = :poltergeist
 
@@ -41,7 +41,7 @@ RSpec.configure do |config|
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
 
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
 
   # Enables shortcut, t() instead of I18n.t() in tests
   config.include AbstractController::Translation

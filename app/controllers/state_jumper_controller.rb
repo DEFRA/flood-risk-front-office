@@ -1,13 +1,13 @@
 # This is a development tool - for creating and jumping straight to an Enrollment
 # For a full list of available factories you can call :
 #
-#   FactoryGirl.definition_file_paths.inspect
+#   FactoryBot.definition_file_paths.inspect
 #
-#   FactoryGirl.factories.collect(&:name).inspect
+#   FactoryBot.factories.collect(&:name).inspect
 #
 unless Rails.env.production?
 
-  require "factory_girl"
+  require "factory_bot"
   require "faker"
 
   class StateJumperController < ApplicationController
@@ -15,10 +15,10 @@ unless Rails.env.production?
     def build_and_display
       # Get weird problems with factories with has_many associations, when they've already been used,
       # so while obviously not very efficient, this seems to prevent that issue
-      FactoryGirl.reload
+      FactoryBot.reload
 
       Rails.logger.debug("State jumper called - building Enrollment from factory #{params['factory']}")
-      enrollment = FactoryGirl.create(params["factory"])
+      enrollment = FactoryBot.create(params["factory"])
 
       state = params["state"] || enrollment.current_step
       Rails.logger.debug("Jumping #{enrollment.inspect} to STATE [#{state}]")

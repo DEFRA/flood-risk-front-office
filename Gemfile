@@ -30,7 +30,7 @@ gem "flood_risk_engine",
 # Automatically loads environment variables from .env into ENV. Specified here
 # rather than in the group in case any of the gems we add depend on env
 # variables being available
-gem "dotenv-rails", "~> 2.1.1", groups: [:development, :test]
+gem "dotenv-rails", "~> 2.1.1", groups: %i[development test]
 
 group :development do
   # Pretty prints objects in console. Usage `$ ap some_object`
@@ -48,10 +48,10 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   # console
   gem "byebug"
-  # Provides Rails integration for factory_girl. Enables "build_dummy_data"
+  # Provides Rails integration for factory_bot. Enables "build_dummy_data"
   # functionality in dev
   # N.B require is false so factories aren't loaded during e.g db:migrate
-  gem "factory_girl_rails", "~> 4.6", require: false
+  gem "factory_bot_rails", "~> 4.7", require: false
   # Used to generate fake data e.g. in the specs
   gem "faker", "~> 1.7"
   gem "rspec-rails", "~> 3.4.2"
