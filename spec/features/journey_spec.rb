@@ -2,7 +2,7 @@ require "rails_helper"
 # This spec tests the journey from start to declaration for each organisation
 # type, to ensure that each step is visited and leads to the expected next step.
 RSpec.feature "Journey for organisation", type: :feature do
-  FloodRiskEngine::Organisation.org_types.keys.each_key do |organisation_type|
+  FloodRiskEngine::Organisation.org_types.each_key do |organisation_type|
     # Get the sequence of steps expected for the current organisation type
     work_flow = FloodRiskEngine::WorkFlow::Definitions.send(organisation_type.to_sym)
 
