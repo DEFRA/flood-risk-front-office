@@ -30,7 +30,7 @@ gem "flood_risk_engine",
 # Automatically loads environment variables from .env into ENV. Specified here
 # rather than in the group in case any of the gems we add depend on env
 # variables being available
-gem "dotenv-rails", "~> 2.1.1", groups: [:development, :test]
+gem "dotenv-rails", "~> 2.1.1", groups: %i[development test]
 
 group :development do
   # Pretty prints objects in console. Usage `$ ap some_object`
