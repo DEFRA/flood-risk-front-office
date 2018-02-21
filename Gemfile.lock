@@ -196,7 +196,7 @@ GEM
       mini_portile2 (~> 2.1.0)
     os_map_ref (0.4.2)
     parallel (1.12.1)
-    parser (2.5.0.0)
+    parser (2.5.0.1)
       ast (~> 2.4.0)
     passenger (5.0.30)
       rack
