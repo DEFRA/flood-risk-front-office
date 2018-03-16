@@ -92,6 +92,15 @@ Style/CaseIndentation:
 Style/Documentation:
   Enabled: false
 
+# This rule was added in 0.53.0 and will anything like this
+# File.expand_path("../../config/environment", __FILE__)
+# It will tell you to replace __FILE__ with __dir__ however they return
+# different values so its not actually a straight swap. Until we are in a
+# position to properly update and test the app to use __dir__ we need to add
+# this exception
+Style/ExpandPathArguments:
+  Enabled: false
+
 # We've found the sprintf style for formatting strings can be useful when storing a formatted string as a template,
 # and passing in strings that can vary with context. Therefore we chose to disable this rule.
 Style/FormatString:
