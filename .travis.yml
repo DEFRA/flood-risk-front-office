@@ -1,6 +1,13 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=9514ee12d781c8e5b043a496d842f04b3288ca5dd58e69d8e16dee2ff0d3e3c0
+
 language: ruby
 rvm: 2.3.1
 cache: bundler
+
+addons:
+-  postgresql: "9.4"
 
 # Travis CI clones repositories to a depth of 50 commits, which is only really
 # useful if you are performing git operations.
@@ -8,53 +15,29 @@ cache: bundler
 git:
   depth: 3
 
-# We need nodejs version >= 4 to be compatible with htmlhint >= 0.9.13
-# This overwrites the system node  0.10.x
 before_install:
-  - nvm install node
+  - export TZ=UTC
+  - gem install -v 1.17.3 bundler --no-document
 
 before_script:
-  # We install and run these checks first prior to the data migrations in order
-  # 'fail fast'. There is no point in running the migrations if these checks
-  # fail.
-  # Install and run brakeman. We always go with the latest (unlike rubocop where
-  # we include the dependency in the project tied to a version) because we want
-  # to check the project against the latest known vulnerabilities.
-  - gem install brakeman --no-document
-  - brakeman
-  # Install and run overcommit.
-  # This will run the following checks
-  #   - YamlSyntax
-  #   - TrailingWhitespace
-  #   - HardTabs
-  - gem install overcommit -v 0.37.0 --no-document
-  - overcommit --sign
-  - overcommit --run
-  # Install and run htmlhint
-  - npm install -g htmlhint
-  - htmlhint ./app/**/*.html.erb
-  # Run rubocop. Its installed as a dependency (hence no install step) as this
+  # Setup to support the CodeClimate test coverage submission
+  # As per CodeClimate's documentation, they suggest only running
+  # ./cc-test-reporter commands on travis-ci push builds only. Hence we wrap all
+  # the codeclimate test coverage related commands in a check that tests if we
+  # are in a pull request or not.
+  - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter; fi
+  - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then chmod +x ./cc-test-reporter; fi
+  - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then ./cc-test-reporter before-build; fi
+  # Run rubocop. It's installed as a dependency (hence no install step) as this
   # allows projects to control the version they are using (rather than getting)
-  # surprise build failurs.
+  # surprise build failures.
   - bundle exec rubocop
   # Replace database.yml with database.travis.yml (but leave filename as
   # database.yml). database.travis.yml is the config needed for Travis, and it
   # needs to be in place before we run the migrations.
   - cp config/database.travis.yml config/database.yml
-  - RAILS_ENV=test bundle exec rake db:create
+  - RAILS_ENV=test bundle exec rake db:create --trace
   - RAILS_ENV=test bundle exec rake db:migrate --trace
 
-# If you need to review the Rails logs on travis you can uncomment the following
-# script:
-  # - ls spec/dummy/log
-  # - cat spec/dummy/log/*
-
-# This section was added as per https://docs.travis-ci.com/user/code-climate/
-# To protect our codeclimate stats rather than adding the Codeclimate API key for this project
-# in the open we used this guide https://docs.travis-ci.com/user/encryption-keys/ to encryt the
-# value. Essentially install travis gem, then run `travis encrypt <my_code_climate_api_key>`
-addons:
-  postgresql: "9.4"
-  code_climate:
-    repo_token:
-      secure: "VsYxj3xqlY/SQ3tBaTEfbHT0Z0lnXOXA5m2B04f+vMo+JVBjWoIr4tLZrZ5fRyFGFupWEszH+hdOy3hli7Hn6hZ1AuuXINKbREkrxOuSIX3e66sxN2Dbjw4FaepqkoHAW07O4CCoV7zWlz+fBaA2M15qncpc/lkFmN+L8SsIZsXuQNUR3vDKLCpj+RwBcoHLL6ZJrQDUYX3QaXlfFtEQ/Lrc7wqsKMBf8ZsBlae9GKGqGkESjuDv1Bl4XQo+jfbc4YKFThvCHTtE8QX6qAlaqph0bukUGCHKs1MRLL2amUICcxd0rwexJ7Hxc3CjZimWICAqQE9wtH9cud4DbG6Fxg55CeIpRVJr/tC5l80VYzgRAiC20a/EupsntO22WMcPELsimaf0+aBMlzm4FZZ6QiCYcXDnCYsJ1S88Zvbh+fRZzmrF3vRPK1D4pjT5EXDveAEQQNWDhlY09L6rcw3Mvz4J+kS4c/UixbrGa+aSM4flBSDFo7e5MTon/UEOhW6yWpYh80jwd29XAo4sOV0iFqMkM70sys+vk620w0MMf/QuTjlL7PLihCJ7qEGRGJIjn6yLPZ7V3/OskbbS22ch+YiJ1GlnpUYaG9TKGsvM43rZxncinPGhOzKfAdwTSSn0Uw+rGYuyFZAWSHN6pHSDBhfM/OWl5xM05RQ5+POEGfM="
+after_script:
+  - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
