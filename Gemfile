@@ -72,7 +72,7 @@ group :production do
   gem "airbrake", "~> 5.3.0"
   # Use Passenger as our web-server/app-server (e.g. on AWS via Upstart, Heroku
   # via Procfile)
-  gem "passenger", "~> 5.0.28", require: "phusion_passenger/rack_handler"
+  gem "passenger", "~> 5.0", ">= 5.0.30", require: "phusion_passenger/rack_handler"
   # Required for Heroku - can be removed when Heroku apps decommissioned
   gem "rails_12factor", "~> 0.0.3"
 end

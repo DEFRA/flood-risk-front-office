@@ -187,7 +187,7 @@ GEM
     parallel (1.12.1)
     parser (2.6.3.0)
       ast (~> 2.4.0)
-    passenger (5.0.30)
+    passenger (5.3.7)
       rack
       rake (>= 0.8.1)
     pg (0.18.4)
@@ -355,7 +355,7 @@ DEPENDENCIES
   govuk_template (~> 0.17.0)
   high_voltage (~> 3.0.0)
   jquery-rails (~> 4.1.1)
-  passenger (~> 5.0.28)
+  passenger (~> 5.0, >= 5.0.30)
   pg (~> 0.18.4)
   poltergeist (~> 1.9.0)
   pundit (~> 1.1.0)
