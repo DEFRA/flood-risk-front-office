@@ -17,7 +17,7 @@ gem "pg", "~> 0.18.4"
 gem "pundit", "~> 1.1.0"
 # Mutes assets pipeline log messages
 gem "quiet_assets", "~> 1.1"
-gem "rails", "4.2.7.1"
+gem "rails", "~> 4.2"
 # Use SCSS for stylesheets
 gem "sass-rails", "~> 5.0.4"
 # Use Uglifier as compressor for JavaScript assets
