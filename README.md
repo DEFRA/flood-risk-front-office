@@ -4,7 +4,7 @@
 [![Code Climate](https://codeclimate.com/github/DEFRA/flood-risk-front-office/badges/gpa.svg)](https://codeclimate.com/github/DEFRA/flood-risk-front-office)
 [![Test Coverage](https://codeclimate.com/github/DEFRA/flood-risk-front-office/badges/coverage.svg)](https://codeclimate.com/github/DEFRA/flood-risk-front-office)
 [![security](https://hakiri.io/github/DEFRA/flood-risk-front-office/develop.svg)](https://hakiri.io/github/DEFRA/flood-risk-front-office/develop)
-[![Dependency Status](https://dependencyci.com/github/DEFRA/flood-risk-engine/badge)](https://dependencyci.com/github/DEFRA/flood-risk-engine)
+[![Licence](https://img.shields.io/badge/Licence-OGLv3-blue.svg)](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3)
 
 A Ruby on Rails application delivering the [Flood risk activity exemptions service](https://register-flood-risk-exemption.service.gov.uk).
 
