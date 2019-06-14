@@ -17,7 +17,7 @@ gem "pg", "~> 0.18.4"
 gem "pundit", "~> 1.1.0"
 # Mutes assets pipeline log messages
 gem "quiet_assets", "~> 1.1"
-gem "rails", "4.2.7.1"
+gem "rails", "~> 4.2"
 # Use SCSS for stylesheets
 gem "sass-rails", "~> 5.0.4"
 # Use Uglifier as compressor for JavaScript assets
@@ -35,9 +35,6 @@ gem "dotenv-rails", "~> 2.1.1", groups: %i[development test]
 group :development do
   # Pretty prints objects in console. Usage `$ ap some_object`
   gem "awesome_print"
-  # A toy SMTP server run on port 1025 catching emails, displaying them on
-  # http://localhost:1080.
-  gem "mailcatcher", "~> 0.6"
   # Used to ensure the code base matches our agreed styles and conventions
   gem "rubocop", "~> 0.47"
 end
@@ -75,7 +72,7 @@ group :production do
   gem "airbrake", "~> 5.3.0"
   # Use Passenger as our web-server/app-server (e.g. on AWS via Upstart, Heroku
   # via Procfile)
-  gem "passenger", "~> 5.0.28", require: "phusion_passenger/rack_handler"
+  gem "passenger", "~> 5.0", ">= 5.0.30", require: "phusion_passenger/rack_handler"
   # Required for Heroku - can be removed when Heroku apps decommissioned
   gem "rails_12factor", "~> 0.0.3"
 end
