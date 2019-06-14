@@ -1,9 +1,9 @@
 # Flood Risk Front Office
 
 [![Build Status](https://travis-ci.org/DEFRA/flood-risk-front-office.svg?branch=develop)](https://travis-ci.org/DEFRA/flood-risk-front-office)
-[![Code Climate](https://codeclimate.com/github/DEFRA/flood-risk-front-office/badges/gpa.svg)](https://codeclimate.com/github/DEFRA/flood-risk-front-office)
-[![Test Coverage](https://codeclimate.com/github/DEFRA/flood-risk-front-office/badges/coverage.svg)](https://codeclimate.com/github/DEFRA/flood-risk-front-office)
-[![security](https://hakiri.io/github/DEFRA/flood-risk-front-office/develop.svg)](https://hakiri.io/github/DEFRA/flood-risk-front-office/develop)
+[![Maintainability](https://api.codeclimate.com/v1/badges/6429344395fd3e97f196/maintainability)](https://codeclimate.com/github/DEFRA/flood-risk-front-office/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/6429344395fd3e97f196/test_coverage)](https://codeclimate.com/github/DEFRA/flood-risk-front-office/test_coverage)
+[![security](https://hakiri.io/github/DEFRA/flood-risk-front-office/master.svg)](https://hakiri.io/github/DEFRA/flood-risk-front-office/master)
 [![Licence](https://img.shields.io/badge/Licence-OGLv3-blue.svg)](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3)
 
 A Ruby on Rails application delivering the [Flood risk activity exemptions service](https://register-flood-risk-exemption.service.gov.uk).
