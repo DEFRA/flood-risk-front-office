@@ -22,6 +22,8 @@ gem "rails", "~> 4.2"
 gem "sass-rails", "~> 5.0.4"
 # Use Uglifier as compressor for JavaScript assets
 gem "uglifier", "~> 3.0"
+# Our capistrano scripts expect whenever (for scheduling cron jobs) to be available
+gem "whenever", "~> 0.9.4", require: false
 
 gem "flood_risk_engine",
     git: "https://github.com/DEFRA/flood-risk-engine",
