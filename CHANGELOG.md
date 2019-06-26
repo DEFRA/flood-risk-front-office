@@ -3,6 +3,18 @@
 ## [v1.1.0](https://github.com/DEFRA/flood-risk-front-office/tree/v1.1.0) (2019-06-26)
 [Full Changelog](https://github.com/DEFRA/flood-risk-front-office/compare/v1.0.2...v1.1.0)
 
+**Implemented enhancements:**
+
+- Inherit engine styles [\#207](https://github.com/DEFRA/flood-risk-front-office/pull/207) ([irisfaraway](https://github.com/irisfaraway))
+- Housekeeping and standardisation across projects [\#152](https://github.com/DEFRA/flood-risk-front-office/pull/152) ([Cruikshanks](https://github.com/Cruikshanks))
+
+**Fixed bugs:**
+
+- Move github changelog generator to main group [\#228](https://github.com/DEFRA/flood-risk-front-office/pull/228) ([Cruikshanks](https://github.com/Cruikshanks))
+- Delete unused schedule.rb file [\#221](https://github.com/DEFRA/flood-risk-front-office/pull/221) ([irisfaraway](https://github.com/irisfaraway))
+- Fix codeclimate integration [\#150](https://github.com/DEFRA/flood-risk-front-office/pull/150) ([Cruikshanks](https://github.com/Cruikshanks))
+- Update EA references after org name change \[no-ci\] [\#149](https://github.com/DEFRA/flood-risk-front-office/pull/149) ([Cruikshanks](https://github.com/Cruikshanks))
+
 **Merged pull requests:**
 
 - Add github changelog generator to the project [\#227](https://github.com/DEFRA/flood-risk-front-office/pull/227) ([Cruikshanks](https://github.com/Cruikshanks))
@@ -10,7 +22,6 @@
 - Bump flood\_risk\_engine from `0fa1d92` to `98fdead` [\#224](https://github.com/DEFRA/flood-risk-front-office/pull/224) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump flood\_risk\_engine from `00ead6e` to `0fa1d92` [\#223](https://github.com/DEFRA/flood-risk-front-office/pull/223) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Re-add whenever gem to fix deployments [\#222](https://github.com/DEFRA/flood-risk-front-office/pull/222) ([irisfaraway](https://github.com/irisfaraway))
-- Delete unused schedule.rb file [\#221](https://github.com/DEFRA/flood-risk-front-office/pull/221) ([irisfaraway](https://github.com/irisfaraway))
 - Bump flood\_risk\_engine from `1e69358` to `00ead6e` [\#220](https://github.com/DEFRA/flood-risk-front-office/pull/220) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump faker from 1.9.3 to 1.9.4 [\#219](https://github.com/DEFRA/flood-risk-front-office/pull/219) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump flood\_risk\_engine from `527fc75` to `1e69358` [\#218](https://github.com/DEFRA/flood-risk-front-office/pull/218) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
@@ -23,7 +34,6 @@
 - \[Security\] Bump ffi from 1.9.23 to 1.11.1 [\#210](https://github.com/DEFRA/flood-risk-front-office/pull/210) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump byebug from 10.0.0 to 11.0.1 [\#209](https://github.com/DEFRA/flood-risk-front-office/pull/209) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Update dependencies [\#208](https://github.com/DEFRA/flood-risk-front-office/pull/208) ([irisfaraway](https://github.com/irisfaraway))
-- Inherit engine styles [\#207](https://github.com/DEFRA/flood-risk-front-office/pull/207) ([irisfaraway](https://github.com/irisfaraway))
 - Update Travis config [\#206](https://github.com/DEFRA/flood-risk-front-office/pull/206) ([irisfaraway](https://github.com/irisfaraway))
 - Bundle Update on 2018-03-21 [\#204](https://github.com/DEFRA/flood-risk-front-office/pull/204) ([deppbot](https://github.com/deppbot))
 - Bundle Update on 2018-03-16 [\#203](https://github.com/DEFRA/flood-risk-front-office/pull/203) ([deppbot](https://github.com/deppbot))
@@ -76,21 +86,25 @@
 - Bundle Update on 2017-08-04 [\#156](https://github.com/DEFRA/flood-risk-front-office/pull/156) ([deppbot](https://github.com/deppbot))
 - Bundle Update on 2017-08-01 [\#155](https://github.com/DEFRA/flood-risk-front-office/pull/155) ([deppbot](https://github.com/deppbot))
 - Bundle Update on 2017-07-19 [\#154](https://github.com/DEFRA/flood-risk-front-office/pull/154) ([deppbot](https://github.com/deppbot))
-- Housekeeping and standardisation across projects [\#152](https://github.com/DEFRA/flood-risk-front-office/pull/152) ([Cruikshanks](https://github.com/Cruikshanks))
-- Fix codeclimate integration [\#150](https://github.com/DEFRA/flood-risk-front-office/pull/150) ([Cruikshanks](https://github.com/Cruikshanks))
-- Update EA references after org name change \[no-ci\] [\#149](https://github.com/DEFRA/flood-risk-front-office/pull/149) ([Cruikshanks](https://github.com/Cruikshanks))
 
 ## [v1.0.2](https://github.com/DEFRA/flood-risk-front-office/tree/v1.0.2) (2016-12-21)
 [Full Changelog](https://github.com/DEFRA/flood-risk-front-office/compare/v1.0.1...v1.0.2)
+
+**Implemented enhancements:**
+
+- Add OS places notice and T&C's to service [\#146](https://github.com/DEFRA/flood-risk-front-office/pull/146) ([Cruikshanks](https://github.com/Cruikshanks))
 
 **Merged pull requests:**
 
 - Update version to 1.0.2 ready for release [\#148](https://github.com/DEFRA/flood-risk-front-office/pull/148) ([Cruikshanks](https://github.com/Cruikshanks))
 - Update version to 1.0.1 ready for release [\#147](https://github.com/DEFRA/flood-risk-front-office/pull/147) ([Cruikshanks](https://github.com/Cruikshanks))
-- Add OS places notice and T&C's to service [\#146](https://github.com/DEFRA/flood-risk-front-office/pull/146) ([Cruikshanks](https://github.com/Cruikshanks))
 
 ## [v1.0.1](https://github.com/DEFRA/flood-risk-front-office/tree/v1.0.1) (2016-12-08)
 [Full Changelog](https://github.com/DEFRA/flood-risk-front-office/compare/v1.0.0...v1.0.1)
+
+**Implemented enhancements:**
+
+- Remove dependency on before\_commit for CI checks [\#144](https://github.com/DEFRA/flood-risk-front-office/pull/144) ([Cruikshanks](https://github.com/Cruikshanks))
 
 **Closed issues:**
 
@@ -99,12 +113,15 @@
 **Merged pull requests:**
 
 - Update version to 1.0.1 ready for release [\#145](https://github.com/DEFRA/flood-risk-front-office/pull/145) ([TThurston](https://github.com/TThurston))
-- Remove dependency on before\_commit for CI checks [\#144](https://github.com/DEFRA/flood-risk-front-office/pull/144) ([Cruikshanks](https://github.com/Cruikshanks))
 - Documentation improvements and Rails 4.2.7.1 upgrade [\#142](https://github.com/DEFRA/flood-risk-front-office/pull/142) ([woodpigeon](https://github.com/woodpigeon))
 - Housekeeping [\#140](https://github.com/DEFRA/flood-risk-front-office/pull/140) ([woodpigeon](https://github.com/woodpigeon))
 - Add a journey spec [\#139](https://github.com/DEFRA/flood-risk-front-office/pull/139) ([reggieb](https://github.com/reggieb))
 
 ## [v1.0.0](https://github.com/DEFRA/flood-risk-front-office/tree/v1.0.0) (2016-07-18)
+**Implemented enhancements:**
+
+- Support CodeClimate including test coverage reporting [\#38](https://github.com/DEFRA/flood-risk-front-office/pull/38) ([woodpigeon](https://github.com/woodpigeon))
+
 **Closed issues:**
 
 - Add suckerpunch [\#123](https://github.com/DEFRA/flood-risk-front-office/issues/123)
@@ -200,7 +217,6 @@
 - Update outdated gem references [\#42](https://github.com/DEFRA/flood-risk-front-office/pull/42) ([woodpigeon](https://github.com/woodpigeon))
 - Add empty whenever configuration file [\#40](https://github.com/DEFRA/flood-risk-front-office/pull/40) ([woodpigeon](https://github.com/woodpigeon))
 - Add gems for deployment [\#39](https://github.com/DEFRA/flood-risk-front-office/pull/39) ([woodpigeon](https://github.com/woodpigeon))
-- Support CodeClimate including test coverage reporting [\#38](https://github.com/DEFRA/flood-risk-front-office/pull/38) ([woodpigeon](https://github.com/woodpigeon))
 - Update version of flood risk engine being used [\#37](https://github.com/DEFRA/flood-risk-front-office/pull/37) ([reggieb](https://github.com/reggieb))
 - RIP-72 update engine reference [\#36](https://github.com/DEFRA/flood-risk-front-office/pull/36) ([woodpigeon](https://github.com/woodpigeon))
 - Add code coverage reporting using simple\_cov [\#35](https://github.com/DEFRA/flood-risk-front-office/pull/35) ([woodpigeon](https://github.com/woodpigeon))
