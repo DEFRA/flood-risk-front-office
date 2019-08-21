@@ -1,6 +1,6 @@
 # Flood Risk Front Office
 
-[![Build Status](https://travis-ci.org/DEFRA/flood-risk-front-office.svg?branch=develop)](https://travis-ci.org/DEFRA/flood-risk-front-office)
+[![Build Status](https://travis-ci.com/DEFRA/flood-risk-front-office.svg?branch=master)](https://travis-ci.com/DEFRA/flood-risk-front-office)
 [![Maintainability](https://api.codeclimate.com/v1/badges/6429344395fd3e97f196/maintainability)](https://codeclimate.com/github/DEFRA/flood-risk-front-office/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/6429344395fd3e97f196/test_coverage)](https://codeclimate.com/github/DEFRA/flood-risk-front-office/test_coverage)
 [![security](https://hakiri.io/github/DEFRA/flood-risk-front-office/master.svg)](https://hakiri.io/github/DEFRA/flood-risk-front-office/master)
