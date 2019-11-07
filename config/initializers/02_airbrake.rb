@@ -60,17 +60,7 @@ Airbrake.configure do |c|
     /password/i,
     /postcode/i,
 
-    :name,
-    :address,
-    :address_list,
-    :premises,
-    :street_address,
-    :locality,
-    :city,
-
     :full_name,
-    :position,
-    :org_type,
 
     :name,
     :telephone_number,
