@@ -18,7 +18,7 @@ end
 if Rails.env.production?
   %w(
     AIRBRAKE_HOST
-    AIRBRAKE_PROJECT_KEY
+    AIRBRAKE_FO_PROJECT_KEY
   ).each do |key|
     ENV.fetch(key) { raise "#{key} not found in ENV" }
   end
