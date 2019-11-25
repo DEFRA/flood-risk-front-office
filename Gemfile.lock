@@ -361,7 +361,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  airbrake (~> 5.3.0)
   awesome_print
   bullet
   byebug
