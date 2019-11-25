@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/DEFRA/flood-risk-engine
-  revision: 0545d6721e7eb12d367b678477cba5b2c2b517ae
-  branch: use-defra-ruby-alert-for-airbrake
+  revision: 7c6e2cde1edb0fed10fd80a76c73e45592a07090
+  branch: master
   specs:
     flood_risk_engine (1.0.2)
       activerecord-session_store (~> 1.0)
