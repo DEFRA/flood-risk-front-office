@@ -8,7 +8,7 @@
 
 A Ruby on Rails application delivering the [Flood risk activity exemptions service](https://register-flood-risk-exemption.service.gov.uk).
 
-This is a thin, host application which merely mounts and provides styling for the [flood_risk_engine](https://github.com/DEFRA/flood-risk-engine) rails engine. The engine is responsible for the service implementation.
+This is a thin, host application which merely mounts and provides styling for the [flood_risk_engine](https://github.com/DEFRA/flood-risk-engine) Rails engine. The engine is responsible for the service implementation.
 
 ## Prerequisites
 
