@@ -27,8 +27,8 @@
 
 <%
   content_for(:body_start) do
-    render("shared/google_analytics", google_tag: ENV["GOOGLE_TAG"])
-  end if ENV["GOOGLE_TAG"].present?
+    render("shared/google_analytics", google_tag: ENV["GOOGLE_ANALYTICS_ID"])
+  end if ENV["GOOGLE_ANALYTICS_ID"].present?
 %>
 
 <% content_for(:content) do %>
