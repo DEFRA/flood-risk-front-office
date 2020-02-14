@@ -1,17 +1,40 @@
 # Changelog
 
-## [Unreleased](https://github.com/DEFRA/flood-risk-front-office/tree/HEAD)
+## [v1.1.3](https://github.com/defra/flood-risk-front-office/tree/v1.1.3) (2020-02-13)
 
-[Full Changelog](https://github.com/DEFRA/flood-risk-front-office/compare/v1.1.2...HEAD)
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v1.1.2...v1.1.3)
+
+**Fixed bugs:**
+
+- Update Google Analytics env var [\#295](https://github.com/DEFRA/flood-risk-front-office/pull/295) ([Cruikshanks](https://github.com/Cruikshanks))
+
+**Security fixes:**
+
+- \[Security\] Bump rack from 1.6.11 to 1.6.12 [\#279](https://github.com/DEFRA/flood-risk-front-office/pull/279) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 
 **Merged pull requests:**
 
+- Bump flood\_risk\_engine from `d7d99d7` to `ab620b7` [\#297](https://github.com/DEFRA/flood-risk-front-office/pull/297) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `ce71b05` to `d7d99d7` [\#296](https://github.com/DEFRA/flood-risk-front-office/pull/296) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `2769f05` to `ce71b05` [\#294](https://github.com/DEFRA/flood-risk-front-office/pull/294) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `c137252` to `2769f05` [\#293](https://github.com/DEFRA/flood-risk-front-office/pull/293) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `e1661ba` to `c137252` [\#292](https://github.com/DEFRA/flood-risk-front-office/pull/292) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Fix changelog generator [\#291](https://github.com/DEFRA/flood-risk-front-office/pull/291) ([Cruikshanks](https://github.com/Cruikshanks))
+- Bump flood\_risk\_engine from `9d839f3` to `e1661ba` [\#290](https://github.com/DEFRA/flood-risk-front-office/pull/290) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `1f28ad6` to `9d839f3` [\#289](https://github.com/DEFRA/flood-risk-front-office/pull/289) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `364d271` to `1f28ad6` [\#286](https://github.com/DEFRA/flood-risk-front-office/pull/286) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `19e91db` to `364d271` [\#285](https://github.com/DEFRA/flood-risk-front-office/pull/285) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump rubocop from 0.78.0 to 0.79.0 [\#284](https://github.com/DEFRA/flood-risk-front-office/pull/284) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `fe3eda8` to `19e91db` [\#283](https://github.com/DEFRA/flood-risk-front-office/pull/283) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump bullet from 6.0.2 to 6.1.0 [\#282](https://github.com/DEFRA/flood-risk-front-office/pull/282) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump rubocop from 0.77.0 to 0.78.0 [\#281](https://github.com/DEFRA/flood-risk-front-office/pull/281) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `e7d9811` to `fe3eda8` [\#280](https://github.com/DEFRA/flood-risk-front-office/pull/280) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump flood\_risk\_engine from `9388075` to `e7d9811` [\#278](https://github.com/DEFRA/flood-risk-front-office/pull/278) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump flood\_risk\_engine from `7c6e2cd` to `9388075` [\#277](https://github.com/DEFRA/flood-risk-front-office/pull/277) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 
-## [v1.1.2](https://github.com/DEFRA/flood-risk-front-office/tree/v1.1.2) (2019-11-28)
+## [v1.1.2](https://github.com/defra/flood-risk-front-office/tree/v1.1.2) (2019-11-28)
 
-[Full Changelog](https://github.com/DEFRA/flood-risk-front-office/compare/v1.1.1...v1.1.2)
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v1.1.1...v1.1.2)
 
 **Fixed bugs:**
 
@@ -43,9 +66,9 @@
 - Bump flood\_risk\_engine from `f8bf2a5` to `55dc5b1` [\#256](https://github.com/DEFRA/flood-risk-front-office/pull/256) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump flood\_risk\_engine from `cf686e2` to `f8bf2a5` [\#255](https://github.com/DEFRA/flood-risk-front-office/pull/255) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 
-## [v1.1.1](https://github.com/DEFRA/flood-risk-front-office/tree/v1.1.1) (2019-09-04)
+## [v1.1.1](https://github.com/defra/flood-risk-front-office/tree/v1.1.1) (2019-09-04)
 
-[Full Changelog](https://github.com/DEFRA/flood-risk-front-office/compare/v1.1.0...v1.1.1)
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v1.1.0...v1.1.1)
 
 **Security fixes:**
 
@@ -72,9 +95,9 @@
 - Bump faker from 1.9.4 to 1.9.5 [\#232](https://github.com/DEFRA/flood-risk-front-office/pull/232) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump flood\_risk\_engine from `1f1a8ec` to `61bde8e` [\#231](https://github.com/DEFRA/flood-risk-front-office/pull/231) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 
-## [v1.1.0](https://github.com/DEFRA/flood-risk-front-office/tree/v1.1.0) (2019-06-27)
+## [v1.1.0](https://github.com/defra/flood-risk-front-office/tree/v1.1.0) (2019-06-27)
 
-[Full Changelog](https://github.com/DEFRA/flood-risk-front-office/compare/v1.0.2...v1.1.0)
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v1.0.2...v1.1.0)
 
 **Implemented enhancements:**
 
@@ -136,11 +159,10 @@
 - Bundle Update on 2017-12-18 [\#181](https://github.com/DEFRA/flood-risk-front-office/pull/181) ([deppbot](https://github.com/deppbot))
 - Bundle Update on 2017-12-16 [\#180](https://github.com/DEFRA/flood-risk-front-office/pull/180) ([deppbot](https://github.com/deppbot))
 - Bundle Update on 2017-12-15 [\#179](https://github.com/DEFRA/flood-risk-front-office/pull/179) ([deppbot](https://github.com/deppbot))
-- Bundle Update on 2017-08-01 [\#155](https://github.com/DEFRA/flood-risk-front-office/pull/155) ([deppbot](https://github.com/deppbot))
 
-## [v1.0.2](https://github.com/DEFRA/flood-risk-front-office/tree/v1.0.2) (2016-12-21)
+## [v1.0.2](https://github.com/defra/flood-risk-front-office/tree/v1.0.2) (2016-12-21)
 
-[Full Changelog](https://github.com/DEFRA/flood-risk-front-office/compare/v1.0.1...v1.0.2)
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v1.0.1...v1.0.2)
 
 **Implemented enhancements:**
 
@@ -151,9 +173,9 @@
 - Update version to 1.0.2 ready for release [\#148](https://github.com/DEFRA/flood-risk-front-office/pull/148) ([Cruikshanks](https://github.com/Cruikshanks))
 - Update version to 1.0.1 ready for release [\#147](https://github.com/DEFRA/flood-risk-front-office/pull/147) ([Cruikshanks](https://github.com/Cruikshanks))
 
-## [v1.0.1](https://github.com/DEFRA/flood-risk-front-office/tree/v1.0.1) (2016-12-08)
+## [v1.0.1](https://github.com/defra/flood-risk-front-office/tree/v1.0.1) (2016-12-08)
 
-[Full Changelog](https://github.com/DEFRA/flood-risk-front-office/compare/v1.0.0...v1.0.1)
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v1.0.0...v1.0.1)
 
 **Implemented enhancements:**
 
@@ -170,9 +192,9 @@
 - Housekeeping [\#140](https://github.com/DEFRA/flood-risk-front-office/pull/140) ([woodpigeon](https://github.com/woodpigeon))
 - Add a journey spec [\#139](https://github.com/DEFRA/flood-risk-front-office/pull/139) ([reggieb](https://github.com/reggieb))
 
-## [v1.0.0](https://github.com/DEFRA/flood-risk-front-office/tree/v1.0.0) (2016-07-18)
+## [v1.0.0](https://github.com/defra/flood-risk-front-office/tree/v1.0.0) (2016-07-18)
 
-[Full Changelog](https://github.com/DEFRA/flood-risk-front-office/compare/de70a743531605a4a5d1b256d528675c7cc710c8...v1.0.0)
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/de70a743531605a4a5d1b256d528675c7cc710c8...v1.0.0)
 
 **Implemented enhancements:**
 
