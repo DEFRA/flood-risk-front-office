@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/DEFRA/flood-risk-engine
-  revision: 501a12e62cf6b0bdfc5e50e9fde8ab213af6db25
-  branch: implement-defra-ruby-email
+  revision: 5732407449f9eb3d8ba53b525888ef1f5489626c
+  branch: master
   specs:
     flood_risk_engine (1.0.2)
       activerecord-session_store (~> 1.0)
