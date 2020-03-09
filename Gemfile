@@ -71,8 +71,6 @@ group :test do
   gem "capybara", "~> 2.6.2"
   gem "capybara-email", "~> 2.5.0"
   gem "ci_reporter_rspec", "~> 1.0.0", require: false
-  # Allow test coverage to be reported for codeclimate for displaying in the readme
-  gem "codeclimate-test-reporter", "~> 0.5.2", require: false
   # Needed for headless testing with Javascript or pages that ref external sites
   gem "poltergeist", "~> 1.9.0"
   # Tool for checking code coverage

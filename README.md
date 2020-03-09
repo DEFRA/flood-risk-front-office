@@ -1,8 +1,8 @@
 # Flood Risk Front Office
 
 [![Build Status](https://travis-ci.com/DEFRA/flood-risk-front-office.svg?branch=master)](https://travis-ci.com/DEFRA/flood-risk-front-office)
-[![Maintainability](https://api.codeclimate.com/v1/badges/6429344395fd3e97f196/maintainability)](https://codeclimate.com/github/DEFRA/flood-risk-front-office/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/6429344395fd3e97f196/test_coverage)](https://codeclimate.com/github/DEFRA/flood-risk-front-office/test_coverage)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=DEFRA_flood-risk-front-office&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=DEFRA_flood-risk-front-office)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=DEFRA_flood-risk-front-office&metric=coverage)](https://sonarcloud.io/dashboard?id=DEFRA_flood-risk-front-office)
 [![security](https://hakiri.io/github/DEFRA/flood-risk-front-office/master.svg)](https://hakiri.io/github/DEFRA/flood-risk-front-office/master)
 [![Licence](https://img.shields.io/badge/Licence-OGLv3-blue.svg)](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3)
 
