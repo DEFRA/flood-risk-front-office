@@ -74,7 +74,7 @@ group :test do
   # Needed for headless testing with Javascript or pages that ref external sites
   gem "poltergeist", "~> 1.9.0"
   # Tool for checking code coverage
-  gem "simplecov", "~> 0.11.2", require: false
+  gem "simplecov", require: false
 end
 
 group :production do
