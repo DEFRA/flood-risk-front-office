@@ -1,5 +1,42 @@
 # Changelog
 
+## [v1.1.4](https://github.com/defra/flood-risk-front-office/tree/v1.1.4) (2020-06-19)
+
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v1.1.3...v1.1.4)
+
+**Implemented enhancements:**
+
+- Enable defra-ruby-email in the project [\#300](https://github.com/DEFRA/flood-risk-front-office/pull/300) ([Cruikshanks](https://github.com/Cruikshanks))
+
+**Security fixes:**
+
+- \[Security\] Bump websocket-extensions from 0.1.3 to 0.1.5 [\#319](https://github.com/DEFRA/flood-risk-front-office/pull/319) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Fix json dependency security issue [\#312](https://github.com/DEFRA/flood-risk-front-office/pull/312) ([Cruikshanks](https://github.com/Cruikshanks))
+
+**Merged pull requests:**
+
+- Switch frae engine branch reference to master [\#321](https://github.com/DEFRA/flood-risk-front-office/pull/321) ([Cruikshanks](https://github.com/Cruikshanks))
+- Bump flood\_risk\_engine from `f9db044` to `7a00188` [\#320](https://github.com/DEFRA/flood-risk-front-office/pull/320) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `9d51bc7` to `f9db044` [\#318](https://github.com/DEFRA/flood-risk-front-office/pull/318) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump rails from 4.2.11.1 to 4.2.11.3 [\#317](https://github.com/DEFRA/flood-risk-front-office/pull/317) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `46d538b` to `9d51bc7` [\#316](https://github.com/DEFRA/flood-risk-front-office/pull/316) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `49165b0` to `46d538b` [\#315](https://github.com/DEFRA/flood-risk-front-office/pull/315) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `c6a4b67` to `49165b0` [\#314](https://github.com/DEFRA/flood-risk-front-office/pull/314) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Use multiple rubocop formats in Travis build [\#313](https://github.com/DEFRA/flood-risk-front-office/pull/313) ([Cruikshanks](https://github.com/Cruikshanks))
+- Bump flood\_risk\_engine from `3c9d0c0` to `c6a4b67` [\#311](https://github.com/DEFRA/flood-risk-front-office/pull/311) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump github\_changelog\_generator from 1.15.1 to 1.15.2 [\#310](https://github.com/DEFRA/flood-risk-front-office/pull/310) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `f45fc15` to `3c9d0c0` [\#309](https://github.com/DEFRA/flood-risk-front-office/pull/309) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump github\_changelog\_generator from 1.15.0 to 1.15.1 [\#308](https://github.com/DEFRA/flood-risk-front-office/pull/308) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump rubocop from 0.80.1 to 0.81.0 [\#307](https://github.com/DEFRA/flood-risk-front-office/pull/307) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `790f425` to `f45fc15` [\#306](https://github.com/DEFRA/flood-risk-front-office/pull/306) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `49b697c` to `790f425` [\#305](https://github.com/DEFRA/flood-risk-front-office/pull/305) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `3799176` to `49b697c` [\#304](https://github.com/DEFRA/flood-risk-front-office/pull/304) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Switch to SonarCloud from CodeClimate [\#303](https://github.com/DEFRA/flood-risk-front-office/pull/303) ([Cruikshanks](https://github.com/Cruikshanks))
+- Bump flood\_risk\_engine from `5732407` to `3799176` [\#302](https://github.com/DEFRA/flood-risk-front-office/pull/302) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump rubocop from 0.80.0 to 0.80.1 [\#301](https://github.com/DEFRA/flood-risk-front-office/pull/301) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `ab620b7` to `29fdf86` [\#299](https://github.com/DEFRA/flood-risk-front-office/pull/299) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump rubocop from 0.79.0 to 0.80.0 [\#298](https://github.com/DEFRA/flood-risk-front-office/pull/298) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+
 ## [v1.1.3](https://github.com/defra/flood-risk-front-office/tree/v1.1.3) (2020-02-13)
 
 [Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v1.1.2...v1.1.3)
@@ -181,10 +218,6 @@
 
 - Remove dependency on before\_commit for CI checks [\#144](https://github.com/DEFRA/flood-risk-front-office/pull/144) ([Cruikshanks](https://github.com/Cruikshanks))
 
-**Closed issues:**
-
-- Pin down gem versions to patch level before go live [\#61](https://github.com/DEFRA/flood-risk-front-office/issues/61)
-
 **Merged pull requests:**
 
 - Update version to 1.0.1 ready for release [\#145](https://github.com/DEFRA/flood-risk-front-office/pull/145) ([TThurston](https://github.com/TThurston))
@@ -199,14 +232,6 @@
 **Implemented enhancements:**
 
 - Support CodeClimate including test coverage reporting [\#38](https://github.com/DEFRA/flood-risk-front-office/pull/38) ([woodpigeon](https://github.com/woodpigeon))
-
-**Closed issues:**
-
-- Add suckerpunch [\#123](https://github.com/DEFRA/flood-risk-front-office/issues/123)
-- Remove setting of FloodRiskEngine.config.redirection\_url\_on\_location\_unchecked [\#81](https://github.com/DEFRA/flood-risk-front-office/issues/81)
-- Remove turbolink references [\#73](https://github.com/DEFRA/flood-risk-front-office/issues/73)
-- Remove copykit [\#32](https://github.com/DEFRA/flood-risk-front-office/issues/32)
-- Add before\_commit to .travis.yml [\#4](https://github.com/DEFRA/flood-risk-front-office/issues/4)
 
 **Merged pull requests:**
 
