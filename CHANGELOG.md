@@ -1,5 +1,14 @@
 # Changelog
 
+## [v1.1.5](https://github.com/defra/flood-risk-front-office/tree/v1.1.5) (2020-07-10)
+
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v1.1.4...v1.1.5)
+
+**Merged pull requests:**
+
+- Bump flood\_risk\_engine from `ecab819` to `c264182` [\#323](https://github.com/DEFRA/flood-risk-front-office/pull/323) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `5cd04ac` to `ecab819` [\#322](https://github.com/DEFRA/flood-risk-front-office/pull/322) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+
 ## [v1.1.4](https://github.com/defra/flood-risk-front-office/tree/v1.1.4) (2020-06-19)
 
 [Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v1.1.3...v1.1.4)
