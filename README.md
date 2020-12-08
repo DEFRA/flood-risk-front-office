@@ -1,6 +1,6 @@
 # Flood Risk Front Office
 
-[![Build Status](https://travis-ci.com/DEFRA/flood-risk-front-office.svg?branch=main)](https://travis-ci.com/DEFRA/flood-risk-front-office)
+![Build Status](https://github.com/DEFRA/flood-risk-front-office/workflows/CI/badge.svg?branch=main)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=DEFRA_flood-risk-front-office&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=DEFRA_flood-risk-front-office)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=DEFRA_flood-risk-front-office&metric=coverage)](https://sonarcloud.io/dashboard?id=DEFRA_flood-risk-front-office)
 [![security](https://hakiri.io/github/DEFRA/flood-risk-front-office/main.svg)](https://hakiri.io/github/DEFRA/flood-risk-front-office/main)
