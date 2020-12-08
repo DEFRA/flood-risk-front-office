@@ -62,7 +62,6 @@ jobs:
       # https://community.sonarsource.com/t/code-coverage-doesnt-work-with-github-action/16747/6
       - name: Run unit tests
         run: |
-          bundle exec rake test
           bundle exec rspec
           sed -i 's/\/home\/runner\/work\/flood-risk-front-office\/flood-risk-front-office\//\/github\/workspace\//g' coverage/.resultset.json
       - name: Analyze with SonarCloud
