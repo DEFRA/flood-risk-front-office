@@ -1,5 +1,27 @@
 # Changelog
 
+## [v1.2.1](https://github.com/defra/flood-risk-front-office/tree/v1.2.1) (2021-03-23)
+
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v1.2.0...v1.2.1)
+
+**Implemented enhancements:**
+
+- Link to accessibility statement in footer [\#342](https://github.com/DEFRA/flood-risk-front-office/pull/342) ([irisfaraway](https://github.com/irisfaraway))
+
+**Merged pull requests:**
+
+- Bump flood\_risk\_engine from `2ec87d3` to `a45b4aa` [\#345](https://github.com/DEFRA/flood-risk-front-office/pull/345) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump flood\_risk\_engine from `04dbe2c` to `2ec87d3` [\#343](https://github.com/DEFRA/flood-risk-front-office/pull/343) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump flood\_risk\_engine from `3779b5e` to `04dbe2c` [\#341](https://github.com/DEFRA/flood-risk-front-office/pull/341) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump bullet from 6.1.3 to 6.1.4 [\#340](https://github.com/DEFRA/flood-risk-front-office/pull/340) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump flood\_risk\_engine from `eb3a1d6` to `3779b5e` [\#339](https://github.com/DEFRA/flood-risk-front-office/pull/339) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump flood\_risk\_engine from `1f7e384` to `eb3a1d6` [\#338](https://github.com/DEFRA/flood-risk-front-office/pull/338) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update Postgres image in CI build [\#337](https://github.com/DEFRA/flood-risk-front-office/pull/337) ([irisfaraway](https://github.com/irisfaraway))
+- Bump bullet from 6.1.2 to 6.1.3 [\#336](https://github.com/DEFRA/flood-risk-front-office/pull/336) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump flood\_risk\_engine from `19e17a7` to `1f7e384` [\#335](https://github.com/DEFRA/flood-risk-front-office/pull/335) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump flood\_risk\_engine from `188df5e` to `19e17a7` [\#334](https://github.com/DEFRA/flood-risk-front-office/pull/334) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump bullet from 6.1.0 to 6.1.2 [\#333](https://github.com/DEFRA/flood-risk-front-office/pull/333) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v1.2.0](https://github.com/defra/flood-risk-front-office/tree/v1.2.0) (2020-12-10)
 
 [Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v1.1.5...v1.2.0)
@@ -127,11 +149,14 @@
 - Bump flood\_risk\_engine from `55dc5b1` to `5bec682` [\#257](https://github.com/DEFRA/flood-risk-front-office/pull/257) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump flood\_risk\_engine from `f8bf2a5` to `55dc5b1` [\#256](https://github.com/DEFRA/flood-risk-front-office/pull/256) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump flood\_risk\_engine from `cf686e2` to `f8bf2a5` [\#255](https://github.com/DEFRA/flood-risk-front-office/pull/255) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
-- Bump flood\_risk\_engine from `610e346` to `f14c53d` [\#251](https://github.com/DEFRA/flood-risk-front-office/pull/251) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 
 ## [v1.1.1](https://github.com/defra/flood-risk-front-office/tree/v1.1.1) (2019-09-04)
 
 [Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v1.1.0...v1.1.1)
+
+**Fixed bugs:**
+
+- Move github changelog generator to main group [\#228](https://github.com/DEFRA/flood-risk-front-office/pull/228) ([Cruikshanks](https://github.com/Cruikshanks))
 
 **Security fixes:**
 
@@ -142,6 +167,7 @@
 - Bump flood\_risk\_engine from `8e165f1` to `cf686e2` [\#254](https://github.com/DEFRA/flood-risk-front-office/pull/254) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump flood\_risk\_engine from `92681dd` to `8e165f1` [\#253](https://github.com/DEFRA/flood-risk-front-office/pull/253) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump flood\_risk\_engine from `f14c53d` to `92681dd` [\#252](https://github.com/DEFRA/flood-risk-front-office/pull/252) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump flood\_risk\_engine from `610e346` to `f14c53d` [\#251](https://github.com/DEFRA/flood-risk-front-office/pull/251) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump flood\_risk\_engine from `ce68109` to `610e346` [\#250](https://github.com/DEFRA/flood-risk-front-office/pull/250) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Update Travis-CI badge url in README [\#249](https://github.com/DEFRA/flood-risk-front-office/pull/249) ([Cruikshanks](https://github.com/Cruikshanks))
 - Migrate area lookup to defra-ruby-area [\#247](https://github.com/DEFRA/flood-risk-front-office/pull/247) ([Cruikshanks](https://github.com/Cruikshanks))
@@ -168,7 +194,6 @@
 
 **Fixed bugs:**
 
-- Move github changelog generator to main group [\#228](https://github.com/DEFRA/flood-risk-front-office/pull/228) ([Cruikshanks](https://github.com/Cruikshanks))
 - Delete unused schedule.rb file [\#221](https://github.com/DEFRA/flood-risk-front-office/pull/221) ([irisfaraway](https://github.com/irisfaraway))
 - Fix codeclimate integration [\#150](https://github.com/DEFRA/flood-risk-front-office/pull/150) ([Cruikshanks](https://github.com/Cruikshanks))
 - Update EA references after org name change \[no-ci\] [\#149](https://github.com/DEFRA/flood-risk-front-office/pull/149) ([Cruikshanks](https://github.com/Cruikshanks))
@@ -233,6 +258,7 @@
 **Merged pull requests:**
 
 - Update version to 1.0.2 ready for release [\#148](https://github.com/DEFRA/flood-risk-front-office/pull/148) ([Cruikshanks](https://github.com/Cruikshanks))
+- Update version to 1.0.1 ready for release [\#147](https://github.com/DEFRA/flood-risk-front-office/pull/147) ([Cruikshanks](https://github.com/Cruikshanks))
 
 ## [v1.0.1](https://github.com/defra/flood-risk-front-office/tree/v1.0.1) (2016-12-08)
 
@@ -244,7 +270,6 @@
 
 **Merged pull requests:**
 
-- Update version to 1.0.1 ready for release [\#147](https://github.com/DEFRA/flood-risk-front-office/pull/147) ([Cruikshanks](https://github.com/Cruikshanks))
 - Update version to 1.0.1 ready for release [\#145](https://github.com/DEFRA/flood-risk-front-office/pull/145) ([TThurston](https://github.com/TThurston))
 - Documentation improvements and Rails 4.2.7.1 upgrade [\#142](https://github.com/DEFRA/flood-risk-front-office/pull/142) ([woodpigeon](https://github.com/woodpigeon))
 - Housekeeping [\#140](https://github.com/DEFRA/flood-risk-front-office/pull/140) ([woodpigeon](https://github.com/woodpigeon))
