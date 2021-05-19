@@ -1,17 +1,45 @@
-/*
- *= require flood_risk_engine/application
-*/
+// GOV.UK Frontend Toolkit (alphagov/govuk_frontend_toolkit)
+@import 'colours';
+@import 'font_stack';
+@import 'measurements';
+@import 'conditionals';
+@import 'device-pixels';
+@import 'grid_layout';
+@import 'typography';
+@import 'shims';
 
-// The govuk_elements_rails gem (https://github.com/alphagov/govuk_elements_rails)
-// allows us to pull in govuk_elements, a collection of sass and js building blocks.
-// Using this gem makes it easier for us to update to the latest version of govuk_elements.
-//
-// Note that govuk_elements_rails will bring in the govuk_frontend_toolkit
-// (as a dependency) but not govuk_template, which we need to specify in the Gemfile.
-// There is a fair bit to understand about how the 3 projects are related and loaded.
-// Pulling in govuk-elements.scss here will pull in all sass at:
-// https://github.com/alphagov/govuk_elements/blob/master/public/sass/_govuk-elements.scss
-@import 'govuk-elements';
+@import 'design-patterns/alpha-beta';
+@import 'design-patterns/buttons';
+@import 'design-patterns/breadcrumbs';
+
+// GOV.UK elements (alphagov/govuk_elements)
+
+// Helper functions and classes
+@import "elements/helpers";
+// Generic (normalize/reset.css)
+@import "elements/reset";
+// Base (unclassed HTML elements)
+// These are predefined by govuk_template
+// If you're not using govuk_template, uncomment the line below.
+// @import "elements/govuk-template-base";
+// Main content container. Grid layout - rows and column widths
+@import "elements/layout";
+// Components (chunks of UI)
+@import "elements/elements-typography";
+@import "elements/buttons";
+@import "elements/icons";
+@import "elements/lists";
+@import "elements/tables";
+@import "elements/details";
+@import "elements/panels";
+@import "elements/forms";
+@import "elements/forms/form-multiple-choice";
+@import "elements/forms/form-date";
+@import "elements/forms/form-validation";
+@import "elements/breadcrumbs";
+@import "elements/phase-banner";
+@import "elements/components";
+@import "elements/shame";
 @import 'partials/forms';
 @import 'partials/footer';
 @import 'partials/static_pages';

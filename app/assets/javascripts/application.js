@@ -11,7 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require details.polyfill
+// from govuk_frontend_toolkit gem
+//= require vendor/polyfills/bind
+//= require govuk_toolkit
 //= require jquery_ujs
 //= require flood_risk_engine
 //= require govuk/selection-buttons
