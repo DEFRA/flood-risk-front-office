@@ -6,6 +6,13 @@
   <%= csrf_meta_tags %>
 <% end %>
 
+<% content_for(:cookie_message)  do %>
+  <p>
+    <%= t("global_cookies.message") %>
+    <%= link_to t("global_cookies.link_text"), page_path("cookies"), target: "_blank" %>
+  </p>
+<% end %>
+
 <% page_title t(:global_proposition_header) %>
 
 <% content_for :header_class, 'with-proposition' %>
