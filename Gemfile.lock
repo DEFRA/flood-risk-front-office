@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/DEFRA/flood-risk-engine
-  revision: 9fc788b729e869b1340d49394379e3c5966031b8
+  revision: c72541ddfe582426ee7a1dfcb2d313b2d324ab8d
   branch: main
   specs:
     flood_risk_engine (1.0.2)
@@ -173,7 +173,7 @@ GEM
     has_secure_token (1.0.0)
       activerecord (>= 3.0)
     high_voltage (3.0.0)
-    http-cookie (1.0.3)
+    http-cookie (1.0.4)
       domain_name (~> 0.5)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
@@ -184,7 +184,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (2.3.0)
-    loofah (2.9.1)
+    loofah (2.10.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
