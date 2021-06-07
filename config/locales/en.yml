@@ -8,4 +8,6 @@ en:
     application:
       beta: BETA
       feedback: This is a new service – your %{link} will help us to improve it.
-      feedback_link: feedback
+      feedback_link:
+        text: feedback
+        url: https://www.gov.uk/done/register-flood-risk-exemption

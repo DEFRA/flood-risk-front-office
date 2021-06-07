@@ -48,8 +48,8 @@
           <%= t(
                 ".feedback",
                 link: link_to(
-                  t(".feedback_link"),
-                  ::ApplicationHelper.feedback_survey_url(content_for(:page_title)),
+                  t(".feedback_link.text"),
+                  t(".feedback_link.url"),
                   target: "_blank"
                 )
               ).html_safe
