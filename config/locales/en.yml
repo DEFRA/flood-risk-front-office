@@ -1,5 +1,8 @@
 ---
 en:
+  global_cookies:
+    message: We only collect essential cookies to help save your information and to keep it secure.
+    link_text: Find out more about cookies
   global_proposition_header: Register a flood risk activity exemption
   layouts:
     application:
