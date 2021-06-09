@@ -39,4 +39,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   config.action_view.raise_on_missing_translations = true
+
+  # Resolves issue with sass-rails
+  # https://github.com/sass/sassc-rails/issues/93
+  config.assets.css_compressor = nil
 end
