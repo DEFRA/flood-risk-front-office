@@ -1,9 +1,7 @@
 source "https://rubygems.org"
 ruby "2.7.1"
 
-gem "govuk_elements_rails"
-gem "govuk_frontend_toolkit", git: "https://github.com/alphagov/govuk_frontend_toolkit_gem.git", submodules: true
-gem "govuk_template"
+gem "dxw_govuk_frontend_rails"
 gem "high_voltage"
 gem "jquery-rails"
 gem "pg"
