@@ -31,8 +31,5 @@ module FloodRiskFrontOffice
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     config.time_zone = 'London'
-
-    # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
   end
 end
