@@ -4,7 +4,7 @@ FloodRiskEngine::ApplicationController.layout 'application'
 
 FloodRiskEngine.configure do |config|
   # Last email cache config
-  # FIX: config.use_last_email_cache = ENV["USE_LAST_EMAIL_CACHE"] || "false"
+  config.use_last_email_cache = ENV["USE_LAST_EMAIL_CACHE"] || "false"
 
   # Configure airbrake, which is done via the engine using defra_ruby_alert
   config.airbrake_enabled = ENV["USE_AIRBRAKE"]
