@@ -37,7 +37,6 @@ group :development, :test do
   gem "byebug"
   # Provides Rails integration for factory_bot. Enables "build_dummy_data"
   # functionality in dev
-  # N.B require is false so factories aren"t loaded during e.g db:migrate
   gem "factory_bot_rails"
   # Used to generate fake data e.g. in the specs
   gem "faker"
