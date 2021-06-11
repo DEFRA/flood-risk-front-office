@@ -1,16 +1,16 @@
 GIT
   remote: https://github.com/DEFRA/flood-risk-engine
-  revision: c72541ddfe582426ee7a1dfcb2d313b2d324ab8d
+  revision: afa75f480473a4d15da4fe29bce57d055384b491
   branch: main
   specs:
     flood_risk_engine (1.0.2)
       activerecord-session_store (~> 1.0)
+      defra_ruby_address
       defra_ruby_alert (~> 0.1.0)
       defra_ruby_area
       defra_ruby_email
       dibber (~> 0.5)
       dotenv-rails (~> 2.1)
-      ea-address_lookup (~> 0.3.0)
       finite_machine (~> 0.11.3)
       has_secure_token (~> 1.0.0)
       high_voltage (~> 3.0)
@@ -109,6 +109,8 @@ GEM
     crass (1.0.6)
     declarative (0.0.20)
     declarative-option (0.1.0)
+    defra_ruby_address (0.1.0)
+      rest-client (~> 2.0)
     defra_ruby_alert (0.1.0)
       airbrake (~> 5.3.0)
     defra_ruby_area (2.0.0)
@@ -131,10 +133,6 @@ GEM
     dotenv-rails (2.1.2)
       dotenv (= 2.1.2)
       railties (>= 3.2, < 5.1)
-    ea-address_lookup (0.3.3)
-      activesupport (>= 4.2)
-      nesty (~> 1.0)
-      rest-client (~> 2.0.0.rc2)
     equalizer (0.0.11)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -173,6 +171,7 @@ GEM
     has_secure_token (1.0.0)
       activerecord (>= 3.0)
     high_voltage (3.0.0)
+    http-accept (1.7.0)
     http-cookie (1.0.4)
       domain_name (~> 0.5)
     i18n (0.9.5)
@@ -197,7 +196,6 @@ GEM
     minitest (5.14.4)
     multi_json (1.15.0)
     multipart-post (2.1.1)
-    nesty (1.0.2)
     netrc (0.11.0)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
@@ -269,7 +267,8 @@ GEM
       declarative (< 0.1.0)
       declarative-option (< 0.2.0)
       uber (< 0.2.0)
-    rest-client (2.0.2)
+    rest-client (2.1.0)
+      http-accept (>= 1.7.0, < 2.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
