@@ -1,5 +1,23 @@
 # Changelog
 
+## [v1.3.0](https://github.com/defra/flood-risk-front-office/tree/v1.3.0) (2021-06-15)
+
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v1.2.1...v1.3.0)
+
+**Implemented enhancements:**
+
+- PECR Audit - change feedback link [\#350](https://github.com/DEFRA/flood-risk-front-office/pull/350) ([tobyprivett](https://github.com/tobyprivett))
+- PECR Audit - Action 1 - Update cookie banner [\#349](https://github.com/DEFRA/flood-risk-front-office/pull/349) ([tobyprivett](https://github.com/tobyprivett))
+
+**Merged pull requests:**
+
+- Bump flood\_risk\_engine from `d4a5e4b` to `c4b1403` [\#356](https://github.com/DEFRA/flood-risk-front-office/pull/356) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump flood\_risk\_engine from `afa75f4` to `d4a5e4b` [\#355](https://github.com/DEFRA/flood-risk-front-office/pull/355) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump flood\_risk\_engine from `c72541d` to `afa75f4` [\#354](https://github.com/DEFRA/flood-risk-front-office/pull/354) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump flood\_risk\_engine from `9fc788b` to `c72541d` [\#351](https://github.com/DEFRA/flood-risk-front-office/pull/351) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump flood\_risk\_engine from `a45b4aa` to `9fc788b` [\#347](https://github.com/DEFRA/flood-risk-front-office/pull/347) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rexml from 3.2.4 to 3.2.5 [\#346](https://github.com/DEFRA/flood-risk-front-office/pull/346) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v1.2.1](https://github.com/defra/flood-risk-front-office/tree/v1.2.1) (2021-03-23)
 
 [Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v1.2.0...v1.2.1)
@@ -154,10 +172,6 @@
 
 [Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v1.1.0...v1.1.1)
 
-**Fixed bugs:**
-
-- Move github changelog generator to main group [\#228](https://github.com/DEFRA/flood-risk-front-office/pull/228) ([Cruikshanks](https://github.com/Cruikshanks))
-
 **Security fixes:**
 
 - \[Security\] Bump nokogiri from 1.10.3 to 1.10.4 [\#242](https://github.com/DEFRA/flood-risk-front-office/pull/242) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
@@ -180,7 +194,6 @@
 - Bump flood\_risk\_engine from `61bde8e` to `163c62c` [\#235](https://github.com/DEFRA/flood-risk-front-office/pull/235) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump faker from 1.9.5 to 1.9.6 [\#234](https://github.com/DEFRA/flood-risk-front-office/pull/234) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump flood\_risk\_engine from `61bde8e` to `88d5cfc` [\#233](https://github.com/DEFRA/flood-risk-front-office/pull/233) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
-- Bump faker from 1.9.4 to 1.9.5 [\#232](https://github.com/DEFRA/flood-risk-front-office/pull/232) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump flood\_risk\_engine from `1f1a8ec` to `61bde8e` [\#231](https://github.com/DEFRA/flood-risk-front-office/pull/231) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 
 ## [v1.1.0](https://github.com/defra/flood-risk-front-office/tree/v1.1.0) (2019-06-27)
@@ -194,12 +207,14 @@
 
 **Fixed bugs:**
 
+- Move github changelog generator to main group [\#228](https://github.com/DEFRA/flood-risk-front-office/pull/228) ([Cruikshanks](https://github.com/Cruikshanks))
 - Delete unused schedule.rb file [\#221](https://github.com/DEFRA/flood-risk-front-office/pull/221) ([irisfaraway](https://github.com/irisfaraway))
 - Fix codeclimate integration [\#150](https://github.com/DEFRA/flood-risk-front-office/pull/150) ([Cruikshanks](https://github.com/Cruikshanks))
 - Update EA references after org name change \[no-ci\] [\#149](https://github.com/DEFRA/flood-risk-front-office/pull/149) ([Cruikshanks](https://github.com/Cruikshanks))
 
 **Merged pull requests:**
 
+- Bump faker from 1.9.4 to 1.9.5 [\#232](https://github.com/DEFRA/flood-risk-front-office/pull/232) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump flood\_risk\_engine from `6e15808` to `1f1a8ec` [\#230](https://github.com/DEFRA/flood-risk-front-office/pull/230) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump flood\_risk\_engine from `98fdead` to `6e15808` [\#229](https://github.com/DEFRA/flood-risk-front-office/pull/229) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Add github changelog generator to the project [\#227](https://github.com/DEFRA/flood-risk-front-office/pull/227) ([Cruikshanks](https://github.com/Cruikshanks))
