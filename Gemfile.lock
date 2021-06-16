@@ -155,6 +155,7 @@ GEM
       trailblazer-option (~> 0.1.0)
     defra_ruby_address (0.1.0)
       rest-client (~> 2.0)
+    deep_merge (1.2.1)
     defra_ruby_alert (2.1.1)
       airbrake
     defra_ruby_area (2.0.1)
@@ -221,6 +222,11 @@ GEM
       retriable (~> 3.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    govuk_design_system_formbuilder (2.6.0)
+      actionview (>= 6.0)
+      activemodel (>= 6.0)
+      activesupport (>= 6.0)
+      deep_merge (~> 1.2.1)
     has_secure_token (1.0.0)
       activerecord (>= 3.0)
     high_voltage (3.1.2)
@@ -446,6 +452,7 @@ DEPENDENCIES
   faker
   flood_risk_engine!
   github_changelog_generator
+  govuk_design_system_formbuilder
   high_voltage
   jquery-rails
   passenger (~> 6.0)

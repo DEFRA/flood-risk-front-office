@@ -2,6 +2,7 @@ source "https://rubygems.org"
 ruby "2.7.1"
 
 gem "dxw_govuk_frontend_rails"
+gem "govuk_design_system_formbuilder"
 gem "high_voltage"
 gem "jquery-rails"
 gem "pg"
