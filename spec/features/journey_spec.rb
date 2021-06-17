@@ -29,8 +29,11 @@ RSpec.feature "Journey for organisation", type: :feature do
 
       # Mock some processes triggered along the way.
       allow_any_instance_of(FloodRiskEngine::UpdateWaterManagementAreaJob).to receive(:perform).and_return(true)
-      mock_ea_address_lookup_find_by_uprn
-      mock_ea_address_lookup_find_by_postcode
+      lookup = double(:lookup,
+                      successful?: true,
+                      response: [{ "uprn": "foo", "address": "bar" }],
+                      error: nil)
+      allow(FloodRiskEngine::AddressLookupService).to receive(:run).and_return(lookup)
 
       # Start the journey at the first step
       initial_step = work_flow.shift
