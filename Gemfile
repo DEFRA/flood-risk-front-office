@@ -48,8 +48,8 @@ group :test do
   gem "ci_reporter_rspec"
   # Needed for headless testing with Javascript or pages that ref external sites
   gem "poltergeist"
-  # Tool for checking code coverage
-  gem "simplecov", require: false
+  # Tool for checking code coverage, version pinned to support Sonarcloud
+  gem "simplecov", "~> 0.17.1", require: false
 end
 
 group :production do
