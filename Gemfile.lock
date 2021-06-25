@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/DEFRA/defra-ruby-template
+  revision: 5e1316d4e1a31e5fc0b3786aea992e47665d2204
+  branch: main
+  specs:
+    defra_ruby_template (3.13.0)
+
+GIT
   remote: https://github.com/DEFRA/flood-risk-engine
   revision: 60d7f29b70101d723dea1ac62926f4da31ac1853
   branch: rails6
@@ -184,7 +191,6 @@ GEM
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
-    dxw_govuk_frontend_rails (3.11.0)
     equalizer (0.0.11)
     erubi (1.10.0)
     execjs (2.8.1)
@@ -445,8 +451,8 @@ DEPENDENCIES
   capybara
   capybara-email
   ci_reporter_rspec
+  defra_ruby_template!
   dotenv-rails
-  dxw_govuk_frontend_rails
   factory_bot_rails
   faker
   flood_risk_engine!

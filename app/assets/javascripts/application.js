@@ -1,6 +1,6 @@
 //= require jquery
 //= require jquery_ujs
-//= require govuk_frontend_rails
+//= require defra_ruby_template
 
 window.onload = function() {
   window.GOVUKFrontend.initAll()

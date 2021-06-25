@@ -1,7 +1,10 @@
 source "https://rubygems.org"
 ruby "2.7.1"
 
-gem "dxw_govuk_frontend_rails"
+gem "defra_ruby_template",
+    git: "https://github.com/DEFRA/defra-ruby-template",
+    branch: "main"
+
 gem "govuk_design_system_formbuilder"
 gem "high_voltage"
 gem "jquery-rails"
