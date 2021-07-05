@@ -19,8 +19,8 @@ RSpec.feature "Journey for organisation", type: :feature do
       # form is tested individually we are not interested here in testing specific
       # data input, just that if the data input is successful that the journey
       # continues to the next step
-      allow_any_instance_of(FloodRiskEngine::Steps::BaseForm).to receive(:save).and_return(true)
-      allow_any_instance_of(FloodRiskEngine::Steps::BaseForm).to receive(:validate).and_return(true)
+      allow_any_instance_of(FloodRiskEngine::Steps::BaseStepsForm).to receive(:save).and_return(true)
+      allow_any_instance_of(FloodRiskEngine::Steps::BaseStepsForm).to receive(:validate).and_return(true)
 
       # This effectively mocks the setting of the journey token
       allow_any_instance_of(FloodRiskEngine::ApplicationController)
