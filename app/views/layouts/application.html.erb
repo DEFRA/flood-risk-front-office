@@ -1,73 +1,57 @@
-<% content_for(:head) do %>
-  <%= stylesheet_link_tag "application", media: "all" %>
-  <!--[if IE 8]><%= stylesheet_link_tag "ie8" %><![endif]-->
-  <meta name="format-detection" content="telephone=no" />
-  <%= javascript_include_tag "application" %>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= render("shared/google_analytics", google_tag: ENV["GOOGLE_ANALYTICS_ID"]) if ENV["GOOGLE_ANALYTICS_ID"].present? %>
 <% end %>
 
-<% content_for(:cookie_message)  do %>
-  <p>
-    <%= t("global_cookies.message") %>
-    <%= link_to t("global_cookies.link_text"), page_path("cookies"), target: "_blank" %>
-  </p>
+<% content_for :header_content do %>
+  <%= link_to  t(:global_proposition_header), main_app.root_path, id: "proposition-name", class: "govuk-header__link govuk-header__link--service-name" %>
 <% end %>
 
-<% page_title t(:global_proposition_header) %>
-
-<% content_for :header_class, 'with-proposition' %>
-<% content_for :proposition_header do %>
-  <div class="header-proposition">
-    <div class="content">
-      <nav id="proposition-menu">
-        <%= link_to  t(:global_proposition_header), main_app.root_path,id: "proposition-name" %>
-      </nav>
-    </div>
+<% content_for :phase_banner do %>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        <%= t(".beta")  %>
+      </strong>
+      <span class="govuk-phase-banner__text">
+        <%= t(
+              ".feedback",
+              link: link_to(
+                t(".feedback_link.text"),
+                t(".feedback_link.url"),
+                class: "govuk-link",
+                target: "_blank"
+              )
+            ).html_safe
+        %>
+      </span>
+    </p>
   </div>
 <% end %>
 
-<%
-  if Rails.env.development? && ENV["ADD_STATE_JUMPER_TOOLBAR"] == "true"
-    content_for :after_header, render(partial: "shared/tools/state_renderer")
-  end
-%>
+<% content_for :footer do %>
+  <ul class="govuk-footer__inline-list">
+    <li class="govuk-footer__inline-list-item">
+       <%= t('flood_risk_engine.shared.footer.support_text') %>
+       <%= link_to t("flood_risk_engine.shared.footer.helpline_telephone_number"),
+        "tel:#{t "flood_risk_engine.shared.footer.helpline_telephone_number_uri" }",
+        class: "govuk-footer__link" %>
+    </li>
+  </ul>
 
-<%
-  content_for(:body_start) do
-    render("shared/google_analytics", google_tag: ENV["GOOGLE_ANALYTICS_ID"])
-  end if ENV["GOOGLE_ANALYTICS_ID"].present?
-%>
-
-<% content_for(:content) do %>
-  <main id="content" role="main">
-
-    <div class="phase-banner-beta">
-      <p>
-        <strong class="phase-tag"><%= t(".beta")  %></strong>
-        <span>
-          <%= t(
-                ".feedback",
-                link: link_to(
-                  t(".feedback_link.text"),
-                  t(".feedback_link.url"),
-                  target: "_blank"
-                )
-              ).html_safe
-          %>
-        </span>
-      </p>
-    </div>
-
-    <%= yield %>
-  </main>
+  <h2 class="govuk-visually-hidden">Support links</h2>
+  <ul class="govuk-footer__inline-list">
+    <li class="govuk-footer__inline-list-item">
+      <%= link_to 'Privacy', page_path('privacy_policy'), class: "govuk-footer__link", target: "_blank" %>
+    </li>
+    <li class="govuk-footer__inline-list-item">
+      <%= link_to 'Cookies', page_path('cookies'), class: "govuk-footer__link", target: "_blank" %>
+    </li>
+    <li class="govuk-footer__inline-list-item">
+      <%= link_to 'Accessibility', page_path('accessibility'), class: "govuk-footer__link", target: "_blank" %>
+    </li>
+  </ul>
 <% end %>
 
-<% content_for :body_end do %>
-<% end %>
-
-<% content_for :footer_top do %>
-  <%= render("shared/footer") %>
-<% end %>
-
-<%-# LAST: RENDER main GDS template -%>
-<%= render template: "layouts/govuk_template" %>
+<%= render template: "layouts/defra_ruby_template" %>

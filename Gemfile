@@ -1,9 +1,11 @@
 source "https://rubygems.org"
 ruby "2.7.1"
 
-gem "govuk_elements_rails"
-gem "govuk_frontend_toolkit", git: "https://github.com/alphagov/govuk_frontend_toolkit_gem.git", submodules: true
-gem "govuk_template"
+gem "defra_ruby_template",
+    git: "https://github.com/DEFRA/defra-ruby-template",
+    branch: "main"
+
+gem "govuk_design_system_formbuilder"
 gem "high_voltage"
 gem "jquery-rails"
 gem "pg"
@@ -49,8 +51,8 @@ group :test do
   gem "ci_reporter_rspec"
   # Needed for headless testing with Javascript or pages that ref external sites
   gem "poltergeist"
-  # Tool for checking code coverage
-  gem "simplecov", require: false
+  # Tool for checking code coverage, version pinned to support Sonarcloud
+  gem "simplecov", "~> 0.17.1", require: false
 end
 
 group :production do

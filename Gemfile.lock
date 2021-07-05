@@ -1,9 +1,17 @@
 GIT
+  remote: https://github.com/DEFRA/defra-ruby-template
+  revision: 5e1316d4e1a31e5fc0b3786aea992e47665d2204
+  branch: main
+  specs:
+    defra_ruby_template (3.13.0)
+
+GIT
   remote: https://github.com/DEFRA/flood-risk-engine
-  revision: bd218b3a28f81df3ff0b388cf05326879919bc16
+  revision: 60d7f29b70101d723dea1ac62926f4da31ac1853
   branch: rails6
   specs:
     flood_risk_engine (1.1)
+      aasm (~> 4.12)
       activerecord-session_store (~> 2.0)
       defra_ruby_address
       defra_ruby_alert (~> 2.1.1)
@@ -14,7 +22,7 @@ GIT
       finite_machine (~> 0.11.3)
       has_secure_token (~> 1.0.0)
       high_voltage (~> 3.0)
-      jquery-rails (>= 3.1)
+      jquery-rails (~> 4.4)
       nokogiri (>= 1.11)
       os_map_ref (= 0.4.2)
       phonelib (~> 0.6)
@@ -27,17 +35,11 @@ GIT
       validates_email_format_of (~> 1.6)
       virtus (~> 1.0)
 
-GIT
-  remote: https://github.com/alphagov/govuk_frontend_toolkit_gem.git
-  revision: bf8afd715d93ec3e49225c440d14cb012bebad38
-  submodules: true
-  specs:
-    govuk_frontend_toolkit (9.0.0)
-      railties (>= 3.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
+    aasm (4.12.3)
+      concurrent-ruby (~> 1.0)
     actioncable (6.0.3.7)
       actionpack (= 6.0.3.7)
       nio4r (~> 2.0)
@@ -103,7 +105,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     airbrake (11.0.3)
       airbrake-ruby (~> 5.1)
-    airbrake-ruby (5.2.0)
+    airbrake-ruby (5.2.1)
       rbtree3 (~> 0.5)
     ast (2.4.2)
     async (1.29.0)
@@ -161,6 +163,7 @@ GEM
     declarative (0.0.20)
     declarative-builder (0.2.0)
       trailblazer-option (~> 0.1.0)
+    deep_merge (1.2.1)
     defra_ruby_address (0.1.0)
       rest-client (~> 2.0)
     defra_ruby_alert (2.1.1)
@@ -224,12 +227,11 @@ GEM
       retriable (~> 3.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    govuk_elements_rails (3.1.3)
-      govuk_frontend_toolkit (>= 6.0.2)
-      rails (>= 4.1.0)
-      sass (>= 3.2.0)
-    govuk_template (0.26.0)
-      rails (>= 3.1)
+    govuk_design_system_formbuilder (2.6.0)
+      actionview (>= 6.0)
+      activemodel (>= 6.0)
+      activesupport (>= 6.0)
+      deep_merge (~> 1.2.1)
     has_secure_token (1.0.0)
       activerecord (>= 3.0)
     high_voltage (3.1.2)
@@ -243,6 +245,7 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    json (2.5.1)
     jwt (2.2.3)
     loofah (2.10.0)
       crass (~> 1.0.2)
@@ -253,7 +256,7 @@ GEM
     method_source (1.0.0)
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2021.0225)
+    mime-types-data (3.2021.0704)
     mini_mime (1.1.0)
     mini_portile2 (2.5.3)
     minitest (5.14.4)
@@ -324,9 +327,6 @@ GEM
       thor (>= 0.20.3, < 2.0)
     rainbow (3.0.0)
     rake (13.0.3)
-    rb-fsevent (0.11.0)
-    rb-inotify (0.10.1)
-      ffi (~> 1.0)
     rbtree3 (0.6.0)
     reform (2.6.0)
       disposable (~> 0.5.0)
@@ -381,11 +381,6 @@ GEM
       parser (>= 3.0.1.1)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.4)
-    sass (3.7.4)
-      sass-listen (~> 4.0.0)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -399,12 +394,11 @@ GEM
     sawyer (0.8.2)
       addressable (>= 2.3.5)
       faraday (> 0.8, < 2.0)
-    simplecov (0.21.2)
+    simplecov (0.17.1)
       docile (~> 1.1)
-      simplecov-html (~> 0.11)
-      simplecov_json_formatter (~> 0.1)
-    simplecov-html (0.12.3)
-    simplecov_json_formatter (0.1.3)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.2)
     sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -457,14 +451,13 @@ DEPENDENCIES
   capybara
   capybara-email
   ci_reporter_rspec
+  defra_ruby_template!
   dotenv-rails
   factory_bot_rails
   faker
   flood_risk_engine!
   github_changelog_generator
-  govuk_elements_rails
-  govuk_frontend_toolkit!
-  govuk_template
+  govuk_design_system_formbuilder
   high_voltage
   jquery-rails
   passenger (~> 6.0)
@@ -475,7 +468,7 @@ DEPENDENCIES
   rspec-rails
   rubocop
   sass-rails
-  simplecov
+  simplecov (~> 0.17.1)
   uglifier
   whenever
 
