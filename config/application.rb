@@ -31,5 +31,10 @@ module FloodRiskFrontOffice
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     config.time_zone = 'London'
+
+    # Fix sass compilation error in govuk_frontend:
+    # SassC::SyntaxError: Error: "calc(0px)" is not a number for `max'
+    # https://github.com/alphagov/govuk-frontend/issues/1350
+    config.assets.css_compressor = nil
   end
 end

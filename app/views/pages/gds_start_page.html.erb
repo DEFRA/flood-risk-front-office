@@ -1,51 +1,28 @@
-<div class="grid-row start-page">
-  <div class="column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l"><%= page_title t('.heading') %></h1>
 
-    <header class="text">
-      <h1 class="form-title heading-large" id="groupLabel">
-        <%= page_title t('.heading') %>
-      </h1>
-    </header>
-
-    <h2 class="heading-small"><%= t('.before_you_register') %></h2>
-
-    <ul class="list list-bullet text">
+    <h3 class="govuk-heading-s"><%= t('.before_you_register') %></h3>
+    <ul class="govuk-list govuk-list--bullet">
       <li><%= t('.requirement1') %></li>
       <li><%= t('.requirement2') %></li>
     </ul>
 
-    <h2 class="heading-small"><%= t('.we_will') %></h2>
-
-    <ul class="list list-bullet text">
+    <h3 class="govuk-heading-s"><%= t('.we_will') %></h3>
+    <ul class="govuk-list govuk-list--bullet">
       <li><%= t('.responsibility1') %></li>
       <li><%= t('.responsibility2') %></li>
     </ul>
 
-    <!-- Find grid reference -->
-    <details class="heading_section">
-      <summary><span class="summary"><h2 class="bold-small"><%= t('.you_will_need')%></h2></span></summary>
-      <div class="panel panel-border-narrow">
-        <ul class="list list-bullet text">
-          <li>
-            <%= t('.need1') %>
-          </li>
-          <li>
-            <%= t('.need2') %>
-          </li>
-          <li>
-            <%= t('.need3') %>
-          </li>
-          <li>
-            <%= t('.need4') %>
-          </li>
-          <li>
-            <%= t('.need5') %>
-          </li>
-        </ul>
-      </div>
-    </details>
+    <h3 class="govuk-heading-s"><%= t('.you_will_need')%></h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><%= t('.need1') %></li>
+      <li><%= t('.need2') %></li>
+      <li><%= t('.need3') %></li>
+      <li><%= t('.need4') %></li>
+      <li><%= t('.need5') %></li>
+    </ul>
 
-    <%= link_to t('.continue'), flood_risk_engine.new_enrollment_path, class: 'button', role: 'button' %>
-
+    <%= link_to t('.continue'), flood_risk_engine.new_enrollment_path, class: 'govuk-button', role: 'button' %>
   </div>
 </div>
