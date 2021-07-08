@@ -5,7 +5,7 @@
 <% content_for :head do %>
   <%= stylesheet_link_tag "application" %>
   <%= csrf_meta_tags %>
-  <%= render("shared/google_analytics", google_tag: ENV["GOOGLE_ANALYTICS_ID"]) if ENV["GOOGLE_ANALYTICS_ID"].present? %>
+  <%= render "shared/google_analytics" if ENV["GOOGLE_ANALYTICS_ID"].present? %>
 <% end %>
 
 <% content_for :header_content do %>
