@@ -43,7 +43,7 @@ RSpec.feature "Journey for organisation", type: :feature do
       # Each time the submit button is clicked, we should move to the next
       # step in the work flow.
       work_flow.each do |next_step|
-        find('input[type="submit"]').click
+        within(".govuk-main-wrapper") { find('input[type="submit"]').click }
         expect(current_path).to eql("/enrollments/#{enrollment.token}/steps/#{next_step}")
       end
     end
