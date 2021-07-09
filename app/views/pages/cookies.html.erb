@@ -1,28 +1,61 @@
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l"><%= page_title t('.heading') %></h1>
+<%= form_tag "/cookies", method: :post do %>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l"><%= page_title t('.heading') %></h1>
+      <p class="govuk-body"><%= t('.text_1') %></p>
+      <p class="govuk-body"><%= t('.text_2') %></p>
 
-    <h3 class="govuk-heading-s"><%= t('.before_you_register') %></h3>
-    <ul class="govuk-list govuk-list--bullet">
-      <li><%= t('.requirement1') %></li>
-      <li><%= t('.requirement2') %></li>
-    </ul>
+      <h2 class="govuk-heading-m"><%= page_title t('.cookie_settings.subheading') %></h2>
+      <p class="govuk-body"><%= t('.cookie_settings.text_1') %></p>
 
-    <h3 class="govuk-heading-s"><%= t('.we_will') %></h3>
-    <ul class="govuk-list govuk-list--bullet">
-      <li><%= t('.responsibility1') %></li>
-      <li><%= t('.responsibility2') %></li>
-    </ul>
-
-    <h3 class="govuk-heading-s"><%= t('.you_will_need')%></h3>
-    <ul class="govuk-list govuk-list--bullet">
-      <li><%= t('.need1') %></li>
-      <li><%= t('.need2') %></li>
-      <li><%= t('.need3') %></li>
-      <li><%= t('.need4') %></li>
-      <li><%= t('.need5') %></li>
-    </ul>
-
-    <%= link_to t('.continue'), flood_risk_engine.new_enrollment_path, class: 'govuk-button', role: 'button' %>
+      <h2 class="govuk-body govuk-!-font-weight-bold"><%= t('.analytics_cookies.subheading') %></h2>
+      <p class="govuk-body"><%= t('.analytics_cookies.text_1') %></p>
+      <p class="govuk-body"><%= t('.analytics_cookies.text_2') %></p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><%= t('.analytics_cookies.list_item_1') %></li>
+        <li><%= t('.analytics_cookies.list_item_2') %></li>
+        <li><%= t('.analytics_cookies.list_item_3') %></li>
+      </ul>
+      <h2 class="govuk-heading-m"><%= page_title t('.essential_cookies.subheading') %></h2>
+      <p class="govuk-body"><%= t('.essential_cookies.text_1') %></p>
+      <p class="govuk-body"><%= t('.essential_cookies.text_2') %></p>
+    </div>
+    <div class="govuk-grid-column-full">
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">
+          <%= t('.cookies_we_use.subheading') %>
+        </caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">
+              <%= t('.cookies_we_use.name') %>
+            </th>
+            <th scope="col" class="govuk-table__header">
+              <%= t('.cookies_we_use.purpose') %>
+            </th>
+            <th scope="col" class="govuk-table__header">
+              <%= t('.cookies_we_use.expires') %>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <% %i{ flood_risk_front_office journey_token cookies_policy cookies_preferences_set }.each do |cookie| %>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <%= t(".cookies_we_use.#{cookie}.name") %>
+              </td>
+              <td class="govuk-table__cell">
+                <%= t(".cookies_we_use.#{cookie}.purpose") %>
+              </td>
+              <td class="govuk-table__cell">
+                <%= t(".cookies_we_use.#{cookie}.expires") %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <p class="govuk-body"><%= link_to t('.find_out_more.text'), t('.find_out_more.url') %></p>
+      <%= submit_tag t('.submit_button'), class: "govuk-button" %>
+    </div>
   </div>
-</div>
+<% end %>
