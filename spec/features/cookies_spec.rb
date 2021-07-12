@@ -2,6 +2,7 @@ require "rails_helper"
 
 RSpec.feature "Cookies", type: :feature do
   let(:cookie_banner_div) { ".govuk-cookie-banner" }
+  let(:google_analytics_render_tag) { "function(w,d,s,l,i)" }
 
   before { ENV["GOOGLE_ANALYTICS_ID"] = "GA_ID" }
 
@@ -18,20 +19,26 @@ RSpec.feature "Cookies", type: :feature do
     end
 
     expect(page).not_to have_css(cookie_banner_div)
-
-    # Note that the google analytics tag is only parsed into a URL
-    # if javascript is enabled.
-    # Here we check that the GOOGLE_ANALYTICS_ID is rendered as expected
-    expect(page.source).to have_text("'script','dataLayer','GA_ID'")
+    expect(page.source).to have_text(google_analytics_render_tag)
   end
 
-  scenario "User rejects analytics cookies" do
+  scenario "User rejects analytics cookies and toggles their selection" do
     visit "/"
     click_on "Reject analytics cookies"
     expect(page).to have_text("You’ve rejected analytics cookies")
+    expect(page.source).not_to have_text(google_analytics_render_tag)
 
-    click_on "Hide this message"
+    click_on "change your cookie settings"
+    expect(page).to have_css("h1", text: "Cookie settings")
 
-    expect(page.source).to have_text("'script','dataLayer','ga-disable-GA_ID'")
+    choose "Use cookies that measure my website use"
+    click_on "Save and continue"
+    expect(page.source).to have_text(google_analytics_render_tag)
+    expect(page).to have_text("You’ve set your cookie preferences.")
+    expect(page).to have_link("Go back to the page you were looking at.", href: "/")
+
+    choose "Do not use cookies that measure my website use"
+    click_on "Save and continue"
+    expect(page.source).not_to have_text(google_analytics_render_tag)
   end
 end
