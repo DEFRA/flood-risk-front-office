@@ -1,21 +1,9 @@
+<% if cookies[:cookies_policy] == "analytics_accepted" %>
 <!-- Google Tag Manager -->
-<%
-  # The preferred way to disable analytics for a user is to append
-  # 'ga-disable-' to the GOOGLE_ANALYTICS_ID
-  # https://developers.google.com/analytics/devguides/collection/analyticsjs/user-opt-out
-  #
-  # Ideally, this logic would be in the application controller, but we
-  # need to support pages rendered by the flood_risk_engine, so we put it here.
-  google_analytics_id =
-    if cookies[:cookies_policy] == 'analytics_accepted'
-      ENV["GOOGLE_ANALYTICS_ID"]
-    else
-      "ga-disable-#{ ENV["GOOGLE_ANALYTICS_ID"] }"
-    end
-%>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','<%= google_analytics_id %>');</script>
+})(window,document,'script','dataLayer','<%= ENV["GOOGLE_ANALYTICS_ID"] %>');</script>
 <!-- End Google Tag Manager -->
+<% end %>

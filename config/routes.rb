@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     get '/state_jumper/:factory/(:state)', :to => 'state_jumper#build_and_display', :as => :build_and_display
   end
 
-  resource :cookies, only: [:post] do
+  resource :cookies, only: [:update] do
     member do
       post :accept_analytics
       post :reject_analytics
