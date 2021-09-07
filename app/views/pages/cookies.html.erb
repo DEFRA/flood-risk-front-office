@@ -54,45 +54,44 @@
         </div>
       </fieldset>
     </div>
-    <h2 class="govuk-heading-m"><%= page_title t('.essential_cookies.subheading') %></h2>
+    <h3 class="govuk-heading-s"><%= page_title t('.essential_cookies.subheading') %></h2>
     <p class="govuk-body"><%= t('.essential_cookies.text_1') %></p>
     <p class="govuk-body"><%= t('.essential_cookies.text_2') %></p>
-    <div class="govuk-grid-column-full">
-      <table class="govuk-table">
-        <caption class="govuk-table__caption govuk-table__caption--m">
-          <%= t('.cookies_we_use.subheading') %>
-        </caption>
-        <thead class="govuk-table__head">
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">
+        <%= t('.cookies_we_use.subheading') %>
+      </caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">
+            <%= t('.cookies_we_use.name') %>
+          </th>
+          <th scope="col" class="govuk-table__header">
+            <%= t('.cookies_we_use.purpose') %>
+          </th>
+          <th scope="col" class="govuk-table__header">
+            <%= t('.cookies_we_use.expires') %>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <% %i{ flood_risk_front_office journey_token cookies_policy cookies_preferences_set }.each do |cookie| %>
           <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">
-              <%= t('.cookies_we_use.name') %>
-            </th>
-            <th scope="col" class="govuk-table__header">
-              <%= t('.cookies_we_use.purpose') %>
-            </th>
-            <th scope="col" class="govuk-table__header">
-              <%= t('.cookies_we_use.expires') %>
-            </th>
+            <td class="govuk-table__cell">
+              <%= t(".cookies_we_use.#{cookie}.name") %>
+            </td>
+            <td class="govuk-table__cell">
+              <%= t(".cookies_we_use.#{cookie}.purpose") %>
+            </td>
+            <td class="govuk-table__cell">
+              <%= t(".cookies_we_use.#{cookie}.expires") %>
+            </td>
           </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <% %i{ flood_risk_front_office journey_token cookies_policy cookies_preferences_set }.each do |cookie| %>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                <%= t(".cookies_we_use.#{cookie}.name") %>
-              </td>
-              <td class="govuk-table__cell">
-                <%= t(".cookies_we_use.#{cookie}.purpose") %>
-              </td>
-              <td class="govuk-table__cell">
-                <%= t(".cookies_we_use.#{cookie}.expires") %>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-      <p class="govuk-body"><%= link_to t('.find_out_more.text'), t('.find_out_more.url') %></p>
-      <%= submit_tag t('.submit_button'), class: "govuk-button" %>
-    </div>
+        <% end %>
+      </tbody>
+    </table>
+    <p class="govuk-body"><%= link_to t('.find_out_more.text'), t('.find_out_more.url') %></p>
+    <%= submit_tag t('.submit_button'), class: "govuk-button" %>
   </div>
 <% end %>
