@@ -8,6 +8,8 @@
   <%= render "shared/google_analytics" if ENV["GOOGLE_ANALYTICS_ID"].present? %>
 <% end %>
 
+<% content_for :page_title, title %>
+
 <% content_for :header_content do %>
   <%= link_to  t(:global_proposition_header), main_app.root_path, id: "proposition-name", class: "govuk-header__link govuk-header__link--service-name" %>
 <% end %>
@@ -47,13 +49,13 @@
   <h2 class="govuk-visually-hidden">Support links</h2>
   <ul class="govuk-footer__inline-list">
     <li class="govuk-footer__inline-list-item">
-      <%= link_to 'Privacy', page_path('privacy_policy'), class: "govuk-footer__link", target: "_blank" %>
+      <%= link_to 'Privacy', main_app.page_path('privacy_policy'), class: "govuk-footer__link", target: "_blank" %>
     </li>
     <li class="govuk-footer__inline-list-item">
-      <%= link_to 'Cookies', page_path('cookies'), class: "govuk-footer__link", target: "_blank" %>
+      <%= link_to 'Cookies', main_app.page_path('cookies'), class: "govuk-footer__link", target: "_blank" %>
     </li>
     <li class="govuk-footer__inline-list-item">
-      <%= link_to 'Accessibility', page_path('accessibility'), class: "govuk-footer__link", target: "_blank" %>
+      <%= link_to 'Accessibility', main_app.page_path('accessibility'), class: "govuk-footer__link", target: "_blank" %>
     </li>
   </ul>
 <% end %>
