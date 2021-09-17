@@ -12,15 +12,15 @@
   </div>
   <div class="govuk-button-group">
     <%= button_to t('cookies-banner.button.accept_analytics'),
-        accept_analytics_cookies_path,
+        main_app.accept_analytics_cookies_path,
         class: "govuk-button"
     %>
     <%= button_to t('cookies-banner.button.reject_analytics'),
-        reject_analytics_cookies_path,
+        main_app.reject_analytics_cookies_path,
         class: "govuk-button"
     %>
     <%= link_to t('cookies-banner.link.view_cookies'),
-         page_path('cookies'),
+        main_app.page_path('cookies'),
         class: "govuk-link"
     %>
   </div>
