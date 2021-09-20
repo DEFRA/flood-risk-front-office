@@ -35,7 +35,6 @@ RSpec.feature "Cookies", type: :feature do
     click_on "Save and continue"
     expect(page.source).to have_text(google_analytics_render_tag)
     expect(page).to have_text("You’ve set your cookie preferences.")
-    expect(page).to have_link("Go back to the page you were looking at.", href: "/")
 
     choose "Do not use cookies that measure my website use"
     click_on "Save and continue"
