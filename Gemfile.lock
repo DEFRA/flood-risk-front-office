@@ -424,7 +424,6 @@ DEPENDENCIES
   github_changelog_generator
   govuk_design_system_formbuilder
   high_voltage
-  jquery-rails
   passenger (~> 6.0)
   pg
   poltergeist
