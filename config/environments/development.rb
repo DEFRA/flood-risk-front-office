@@ -36,9 +36,6 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
-  # Raises error for missing translations
-  config.action_view.raise_on_missing_translations = true
-
   host = ENV["DEFAULT_URL_HOST"] || "localhost"
   port = ENV["SSL_PORT"].try!(:to_i) || ENV["PORT"].try!(:to_i) || 3000
   protocol = ENV["SSL_PORT"].present? ? "https" : "http"
