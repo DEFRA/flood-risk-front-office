@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/DEFRA/defra-ruby-template
-  revision: 7357a79d168411ac6b2eedfa446974e22904586a
+  revision: 5a8417c23e1018d152931c1183eab0fbb6a08720
   branch: main
   specs:
     defra_ruby_template (3.13.0)
