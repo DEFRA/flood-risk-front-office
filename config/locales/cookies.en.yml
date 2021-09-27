@@ -27,6 +27,18 @@ en:
         name: Name
         purpose: Purpose
         expires: Expires
+        ga:
+          name: _ga
+          purpose: Used to identify referring sites, visitors and sessions
+          expires: 2 years
+        gat:
+          name: _gat
+          purpose: Used to control request rate
+          expires: 1 minute
+        gid:
+          name: _gid
+          purpose: Tells us how visitors use the service, where they came from and the pages visited.
+          expires: 24 hours
         flood_risk_front_office:
           name: flood-risk-front-office
           purpose: Used for session management and authentication
