@@ -75,7 +75,7 @@
         </tr>
       </thead>
       <tbody class="govuk-table__body">
-        <% %i{ flood_risk_front_office journey_token cookies_policy cookies_preferences_set }.each do |cookie| %>
+        <% %i{ gat ga gid journey_token flood_risk_front_office cookies_policy cookies_preferences_set }.each do |cookie| %>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
               <%= t(".cookies_we_use.#{cookie}.name") %>
