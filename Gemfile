@@ -7,6 +7,7 @@ gem "defra_ruby_template",
 
 gem "govuk_design_system_formbuilder"
 gem "high_voltage"
+gem "jquery-rails", "~> 4.4"
 gem "pg"
 gem "pundit"
 gem "rails", "~> 6.1"
