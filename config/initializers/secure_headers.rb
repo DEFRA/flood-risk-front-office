@@ -42,7 +42,7 @@ SecureHeaders::Configuration.default do |config|
     frame_ancestors: %w['none'],
     img_src: %w['self' www.google-analytics.com],
     object_src: %w['none'],
-    script_src: %w['self' nonce https://www.google-analytics.com https://www.googletagmanager.com],
+    script_src: %w['self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com],
     style_src: %w['self'],
     report_uri: %w[https://environmentagency.report-uri.io/r/default/csp/enforce]
   }
