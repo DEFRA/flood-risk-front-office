@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: https://github.com/DEFRA/flood-risk-engine
-  revision: 36f141313f0f4dc5706d37a0ee257a37fd5adfde
+  revision: c960880520378d3e8c018636f1330359457fd198
   branch: rails6
   specs:
     flood_risk_engine (1.1)
@@ -158,8 +158,8 @@ GEM
       rest-client (~> 2.0)
     defra_ruby_alert (2.1.1)
       airbrake
-    defra_ruby_area (2.0.1)
-      nokogiri (~> 1.11.1)
+    defra_ruby_area (2.0.2)
+      nokogiri (>= 1.11.1, < 1.13.0)
       rest-client (~> 2.0)
     defra_ruby_email (1.2.0)
       notifications-ruby-client
@@ -230,7 +230,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (2.5.1)
-    jwt (2.2.3)
+    jwt (2.3.0)
     loofah (2.12.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -242,14 +242,14 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2021.0901)
     mini_mime (1.1.1)
-    mini_portile2 (2.5.3)
+    mini_portile2 (2.6.1)
     minitest (5.14.4)
     multi_json (1.15.0)
     multipart-post (2.1.1)
     netrc (0.11.0)
     nio4r (2.5.8)
-    nokogiri (1.11.7)
-      mini_portile2 (~> 2.5.0)
+    nokogiri (1.12.5)
+      mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     notifications-ruby-client (5.3.0)
       jwt (>= 1.5, < 3)
