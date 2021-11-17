@@ -14,7 +14,7 @@ RSpec.feature "Cookies", type: :feature do
     expect(page).to have_text("You’ve accepted analytics cookies")
 
     within cookie_banner_div do
-      expect(page).to have_link("change your cookie settings", href: "/pages/cookies")
+      expect(page).to have_link("change your cookie settings", href: "/cookies/edit")
       click_on "Hide this message"
     end
 

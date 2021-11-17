@@ -1,96 +1,93 @@
-<% if params[:cookies_updated] %>
-  <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-    <div class="govuk-notification-banner__header">
-      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-        <%= t('.updated.success') %>
-      </h2>
-    </div>
-    <div class="govuk-notification-banner__content">
-      <p class="govuk-notification-banner__heading">
-        <%= t('.updated.you_set_your_cookie_preferences') %>
-      </p>
-    </div>
-  </div>
+<% content_for :title do %>
+  <%= t(".title") %>
 <% end %>
 
-<%= form_tag cookies_path, method: :patch do %>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l"><%= t('.heading') %></h1>
-      <p class="govuk-body"><%= t('.text_1') %></p>
-      <p class="govuk-body"><%= t('.text_2') %></p>
-      <h2 class="govuk-heading-m"><%= t('.cookie_settings.subheading') %></h2>
-      <p class="govuk-body"><%= t('.cookie_settings.text_1') %></p>
-      <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-          <h2 class="govuk-body govuk-!-font-weight-bold"><%= t('.analytics_cookies.subheading') %></h2>
-          <p class="govuk-body"><%= t('.analytics_cookies.text_1') %></p>
-          <p class="govuk-body"><%= t('.analytics_cookies.text_2') %></p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li><%= t('.analytics_cookies.list_item_1') %></li>
-            <li><%= t('.analytics_cookies.list_item_2') %></li>
-            <li><%= t('.analytics_cookies.list_item_3') %></li>
-          </ul>
-        </legend>
-        <div class="govuk-radios">
-          <div class="govuk-radios__item">
-            <%= radio_button_tag :analytics, :accept,
-                (cookies[:cookies_policy] && cookies[:cookies_policy] == "analytics_accepted"),
-                class: "govuk-radios__input" %>
-            <%= label_tag :analytics_accept,
-                t('.analytics_cookies.radio_button_label.accept'),
-                class: "govuk-label govuk-radios__label" %>
-          </div>
-          <div class="govuk-radios__item">
-            <%= radio_button_tag :analytics, :reject,
-                !(cookies[:cookies_policy] && cookies[:cookies_policy] == "analytics_accepted"),
-                class: "govuk-radios__input" %>
-            <%= label_tag :analytics_reject,
-                t('.analytics_cookies.radio_button_label.reject'),
-                class: "govuk-label govuk-radios__label" %>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-    <h3 class="govuk-heading-s"><%= t('.essential_cookies.subheading') %></h2>
-    <p class="govuk-body"><%= t('.essential_cookies.text_1') %></p>
-    <p class="govuk-body"><%= t('.essential_cookies.text_2') %></p>
-
-    <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">
-        <%= t('.cookies_we_use.subheading') %>
-      </caption>
-      <thead class="govuk-table__head">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l"><%= t('.heading') %></h1>
+    <p class="govuk-body"><%= t('.text_1') %></p>
+    <p class="govuk-body"><%= t('.text_2') %></p>
+    <h2 class="govuk-heading-m"><%= t('.cookie_settings.subheading') %></h2>
+    <p class="govuk-body"><%= t('.cookie_settings.text_1') %></p>
+    <div class="govuk-form-group">
+    <h2 class="govuk-heading-m"><%= t('.analytics_cookies.subheading') %></h2>
+    <p class="govuk-body"><%= t('.analytics_cookies.text_1') %></p>
+    <p class="govuk-body"><%= t('.analytics_cookies.text_2') %></p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><%= t('.analytics_cookies.list_item_1') %></li>
+      <li><%= t('.analytics_cookies.list_item_2') %></li>
+      <li><%= t('.analytics_cookies.list_item_3') %></li>
+    </ul>
+  </div>
+  <table class="govuk-table">
+    <caption class="govuk-visually-hidden">
+      <%= t('.analytics_cookies.subheading') %>
+    </caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">
+          <%= t('.cookies_we_use.name') %>
+        </th>
+        <th scope="col" class="govuk-table__header">
+          <%= t('.cookies_we_use.purpose') %>
+        </th>
+        <th scope="col" class="govuk-table__header">
+          <%= t('.cookies_we_use.expires') %>
+        </th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <% %i{ gat ga gid }.each do |cookie| %>
         <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">
-            <%= t('.cookies_we_use.name') %>
-          </th>
-          <th scope="col" class="govuk-table__header">
-            <%= t('.cookies_we_use.purpose') %>
-          </th>
-          <th scope="col" class="govuk-table__header">
-            <%= t('.cookies_we_use.expires') %>
-          </th>
+          <td class="govuk-table__cell">
+            <%= t(".cookies_we_use.#{cookie}.name") %>
+          </td>
+          <td class="govuk-table__cell">
+            <%= t(".cookies_we_use.#{cookie}.purpose") %>
+          </td>
+          <td class="govuk-table__cell">
+            <%= t(".cookies_we_use.#{cookie}.expires") %>
+          </td>
         </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <% %i{ gat ga gid journey_token flood_risk_front_office cookies_policy cookies_preferences_set }.each do |cookie| %>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <%= t(".cookies_we_use.#{cookie}.name") %>
-            </td>
-            <td class="govuk-table__cell">
-              <%= t(".cookies_we_use.#{cookie}.purpose") %>
-            </td>
-            <td class="govuk-table__cell">
-              <%= t(".cookies_we_use.#{cookie}.expires") %>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-    <p class="govuk-body"><%= link_to t('.find_out_more.text'), t('.find_out_more.url') %></p>
-    <%= submit_tag t('.submit_button'), class: "govuk-button" %>
-  </div>
-<% end %>
+      <% end %>
+    </tbody>
+  </table>
+  <h2 class="govuk-heading-m"><%= t('.essential_cookies.subheading') %></h2>
+  <p class="govuk-body"><%= t('.essential_cookies.text_1') %></p>
+  <p class="govuk-body"><%= t('.essential_cookies.text_2') %></p>
+  <table class="govuk-table">
+    <caption class="govuk-visually-hidden">
+      <%= t('.cookies_we_use.subheading') %>
+    </caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">
+          <%= t('.cookies_we_use.name') %>
+        </th>
+        <th scope="col" class="govuk-table__header">
+          <%= t('.cookies_we_use.purpose') %>
+        </th>
+        <th scope="col" class="govuk-table__header">
+          <%= t('.cookies_we_use.expires') %>
+        </th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <% %i{ journey_token flood_risk_front_office cookies_policy cookies_preferences_set }.each do |cookie| %>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <%= t(".cookies_we_use.#{cookie}.name") %>
+          </td>
+          <td class="govuk-table__cell">
+            <%= t(".cookies_we_use.#{cookie}.purpose") %>
+          </td>
+          <td class="govuk-table__cell">
+            <%= t(".cookies_we_use.#{cookie}.expires") %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <h2 class="govuk-heading-m"><%= t('.change_your_cookie_settings.subheading') %></h2>
+  <p class="govuk-body"><%= t('.change_your_cookie_settings.text_1', edit_path: edit_cookies_path).html_safe %></p>
+</div>
