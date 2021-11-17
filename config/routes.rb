@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root to: "flood_risk_engine/start_forms#new"
 
-  resource :cookies, only: [:update] do
+  resource :cookies, only: [:edit, :update] do
     member do
       post :accept_analytics
       post :reject_analytics
