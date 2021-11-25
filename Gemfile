@@ -18,7 +18,7 @@ gem "whenever"
 
 gem "flood_risk_engine",
     git: "https://github.com/DEFRA/flood-risk-engine",
-    branch: "rails6"
+    branch: "main"
 
 gem "github_changelog_generator", require: false
 
