@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.7.1"
+ruby "3.1.2"
 
 gem "defra_ruby_template",
     git: "https://github.com/DEFRA/defra-ruby-template",
@@ -8,8 +8,9 @@ gem "defra_ruby_template",
 gem "govuk_design_system_formbuilder"
 gem "high_voltage"
 gem "jquery-rails", "~> 4.4"
-gem "pg"
+gem "net-smtp"
 gem "pundit"
+gem "pg"
 gem "rails", "~> 6.1"
 gem "sass-rails"
 gem "secure_headers"
