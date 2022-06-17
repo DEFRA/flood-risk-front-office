@@ -36,7 +36,7 @@ class CookiesController < ApplicationController
   def write_cookie(name, value)
     cookies[name] =
       {
-        value: value,
+        value:,
         expires: 1.year
       }
   end
