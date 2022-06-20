@@ -8,7 +8,9 @@ gem "defra_ruby_template",
 gem "govuk_design_system_formbuilder"
 gem "high_voltage"
 gem "jquery-rails", "~> 4.4"
-gem "net-smtp"
+gem "net-imap", require: false
+gem "net-pop", require: false
+gem "net-smtp", require: false
 gem "pg"
 gem "pundit"
 gem "rails", "~> 6.1"
