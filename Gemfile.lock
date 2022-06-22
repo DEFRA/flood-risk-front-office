@@ -169,6 +169,8 @@ GEM
       notifications-ruby-client
       rails (~> 6.0)
       sprockets (~> 3.7.2)
+    defra_ruby_style (0.1.2)
+      rubocop
     defra_ruby_validators (2.5.0)
       activemodel
       os_map_ref
@@ -434,6 +436,7 @@ DEPENDENCIES
   capybara
   capybara-email
   ci_reporter_rspec
+  defra_ruby_style
   defra_ruby_template!
   dotenv-rails
   factory_bot_rails
