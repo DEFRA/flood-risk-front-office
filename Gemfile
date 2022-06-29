@@ -4,7 +4,6 @@ ruby "3.1.2"
 gem "defra_ruby_template",
     git: "https://github.com/DEFRA/defra-ruby-template",
     branch: "main"
-
 gem "govuk_design_system_formbuilder"
 gem "high_voltage"
 gem "jquery-rails", "~> 4.4"
@@ -32,7 +31,8 @@ gem "dotenv-rails"
 
 group :development do
   gem "awesome_print"
-  gem "rubocop"
+  gem "defra_ruby_style"
+  gem "puma"
 end
 
 group :development, :test do
