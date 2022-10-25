@@ -32,7 +32,7 @@ gem "dotenv-rails"
 group :development do
   gem "awesome_print"
   gem "defra_ruby_style"
-  gem "puma"
+  gem "webrick"
 end
 
 group :development, :test do

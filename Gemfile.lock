@@ -293,8 +293,6 @@ GEM
       protocol-hpack (~> 1.4)
       protocol-http (~> 0.18)
     public_suffix (4.0.7)
-    puma (6.0.0)
-      nio4r (~> 2.0)
     pundit (2.2.0)
       activesupport (>= 3.0.0)
     racc (1.6.0)
@@ -417,6 +415,7 @@ GEM
     uniform_notifier (1.16.0)
     validates_email_format_of (1.7.2)
       i18n
+    webrick (1.7.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -452,7 +451,6 @@ DEPENDENCIES
   passenger (~> 6.0)
   pg
   poltergeist
-  puma
   pundit
   rails (~> 6.1)
   rspec-rails
@@ -460,6 +458,7 @@ DEPENDENCIES
   secure_headers
   simplecov (~> 0.17.1)
   uglifier
+  webrick
   whenever
 
 RUBY VERSION
