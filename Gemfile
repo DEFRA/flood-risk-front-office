@@ -21,8 +21,6 @@ gem "whenever"
 gem "flood_risk_engine",
     git: "https://github.com/DEFRA/flood-risk-engine",
     branch: "main"
-    # path: "/vagrant/flood-risk-engine"
-    
 
 gem "github_changelog_generator", require: false
 
@@ -49,6 +47,10 @@ group :development, :test do
   # Used to generate fake data e.g. in the specs
   gem "faker"
   gem "rspec-rails"
+
+  gem "rubocop"
+  gem "rubocop-rails"
+  gem "rubocop-rspec"
 end
 
 group :test do
