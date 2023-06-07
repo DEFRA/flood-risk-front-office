@@ -52,9 +52,9 @@ jobs:
 
       - name: Database migrations
         run: |
-          RAILS_ENV=test bundle exec rake db:drop
           RAILS_ENV=test bundle exec rake db:create --trace --trace
           RAILS_ENV=test bundle exec rake db:migrate --trace --trace
+          RAILS_ENV=test bundle exec rake db:test:prepare
       # Run linting first. No point running the tests if there is a linting issue
       - name: Run lint check
         run: |
