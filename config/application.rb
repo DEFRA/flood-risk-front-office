@@ -36,5 +36,8 @@ module FloodRiskFrontOffice
     # SassC::SyntaxError: Error: "calc(0px)" is not a number for `max'
     # https://github.com/alphagov/govuk-frontend/issues/1350
     config.assets.css_compressor = nil
+
+    # For Rails 7: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+    config.active_record.legacy_connection_handling = false
   end
 end

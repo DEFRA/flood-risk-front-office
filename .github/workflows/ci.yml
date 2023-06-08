@@ -52,8 +52,7 @@ jobs:
 
       - name: Database migrations
         run: |
-          RAILS_ENV=test bundle exec rake db:create --trace --trace
-          RAILS_ENV=test bundle exec rake db:migrate --trace --trace
+          RAILS_ENV=test bundle exec rake db:reset --trace --trace
       # Run linting first. No point running the tests if there is a linting issue
       - name: Run lint check
         run: |
@@ -61,7 +60,7 @@ jobs:
       # This includes an extra run step. The sonarcloud analysis will be run in a docker container with the current
       # folder mounted as `/github/workspace`. The problem is when the .resultset.json file is generated it will
       # reference the code in the current folder. So to enable sonarcloud to matchup code coverage with the files we use
-      # sed to update the references in .resultset.json
+      # sed to update the references in .resultset.json 
       # https://community.sonarsource.com/t/code-coverage-doesnt-work-with-github-action/16747/6
       - name: Run unit tests
         run: |

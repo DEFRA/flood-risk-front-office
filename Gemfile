@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "3.1.2"
+ruby "3.2.2"
 
 gem "defra_ruby_template",
     git: "https://github.com/DEFRA/defra-ruby-template",
@@ -12,7 +12,7 @@ gem "net-pop", require: false
 gem "net-smtp", require: false
 gem "pg"
 gem "pundit"
-gem "rails", "~> 6.1"
+gem "rails", "~> 7.0"
 gem "sass-rails"
 gem "secure_headers"
 gem "uglifier"
@@ -47,6 +47,10 @@ group :development, :test do
   # Used to generate fake data e.g. in the specs
   gem "faker"
   gem "rspec-rails"
+
+  gem "rubocop"
+  gem "rubocop-rails"
+  gem "rubocop-rspec"
 end
 
 group :test do
