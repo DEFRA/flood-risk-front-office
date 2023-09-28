@@ -2,10 +2,30 @@
 
 ## [Unreleased](https://github.com/defra/flood-risk-front-office/tree/HEAD)
 
-[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v2.0.2...HEAD)
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v2.0.3...HEAD)
+
+**Implemented enhancements:**
+
+- RUBY-2480: moving dependency loading from engine to an app [\#598](https://github.com/DEFRA/flood-risk-front-office/pull/598) ([brujeo](https://github.com/brujeo))
+- Feature/ruby 2480 frae tech upgrade to rails 7 [\#597](https://github.com/DEFRA/flood-risk-front-office/pull/597) ([brujeo](https://github.com/brujeo))
+
+**Fixed bugs:**
+
+- Reconfiguring Uglifier dependency [\#604](https://github.com/DEFRA/flood-risk-front-office/pull/604) ([brujeo](https://github.com/brujeo))
 
 **Merged pull requests:**
 
+- Bump rubocop-rails from 2.19.1 to 2.21.1 [\#633](https://github.com/DEFRA/flood-risk-front-office/pull/633) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump flood\_risk\_engine from `5f1d46c` to `0fc0b14` [\#599](https://github.com/DEFRA/flood-risk-front-office/pull/599) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Fix/ruby 2469 frae update accessibility statement april 2023 [\#594](https://github.com/DEFRA/flood-risk-front-office/pull/594) ([brujeo](https://github.com/brujeo))
+
+## [v2.0.3](https://github.com/defra/flood-risk-front-office/tree/v2.0.3) (2023-05-17)
+
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v2.0.2...v2.0.3)
+
+**Merged pull requests:**
+
+- Release v2.0.3 [\#592](https://github.com/DEFRA/flood-risk-front-office/pull/592) ([PaulDoyle-DEFRA](https://github.com/PaulDoyle-DEFRA))
 - Bump capybara from 3.39.0 to 3.39.1 [\#591](https://github.com/DEFRA/flood-risk-front-office/pull/591) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Fix/ruby 2469 frae update accessibility statement april 2023 [\#590](https://github.com/DEFRA/flood-risk-front-office/pull/590) ([brujeo](https://github.com/brujeo))
 - Bump rspec-rails from 6.0.1 to 6.0.2 [\#589](https://github.com/DEFRA/flood-risk-front-office/pull/589) ([dependabot[bot]](https://github.com/apps/dependabot))
