@@ -293,6 +293,7 @@ GEM
     parallel (1.23.0)
     parser (3.2.2.3)
       ast (~> 2.4.1)
+      racc
     passenger (6.0.18)
       rack
       rake (>= 0.8.1)
@@ -374,7 +375,7 @@ GEM
       rspec-mocks (~> 3.12)
       rspec-support (~> 3.12)
     rspec-support (3.12.0)
-    rubocop (1.56.3)
+    rubocop (1.56.4)
       base64 (~> 0.1.1)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
