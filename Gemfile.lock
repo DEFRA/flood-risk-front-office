@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: https://github.com/DEFRA/flood-risk-engine
-  revision: 0fc0b14a2e067b79d88cc66adb47697241ed601f
+  revision: a34ee4361379e62b22e021a86939ba57806049c4
   branch: main
   specs:
     flood_risk_engine (1.2)
@@ -94,12 +94,13 @@ GEM
     activerecord (7.0.5)
       activemodel (= 7.0.5)
       activesupport (= 7.0.5)
-    activerecord-session_store (2.0.0)
-      actionpack (>= 5.2.4.1)
-      activerecord (>= 5.2.4.1)
+    activerecord-session_store (2.1.0)
+      actionpack (>= 6.1)
+      activerecord (>= 6.1)
+      cgi (>= 0.3.6)
       multi_json (~> 1.11, >= 1.11.2)
-      rack (>= 2.0.8, < 3)
-      railties (>= 5.2.4.1)
+      rack (>= 2.0.8, < 4)
+      railties (>= 6.1)
     activestorage (7.0.5)
       actionpack (= 7.0.5)
       activejob (= 7.0.5)
@@ -158,6 +159,7 @@ GEM
     capybara-email (3.0.2)
       capybara (>= 2.4, < 4.0)
       mail
+    cgi (0.3.6)
     chronic (0.10.2)
     ci_reporter (2.1.0)
       builder (>= 2.1.2)
@@ -185,7 +187,7 @@ GEM
       sprockets-rails
     defra_ruby_style (0.3.0)
       rubocop (>= 1.0, < 2.0)
-    defra_ruby_validators (2.5.1)
+    defra_ruby_validators (2.5.2)
       activemodel
       i18n
       matrix
@@ -229,8 +231,8 @@ GEM
       octokit (~> 4.6)
       rainbow (>= 2.2.1)
       rake (>= 10.0)
-    globalid (1.1.0)
-      activesupport (>= 5.0)
+    globalid (1.2.1)
+      activesupport (>= 6.1)
     govuk_design_system_formbuilder (4.0.0)
       actionview (>= 6.1)
       activemodel (>= 6.1)
@@ -250,7 +252,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (2.6.3)
-    jwt (2.7.0)
+    jwt (2.7.1)
     language_server-protocol (3.17.0.3)
     loofah (2.21.3)
       crass (~> 1.0.2)
@@ -263,11 +265,11 @@ GEM
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
-    mime-types (3.4.1)
+    mime-types (3.5.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2023.0218.1)
-    mini_mime (1.1.2)
-    mini_portile2 (2.8.2)
+    mime-types-data (3.2023.0808)
+    mini_mime (1.1.5)
+    mini_portile2 (2.8.4)
     minitest (5.20.0)
     multi_json (1.15.0)
     net-imap (0.3.7)
@@ -281,7 +283,7 @@ GEM
       net-protocol
     netrc (0.11.0)
     nio4r (2.5.9)
-    nokogiri (1.15.2)
+    nokogiri (1.15.4)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     notifications-ruby-client (5.4.0)
@@ -297,7 +299,7 @@ GEM
       rack
       rake (>= 0.8.1)
     pg (1.5.3)
-    phonelib (0.8.2)
+    phonelib (0.8.4)
     poltergeist (1.18.1)
       capybara (>= 2.1, < 4)
       cliver (~> 0.3.1)
@@ -330,8 +332,9 @@ GEM
       activesupport (= 7.0.5)
       bundler (>= 1.15.0)
       railties (= 7.0.5)
-    rails-dom-testing (2.0.3)
-      activesupport (>= 4.2.0)
+    rails-dom-testing (2.2.0)
+      activesupport (>= 5.0.0)
+      minitest
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
@@ -421,7 +424,7 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.2)
-    sprockets (4.2.0)
+    sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
     sprockets-rails (3.4.2)
@@ -448,14 +451,14 @@ GEM
     validates_email_format_of (1.7.2)
       i18n
     webrick (1.8.1)
-    websocket-driver (0.7.5)
+    websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     whenever (1.0.0)
       chronic (>= 0.6.3)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.8)
+    zeitwerk (2.6.12)
 
 PLATFORMS
   ruby
