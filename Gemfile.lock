@@ -167,7 +167,7 @@ GEM
       ci_reporter (~> 2.0)
       rspec (>= 2.14, < 4)
     cliver (0.3.2)
-    concurrent-ruby (1.2.2)
+    concurrent-ruby (1.2.3)
     console (1.17.2)
       fiber-annotation
       fiber-local
@@ -212,7 +212,7 @@ GEM
     factory_bot_rails (6.4.2)
       factory_bot (~> 6.4)
       railties (>= 5.0.0)
-    faker (3.2.2)
+    faker (3.2.3)
       i18n (>= 1.8.11, < 2)
     faraday (2.7.6)
       faraday-net_http (>= 2.0, < 3.1)
