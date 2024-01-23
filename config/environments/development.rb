@@ -40,18 +40,6 @@ Rails.application.configure do
   port = ENV["SSL_PORT"].try!(:to_i) || ENV["PORT"].try!(:to_i) || 3000
   protocol = ENV["SSL_PORT"].present? ? "https" : "http"
 
-  config.action_mailer.default_url_options = { host: host, port: port, protocol: protocol }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    user_name: ENV['EMAIL_USERNAME'],
-    password: ENV['EMAIL_PASSWORD'],
-    domain: ENV['EMAIL_APP_DOMAIN'],
-    address: ENV['EMAIL_HOST'],
-    port: ENV['EMAIL_PORT'],
-    authentication: :plain,
-    enable_starttls_auto: true
-  }
-
   if defined? Bullet
     config.after_initialize do
       Bullet.enable = true # enable Bullet gem

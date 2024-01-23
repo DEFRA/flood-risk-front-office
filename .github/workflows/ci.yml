@@ -12,8 +12,6 @@ jobs:
       ADDRESS_FACADE_PORT: 9002
       ADDRESS_FACADE_SERVER: localhost
       DEVISE_MAILER_SENDER: "John Smith <js@example.com>"
-      EMAIL_HOST: localhost
-      EMAIL_PORT: 2500
       PG_USERNAME: postgres
       PG_PASSWORD: pinafore
       TZ: UTC
