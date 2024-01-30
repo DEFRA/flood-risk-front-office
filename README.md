@@ -61,26 +61,6 @@ bundle exec rails s
 
 You can then access the web site at http://localhost:3000
 
-## Email
-
-### Intercepting email in development
-
-You can use [Mailcatcher](https://mailcatcher.me/) to intercept emails sent out during development.
-
-Make sure you have the following in your `.env` or `.env.development` file:
-
-    EMAIL_USERNAME=''
-    EMAIL_PASSWORD=''
-    EMAIL_APP_DOMAIN=''
-    EMAIL_HOST='localhost'
-    EMAIL_PORT='1025'
-
-Install **Mailcatcher** (`gem install mailcatcher`) and run it by just calling `mailcatcher`
-
-Then navigate to [http://127.0.0.1:1080](http://127.0.0.1:1080) in your browser.
-
-> Note that [mail_safe](https://github.com/myronmarston/mail_safe) maybe also be running in which case any development email will seem to be sent to your global git config email address.
-
 ## Tests
 
 We use [RSpec](http://rspec.info/) and focus on feature tests in this project that go through the journey for each organisation type (unit testing is done in [flood _risk_engine](https://github.com/DEFRA/flood-risk-engine) and acceptance tests in [Flood risk acceptance tests](https://github.com/DEFRA/flood-risk-acceptance-tests)).

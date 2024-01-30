@@ -19,7 +19,7 @@ RSpec.describe "Cookies" do
         click_on "Hide this message"
       end
 
-      expect(page).not_to have_css(cookie_banner_div)
+      expect(page).to have_no_css(cookie_banner_div)
       expect(page.source).to have_text(google_analytics_render_tag)
     end
 
@@ -27,7 +27,7 @@ RSpec.describe "Cookies" do
       visit "/"
       click_on "Reject analytics cookies"
       expect(page).to have_text("You’ve rejected analytics cookies")
-      expect(page.source).not_to have_text(google_analytics_render_tag)
+      expect(page.source).to have_no_text(google_analytics_render_tag)
 
       click_on "change your cookie settings"
       expect(page).to have_css("h1", text: "Cookie settings")
@@ -39,7 +39,7 @@ RSpec.describe "Cookies" do
 
       choose "Do not use cookies that measure my website use"
       click_on "Save and continue"
-      expect(page.source).not_to have_text(google_analytics_render_tag)
+      expect(page.source).to have_no_text(google_analytics_render_tag)
     end
   end
 end
