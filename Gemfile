@@ -4,12 +4,13 @@ ruby "3.2.2"
 gem "defra_ruby_template",
     git: "https://github.com/DEFRA/defra-ruby-template",
     branch: "main"
+gem "faraday"
+gem "faraday-retry"
 gem "govuk_design_system_formbuilder"
 gem "high_voltage"
 gem "jquery-rails", "~> 4.4"
 gem "net-imap", require: false
 gem "net-pop", require: false
-gem "net-smtp", require: false
 gem "pg"
 gem "pundit"
 gem "rails", "~> 7.0"

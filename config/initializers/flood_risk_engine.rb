@@ -12,8 +12,8 @@ FloodRiskEngine.configure do |config|
 
   # Configure airbrake, which is done via the engine using defra_ruby_alert
   config.airbrake_enabled = ENV["USE_AIRBRAKE"]
-  config.airbrake_host = Rails.application.secrets.airbrake_host
-  config.airbrake_project_key = Rails.application.secrets.airbrake_project_key
+  config.airbrake_host = FloodRiskFrontOffice::Application.secrets.airbrake_host
+  config.airbrake_project_key = FloodRiskFrontOffice::Application.secrets.airbrake_project_key
   config.airbrake_blocklist = [
     # Catch-all "safety net" regexes.
     /password/i,
