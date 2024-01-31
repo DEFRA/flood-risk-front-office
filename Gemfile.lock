@@ -220,9 +220,9 @@ GEM
       ruby2_keywords
     erubi (1.12.0)
     execjs (2.8.1)
-    factory_bot (6.4.5)
+    factory_bot (6.4.6)
       activesupport (>= 5.0.0)
-    factory_bot_rails (6.4.3)
+    factory_bot_rails (6.3.0)
       factory_bot (~> 6.4)
       railties (>= 5.0.0)
     faker (3.2.3)
@@ -316,7 +316,7 @@ GEM
     parser (3.3.0.5)
       ast (~> 2.4.1)
       racc
-    passenger (6.0.20)
+    passenger (5.3.7)
       rack
       rake (>= 0.8.1)
     pg (1.5.4)
@@ -401,7 +401,7 @@ GEM
     rspec-mocks (3.12.6)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
-    rspec-rails (6.1.0)
+    rspec-rails (6.0.4)
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       railties (>= 6.1)
@@ -517,11 +517,10 @@ DEPENDENCIES
   jquery-rails (~> 4.4)
   net-imap
   net-pop
-  passenger (~> 6.0)
+  passenger (< 6.0)
   pg
   poltergeist
   pundit
-  rails (~> 7.0)
   rspec-rails
   rubocop
   rubocop-rails

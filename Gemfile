@@ -13,7 +13,6 @@ gem "net-imap", require: false
 gem "net-pop", require: false
 gem "pg"
 gem "pundit"
-gem "rails", "~> 7.0"
 gem "sass-rails"
 gem "secure_headers"
 gem "uglifier"
@@ -67,5 +66,5 @@ end
 group :production do
   # Use Passenger as our web-server/app-server (e.g. on AWS via Upstart, Heroku
   # via Procfile)
-  gem "passenger", "~> 6.0", require: "phusion_passenger/rack_handler"
+  gem "passenger", "< 6.0", require: "phusion_passenger/rack_handler"
 end
