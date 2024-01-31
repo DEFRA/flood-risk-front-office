@@ -66,5 +66,5 @@ end
 group :production do
   # Use Passenger as our web-server/app-server (e.g. on AWS via Upstart, Heroku
   # via Procfile)
-  gem "passenger", "< 6.0", require: "phusion_passenger/rack_handler"
+  gem "passenger", require: "phusion_passenger/rack_handler"
 end
