@@ -34,6 +34,16 @@ GIT
       sucker_punch (~> 3)
       validates_email_format_of (~> 1)
 
+GIT
+  remote: https://github.com/GhaniyKie/passenger
+  revision: 957f9810d3da8ec87089e66589821da9840be99c
+  branch: compatibility-with-rack-3
+  specs:
+    passenger (6.0.19)
+      rack
+      rackup
+      rake (>= 0.8.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -316,9 +326,6 @@ GEM
     parser (3.3.0.5)
       ast (~> 2.4.1)
       racc
-    passenger (6.0.20)
-      rack
-      rake (>= 0.8.1)
     pg (1.5.4)
     phonelib (0.8.7)
     poltergeist (1.18.1)
@@ -517,7 +524,7 @@ DEPENDENCIES
   jquery-rails (~> 4.4)
   net-imap
   net-pop
-  passenger
+  passenger!
   pg
   poltergeist
   pundit
