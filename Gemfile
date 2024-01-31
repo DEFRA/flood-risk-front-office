@@ -15,7 +15,7 @@ gem "pg"
 gem "pundit"
 gem "sass-rails"
 gem "secure_headers"
-gem "uglifier"
+gem "terser"
 gem "whenever"
 
 gem "flood_risk_engine",
