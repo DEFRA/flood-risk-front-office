@@ -63,11 +63,12 @@ group :test do
   gem "simplecov", "~> 0.17.1", require: false
 end
 
+# Pin this version as well as passenger to avoid https://github.com/phusion/passenger/issues/2508
+gem "rack", "~> 2.2"
+
 group :production do
   # Use Passenger as our web-server/app-server (e.g. on AWS via Upstart, Heroku
   # via Procfile)
-  gem "passenger",
-      git: "https://github.com/GhaniyKie/passenger",
-      branch: "compatibility-with-rack-3",
-      require: "phusion_passenger/rack_handler"
+  # Pin this version as well as rack to avoid https://github.com/phusion/passenger/issues/2508
+  gem "passenger", "6.0.19", require: "phusion_passenger/rack_handler"
 end
