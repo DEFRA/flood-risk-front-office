@@ -288,6 +288,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2023.1205)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.5)
     minitest (5.21.2)
     multi_json (1.15.0)
     mutex_m (0.2.0)
@@ -304,6 +305,9 @@ GEM
       net-protocol
     netrc (0.11.0)
     nio4r (2.7.0)
+    nokogiri (1.16.0)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     notifications-ruby-client (6.0.0)
       jwt (>= 1.5, < 3)
     octokit (4.25.1)
@@ -314,7 +318,7 @@ GEM
     parser (3.3.0.5)
       ast (~> 2.4.1)
       racc
-    passenger (6.0.20)
+    passenger (6.0.19)
       rack
       rake (>= 0.8.1)
     pg (1.5.4)
@@ -517,6 +521,7 @@ DEPENDENCIES
   jquery-rails (~> 4.4)
   net-imap
   net-pop
+  nokogiri (~> 1.16)
   passenger (= 6.0.19)
   pg
   poltergeist

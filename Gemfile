@@ -72,3 +72,5 @@ group :production do
   # Pin this version as well as rack to avoid https://github.com/phusion/passenger/issues/2508
   gem "passenger", "6.0.19", require: "phusion_passenger/rack_handler"
 end
+
+gem "nokogiri", "~> 1.16"
