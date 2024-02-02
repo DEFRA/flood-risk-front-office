@@ -13,10 +13,9 @@ gem "net-imap", require: false
 gem "net-pop", require: false
 gem "pg"
 gem "pundit"
-gem "rails", "~> 7.0"
 gem "sass-rails"
 gem "secure_headers"
-gem "uglifier"
+gem "terser"
 gem "whenever"
 
 gem "flood_risk_engine",
@@ -64,8 +63,14 @@ group :test do
   gem "simplecov", "~> 0.17.1", require: false
 end
 
+# Pin this version as well as passenger to avoid https://github.com/phusion/passenger/issues/2508
+gem "rack", "~> 2.2"
+
 group :production do
   # Use Passenger as our web-server/app-server (e.g. on AWS via Upstart, Heroku
   # via Procfile)
-  gem "passenger", "~> 6.0", require: "phusion_passenger/rack_handler"
+  # Pin this version as well as rack to avoid https://github.com/phusion/passenger/issues/2508
+  gem "passenger", "6.0.19", require: "phusion_passenger/rack_handler"
 end
+
+gem "nokogiri", "~> 1.16"
