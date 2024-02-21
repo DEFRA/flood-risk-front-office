@@ -510,6 +510,7 @@ DEPENDENCIES
   ci_reporter_rspec
   defra_ruby_style
   defra_ruby_template!
+  defra_ruby_validators
   dotenv-rails
   factory_bot_rails
   faker
