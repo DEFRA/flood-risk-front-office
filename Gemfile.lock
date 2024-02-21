@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/DEFRA/defra-ruby-template
-  revision: 5a8417c23e1018d152931c1183eab0fbb6a08720
+  revision: c28759b0acb321f2fb4a5e788d98ab9ee7a4b3db
   branch: main
   specs:
-    defra_ruby_template (3.13.0)
+    defra_ruby_template (3.15.0)
 
 GIT
   remote: https://github.com/DEFRA/flood-risk-engine
@@ -249,7 +249,7 @@ GEM
       rake (>= 10.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    govuk_design_system_formbuilder (5.0.0)
+    govuk_design_system_formbuilder (5.1.0)
       actionview (>= 6.1)
       activemodel (>= 6.1)
       activesupport (>= 6.1)
