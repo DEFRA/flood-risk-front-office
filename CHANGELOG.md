@@ -2,10 +2,28 @@
 
 ## [Unreleased](https://github.com/defra/flood-risk-front-office/tree/HEAD)
 
-[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v2.1.1...HEAD)
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v2.1.2...HEAD)
 
 **Merged pull requests:**
 
+- Bump flood\_risk\_engine from `051400f` to `0bf4c03` [\#756](https://github.com/DEFRA/flood-risk-front-office/pull/756) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump flood\_risk\_engine from `4f3d7d2` to `051400f` [\#755](https://github.com/DEFRA/flood-risk-front-office/pull/755) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rubocop from 1.62.0 to 1.63.4 [\#754](https://github.com/DEFRA/flood-risk-front-office/pull/754) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump flood\_risk\_engine from `f3e7e49` to `4f3d7d2` [\#753](https://github.com/DEFRA/flood-risk-front-office/pull/753) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Add Geospatial queries section to README.md [\#752](https://github.com/DEFRA/flood-risk-front-office/pull/752) ([PaulDoyle-DEFRA](https://github.com/PaulDoyle-DEFRA))
+- Bump flood\_risk\_engine from `e0ee86a` to `f3e7e49` [\#751](https://github.com/DEFRA/flood-risk-front-office/pull/751) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump faraday-retry from 2.2.0 to 2.2.1 [\#749](https://github.com/DEFRA/flood-risk-front-office/pull/749) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rubocop-rspec from 2.27.1 to 2.29.1 [\#748](https://github.com/DEFRA/flood-risk-front-office/pull/748) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump engine and other gems and add postgis to ci.yml [\#747](https://github.com/DEFRA/flood-risk-front-office/pull/747) ([PaulDoyle-DEFRA](https://github.com/PaulDoyle-DEFRA))
+- Bump rspec-rails from 6.1.1 to 6.1.2 [\#728](https://github.com/DEFRA/flood-risk-front-office/pull/728) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+## [v2.1.2](https://github.com/defra/flood-risk-front-office/tree/v2.1.2) (2024-03-19)
+
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v2.1.1...v2.1.2)
+
+**Merged pull requests:**
+
+- Release v2.1.2 [\#729](https://github.com/DEFRA/flood-risk-front-office/pull/729) ([PaulDoyle-DEFRA](https://github.com/PaulDoyle-DEFRA))
 - Bump rubocop from 1.61.0 to 1.62.0 [\#725](https://github.com/DEFRA/flood-risk-front-office/pull/725) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump flood\_risk\_engine from `e216a9b` to `f9446af` [\#724](https://github.com/DEFRA/flood-risk-front-office/pull/724) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump rubocop-rails from 2.23.1 to 2.24.0 [\#723](https://github.com/DEFRA/flood-risk-front-office/pull/723) ([dependabot[bot]](https://github.com/apps/dependabot))
