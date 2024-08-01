@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/DEFRA/defra-ruby-template
-  revision: 3ce5aeaca088b620d89ddc0267ac5f23168d57ed
+  revision: aea06c6c2b4a6bebe61b735f1b2d6ef70e6a1569
   branch: main
   specs:
-    defra_ruby_template (3.15.1)
+    defra_ruby_template (5.4.1)
 
 GIT
   remote: https://github.com/DEFRA/flood-risk-engine
