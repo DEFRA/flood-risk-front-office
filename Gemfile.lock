@@ -1,11 +1,4 @@
 GIT
-  remote: https://github.com/DEFRA/defra-ruby-template
-  revision: aea06c6c2b4a6bebe61b735f1b2d6ef70e6a1569
-  branch: main
-  specs:
-    defra_ruby_template (5.4.1)
-
-GIT
   remote: https://github.com/DEFRA/flood-risk-engine
   revision: ab9fbfd68a57e533cfb37f7bf33e8af04be49947
   branch: main
@@ -205,6 +198,7 @@ GEM
       rubocop-factory_bot
       rubocop-rake
       rubocop-rspec
+    defra_ruby_template (5.4.1)
     defra_ruby_validators (2.6.0)
       activemodel
       i18n
@@ -312,6 +306,8 @@ GEM
       net-protocol
     netrc (0.11.0)
     nio4r (2.7.3)
+    nokogiri (1.16.7-x86_64-darwin)
+      racc (~> 1.4)
     nokogiri (1.16.7-x86_64-linux)
       racc (~> 1.4)
     notifications-ruby-client (6.2.0)
@@ -514,6 +510,7 @@ GEM
     zeitwerk (2.6.17)
 
 PLATFORMS
+  x86_64-darwin-22
   x86_64-linux
 
 DEPENDENCIES
@@ -524,7 +521,7 @@ DEPENDENCIES
   capybara-email
   ci_reporter_rspec
   defra_ruby_style
-  defra_ruby_template!
+  defra_ruby_template (~> 5.0)
   defra_ruby_validators
   dotenv-rails
   factory_bot_rails
