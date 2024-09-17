@@ -2,10 +2,53 @@
 
 ## [Unreleased](https://github.com/defra/flood-risk-front-office/tree/HEAD)
 
-[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v2.1.2...HEAD)
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v2.1.3...HEAD)
+
+**Implemented enhancements:**
+
+- \[RUBY-3225\] Update `defra_ruby_template` gem and improve cookie banner styling [\#816](https://github.com/DEFRA/flood-risk-front-office/pull/816) ([jjromeo](https://github.com/jjromeo))
 
 **Merged pull requests:**
 
+- Bump net-imap from 0.4.14 to 0.4.15 [\#817](https://github.com/DEFRA/flood-risk-front-office/pull/817) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump faraday from 2.10.1 to 2.11.0 [\#815](https://github.com/DEFRA/flood-risk-front-office/pull/815) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump pundit from 2.3.2 to 2.4.0 [\#813](https://github.com/DEFRA/flood-risk-front-office/pull/813) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rexml from 3.3.5 to 3.3.6 [\#812](https://github.com/DEFRA/flood-risk-front-office/pull/812) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rspec-rails from 6.1.3 to 6.1.4 [\#810](https://github.com/DEFRA/flood-risk-front-office/pull/810) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump govuk\_design\_system\_formbuilder from 5.4.1 to 5.5.0 [\#809](https://github.com/DEFRA/flood-risk-front-office/pull/809) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump secure\_headers from 6.5.0 to 6.7.0 [\#808](https://github.com/DEFRA/flood-risk-front-office/pull/808) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rexml from 3.3.2 to 3.3.3 [\#806](https://github.com/DEFRA/flood-risk-front-office/pull/806) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rubocop from 1.65.0 to 1.65.1 [\#805](https://github.com/DEFRA/flood-risk-front-office/pull/805) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump flood\_risk\_engine from `0bf4c03` to `ab9fbfd` [\#804](https://github.com/DEFRA/flood-risk-front-office/pull/804) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump faraday from 2.10.0 to 2.10.1 [\#801](https://github.com/DEFRA/flood-risk-front-office/pull/801) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump nokogiri from 1.16.6 to 1.16.7 [\#800](https://github.com/DEFRA/flood-risk-front-office/pull/800) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump pg from 1.5.6 to 1.5.7 [\#799](https://github.com/DEFRA/flood-risk-front-office/pull/799) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump govuk\_design\_system\_formbuilder from 5.4.0 to 5.4.1 [\#798](https://github.com/DEFRA/flood-risk-front-office/pull/798) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rexml from 3.2.8 to 3.3.2 [\#793](https://github.com/DEFRA/flood-risk-front-office/pull/793) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump faker from 3.4.1 to 3.4.2 [\#791](https://github.com/DEFRA/flood-risk-front-office/pull/791) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump bullet from 7.1.6 to 7.2.0 [\#790](https://github.com/DEFRA/flood-risk-front-office/pull/790) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rubocop from 1.64.1 to 1.65.0 [\#788](https://github.com/DEFRA/flood-risk-front-office/pull/788) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump faraday from 2.9.0 to 2.10.0 [\#787](https://github.com/DEFRA/flood-risk-front-office/pull/787) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rubocop-rails from 2.25.0 to 2.25.1 [\#785](https://github.com/DEFRA/flood-risk-front-office/pull/785) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump terser from 1.2.2 to 1.2.3 [\#783](https://github.com/DEFRA/flood-risk-front-office/pull/783) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rspec-rails from 6.1.2 to 6.1.3 [\#782](https://github.com/DEFRA/flood-risk-front-office/pull/782) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump defra\_ruby\_template from `3ce5aea` to `aea06c6` [\#780](https://github.com/DEFRA/flood-risk-front-office/pull/780) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump net-imap from 0.4.10 to 0.4.14 [\#779](https://github.com/DEFRA/flood-risk-front-office/pull/779) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump nokogiri from 1.16.4 to 1.16.6 [\#777](https://github.com/DEFRA/flood-risk-front-office/pull/777) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rubocop from 1.63.4 to 1.64.1 [\#769](https://github.com/DEFRA/flood-risk-front-office/pull/769) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump faker from 3.3.1 to 3.4.1 [\#768](https://github.com/DEFRA/flood-risk-front-office/pull/768) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump govuk\_design\_system\_formbuilder from 5.3.3 to 5.4.0 [\#764](https://github.com/DEFRA/flood-risk-front-office/pull/764) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rubocop-rails from 2.24.1 to 2.25.0 [\#763](https://github.com/DEFRA/flood-risk-front-office/pull/763) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rexml from 3.2.6 to 3.2.8 [\#762](https://github.com/DEFRA/flood-risk-front-office/pull/762) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump pundit from 2.3.1 to 2.3.2 [\#759](https://github.com/DEFRA/flood-risk-front-office/pull/759) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+## [v2.1.3](https://github.com/defra/flood-risk-front-office/tree/v2.1.3) (2024-05-20)
+
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v2.1.2...v2.1.3)
+
+**Merged pull requests:**
+
+- Release v2.1.3 [\#765](https://github.com/DEFRA/flood-risk-front-office/pull/765) ([PaulDoyle-DEFRA](https://github.com/PaulDoyle-DEFRA))
 - Bump flood\_risk\_engine from `051400f` to `0bf4c03` [\#756](https://github.com/DEFRA/flood-risk-front-office/pull/756) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump flood\_risk\_engine from `4f3d7d2` to `051400f` [\#755](https://github.com/DEFRA/flood-risk-front-office/pull/755) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump rubocop from 1.62.0 to 1.63.4 [\#754](https://github.com/DEFRA/flood-risk-front-office/pull/754) ([dependabot[bot]](https://github.com/apps/dependabot))
