@@ -170,7 +170,7 @@ GEM
     capybara-email (3.0.2)
       capybara (>= 2.4, < 4.0)
       mail
-    cgi (0.4.1)
+    cgi (0.4.2)
     chronic (0.10.2)
     ci_reporter (2.1.0)
       builder (>= 2.1.2)
