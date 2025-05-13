@@ -4,7 +4,6 @@ ruby "3.2.2"
 gem "defra_ruby_template", "~> 5.0"
 gem "faraday"
 gem "faraday-retry"
-gem "govuk_design_system_formbuilder"
 gem "high_voltage"
 gem "jquery-rails", "~> 4.4"
 gem "net-imap", require: false
@@ -18,7 +17,7 @@ gem "whenever"
 
 gem "flood_risk_engine",
     git: "https://github.com/DEFRA/flood-risk-engine",
-    branch: "main"
+    branch: "feature/formbuilder_5_10_0"
 
 # This is specified in the engine gemspec,
 # but need to specify here also to pick up i18n locales

@@ -5,11 +5,13 @@ inherit_gem:
     - default.yml
 
 require:
+  - rubocop-factory_bot
+
+plugins:
   - rubocop-capybara
   - rubocop-rails
   - rubocop-rspec
   - rubocop-rspec_rails
-  - rubocop-factory_bot
 
 AllCops:
   TargetRubyVersion: 3.1.2
