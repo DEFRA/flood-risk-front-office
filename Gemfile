@@ -22,7 +22,8 @@ gem "flood_risk_engine",
 
 # This is specified in the engine gemspec,
 # but need to specify here also to pick up i18n locales
-gem "defra_ruby_validators"
+# Pin to below v3 to avoid pulling in the companies house gem
+gem "defra_ruby_validators", "~> 2.7"
 
 gem "github_changelog_generator", require: false
 
