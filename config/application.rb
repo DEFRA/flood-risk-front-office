@@ -44,8 +44,20 @@ module FloodRiskFrontOffice
     def self.secrets
       @secrets ||= begin
         secrets = ActiveSupport::OrderedOptions.new
+        # Ensure the config/secrets path is defined (removed in Rails 7.2)
+        config.paths.add "config/secrets", with: "config/secrets.yml" unless config.paths["config/secrets"]
         files = config.paths["config/secrets"].existent
-        secrets.merge! Rails::Secrets.parse(files, env: Rails.env)
+        secrets.merge! parse_secrets(files)
+      end
+    end
+
+    def parse_secrets(paths)
+      paths.each_with_object(Hash.new) do |path, all_secrets|
+        require "erb"
+
+        secrets = YAML.load(ERB.new(IO.read(path)).result, aliases: true) || {}
+        all_secrets.merge!(secrets["shared"].deep_symbolize_keys) if secrets["shared"]
+        all_secrets.merge!(secrets[Rails.env].deep_symbolize_keys) if secrets[Rails.env]
       end
     end
   end
