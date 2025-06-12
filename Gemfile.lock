@@ -255,7 +255,14 @@ GEM
       rake (>= 10.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    govuk_design_system_formbuilder (5.10.1)
+      actionview (>= 6.1)
+      activemodel (>= 6.1)
+      activesupport (>= 6.1)
+      html-attributes-utils (~> 1)
     high_voltage (3.1.2)
+    html-attributes-utils (1.0.2)
+      activesupport (>= 6.1.4.4)
     http-accept (1.7.0)
     http-cookie (1.0.8)
       domain_name (~> 0.5)
@@ -543,6 +550,7 @@ DEPENDENCIES
   faraday-retry
   flood_risk_engine!
   github_changelog_generator
+  govuk_design_system_formbuilder
   high_voltage
   jquery-rails (~> 4.4)
   net-imap

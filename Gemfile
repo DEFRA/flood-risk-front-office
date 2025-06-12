@@ -1,6 +1,8 @@
 source "https://rubygems.org"
 ruby "3.2.2"
 
+gem "govuk_design_system_formbuilder"
+
 # Temporary branch of template gem for DR/QA
 gem "defra_ruby_template",
     git: "https://github.com/DEFRA/defra-ruby-template",
