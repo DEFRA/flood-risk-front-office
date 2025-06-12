@@ -1,7 +1,11 @@
 source "https://rubygems.org"
 ruby "3.2.2"
 
-gem "defra_ruby_template", "~> 5.0"
+# Temporary branch of template gem for DR/QA
+gem "defra_ruby_template",
+    git: "https://github.com/DEFRA/defra-ruby-template",
+    branch: "feature/RUBY_3809_govuk-frontend_upgrade"
+
 gem "faraday"
 gem "faraday-retry"
 gem "high_voltage"
@@ -10,14 +14,14 @@ gem "net-imap", require: false
 gem "net-pop", require: false
 gem "pg"
 gem "pundit"
-gem "sass-rails"
+gem "sassc-rails"
 gem "secure_headers"
 gem "terser"
 gem "whenever"
 
 gem "flood_risk_engine",
     git: "https://github.com/DEFRA/flood-risk-engine",
-    branch: "feature/formbuilder_5_10_0"
+    branch: "main"
 
 # This is specified in the engine gemspec,
 # but need to specify here also to pick up i18n locales
