@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 ruby "3.2.2"
 
-gem "defra_ruby_template", "~> 5.0"
+gem "defra_ruby_template", "~> 5.11"
 gem "faraday"
 gem "faraday-retry"
 gem "govuk_design_system_formbuilder"
