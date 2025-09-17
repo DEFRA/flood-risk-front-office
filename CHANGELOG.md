@@ -2,10 +2,29 @@
 
 ## [Unreleased](https://github.com/defra/flood-risk-front-office/tree/HEAD)
 
-[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v2.1.5...HEAD)
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v2.1.6...HEAD)
 
 **Merged pull requests:**
 
+- Bump rubocop-rspec from 3.6.0 to 3.7.0 [\#1008](https://github.com/DEFRA/flood-risk-front-office/pull/1008) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump flood\_risk\_engine from `17f0a9a` to `f583e8d` [\#1007](https://github.com/DEFRA/flood-risk-front-office/pull/1007) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump factory\_bot\_rails from 6.5.0 to 6.5.1 [\#1006](https://github.com/DEFRA/flood-risk-front-office/pull/1006) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump pundit from 2.5.0 to 2.5.1 [\#1005](https://github.com/DEFRA/flood-risk-front-office/pull/1005) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Gem updates [\#1004](https://github.com/DEFRA/flood-risk-front-office/pull/1004) ([PaulDoyle-EA](https://github.com/PaulDoyle-EA))
+- Bump nokogiri from 1.18.8 to 1.18.9 [\#984](https://github.com/DEFRA/flood-risk-front-office/pull/984) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump flood\_risk\_engine from `103d053` to `17f0a9a` [\#981](https://github.com/DEFRA/flood-risk-front-office/pull/981) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Restoring dependabot settings so it can pull engine updates [\#980](https://github.com/DEFRA/flood-risk-front-office/pull/980) ([brujeo](https://github.com/brujeo))
+- Bump faker from 3.5.1 to 3.5.2 [\#979](https://github.com/DEFRA/flood-risk-front-office/pull/979) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump govuk\_design\_system\_formbuilder from 5.10.0 to 5.11.0 [\#974](https://github.com/DEFRA/flood-risk-front-office/pull/974) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump terser from 1.2.5 to 1.2.6 [\#971](https://github.com/DEFRA/flood-risk-front-office/pull/971) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+## [v2.1.6](https://github.com/defra/flood-risk-front-office/tree/v2.1.6) (2025-06-25)
+
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v2.1.5...v2.1.6)
+
+**Merged pull requests:**
+
+- Release v2.1.6 [\#978](https://github.com/DEFRA/flood-risk-front-office/pull/978) ([PaulDoyle-EA](https://github.com/PaulDoyle-EA))
 - Bump defra\_ruby\_template gem version [\#977](https://github.com/DEFRA/flood-risk-front-office/pull/977) ([PaulDoyle-EA](https://github.com/PaulDoyle-EA))
 - Bump faraday-retry from 2.3.1 to 2.3.2 [\#970](https://github.com/DEFRA/flood-risk-front-office/pull/970) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump factory\_bot\_rails from 6.4.4 to 6.5.0 [\#968](https://github.com/DEFRA/flood-risk-front-office/pull/968) ([dependabot[bot]](https://github.com/apps/dependabot))
