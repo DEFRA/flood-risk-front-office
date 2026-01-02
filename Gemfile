@@ -25,6 +25,7 @@ gem "flood_risk_engine",
 # Pin to below v3 to avoid pulling in the companies house gem
 gem "defra_ruby_validators", "~> 2.7"
 
+gem "async", "~> 1" # Pin to 1.x to avoid ThreadError in changelog generator
 gem "github_changelog_generator", require: false
 
 # Automatically loads environment variables from .env into ENV. Specified here

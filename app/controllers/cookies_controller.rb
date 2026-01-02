@@ -1,17 +1,17 @@
 class CookiesController < ApplicationController
   def accept_analytics
     write_cookie(:cookies_policy, :analytics_accepted)
-    redirect_back fallback_location: root_path
+    redirect_back_or_to(root_path)
   end
 
   def reject_analytics
     write_cookie(:cookies_policy, :analytics_rejected)
-    redirect_back fallback_location: root_path
+    redirect_back_or_to(root_path)
   end
 
   def hide_this_message
     write_cookie(:cookies_preferences_set, true)
-    redirect_back fallback_location: root_path
+    redirect_back_or_to(root_path)
   end
 
   def update
