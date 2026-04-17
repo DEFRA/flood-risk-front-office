@@ -2,10 +2,36 @@
 
 ## [Unreleased](https://github.com/defra/flood-risk-front-office/tree/HEAD)
 
-[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v2.1.7...HEAD)
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v2.1.8...HEAD)
 
 **Merged pull requests:**
 
+- Bump flood\_risk\_engine from `7fe72ed` to `6a5cb61` [\#1064](https://github.com/DEFRA/flood-risk-front-office/pull/1064) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rubocop from 1.82.1 to 1.85.0 [\#1062](https://github.com/DEFRA/flood-risk-front-office/pull/1062) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump nokogiri from 1.19.0 to 1.19.1 [\#1059](https://github.com/DEFRA/flood-risk-front-office/pull/1059) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rack from 2.2.21 to 2.2.22 [\#1058](https://github.com/DEFRA/flood-risk-front-office/pull/1058) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump net-imap from 0.6.2 to 0.6.3 [\#1057](https://github.com/DEFRA/flood-risk-front-office/pull/1057) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump faraday from 2.14.0 to 2.14.1 [\#1055](https://github.com/DEFRA/flood-risk-front-office/pull/1055) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rubocop-rails from 2.34.2 to 2.34.3 [\#1047](https://github.com/DEFRA/flood-risk-front-office/pull/1047) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump pg from 1.6.2 to 1.6.3 [\#1046](https://github.com/DEFRA/flood-risk-front-office/pull/1046) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump flood\_risk\_engine from `cf4a9e8` to `7fe72ed` [\#1045](https://github.com/DEFRA/flood-risk-front-office/pull/1045) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump nokogiri from 1.18.10 to 1.19.0 [\#1044](https://github.com/DEFRA/flood-risk-front-office/pull/1044) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump faraday-retry from 2.3.2 to 2.4.0 [\#1043](https://github.com/DEFRA/flood-risk-front-office/pull/1043) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump whenever from 1.0.0 to 1.1.0 [\#1036](https://github.com/DEFRA/flood-risk-front-office/pull/1036) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rubocop-factory\_bot from 2.27.1 to 2.28.0 [\#1034](https://github.com/DEFRA/flood-risk-front-office/pull/1034) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rubocop-rspec from 3.7.0 to 3.8.0 [\#1033](https://github.com/DEFRA/flood-risk-front-office/pull/1033) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rubocop-rspec\_rails from 2.31.0 to 2.32.0 [\#1032](https://github.com/DEFRA/flood-risk-front-office/pull/1032) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rack from 2.2.20 to 2.2.21 [\#1031](https://github.com/DEFRA/flood-risk-front-office/pull/1031) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rubocop from 1.81.6 to 1.81.7 [\#1030](https://github.com/DEFRA/flood-risk-front-office/pull/1030) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump govuk\_design\_system\_formbuilder from 5.11.0 to 5.13.0 [\#1029](https://github.com/DEFRA/flood-risk-front-office/pull/1029) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+## [v2.1.8](https://github.com/defra/flood-risk-front-office/tree/v2.1.8) (2025-12-24)
+
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v2.1.7...v2.1.8)
+
+**Merged pull requests:**
+
+- Release/v2.1.8 [\#1041](https://github.com/DEFRA/flood-risk-front-office/pull/1041) ([brujeo](https://github.com/brujeo))
 - Sonar cloud config [\#1027](https://github.com/DEFRA/flood-risk-front-office/pull/1027) ([brujeo](https://github.com/brujeo))
 - Bump jquery-rails from 4.6.0 to 4.6.1 [\#1024](https://github.com/DEFRA/flood-risk-front-office/pull/1024) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump rubocop from 1.80.2 to 1.81.6 [\#1023](https://github.com/DEFRA/flood-risk-front-office/pull/1023) ([dependabot[bot]](https://github.com/apps/dependabot))
