@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "3.2.2"
+ruby "3.4.6"
 
 gem "defra_ruby_template", "~> 5.11"
 gem "faraday"
