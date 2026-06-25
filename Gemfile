@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source "https://rubygems.org", cooldown: 7
 ruby "3.4.6"
 
 gem "defra_ruby_template", "~> 5.11"
