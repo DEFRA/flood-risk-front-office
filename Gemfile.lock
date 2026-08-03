@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/DEFRA/flood-risk-engine
-  revision: 4d1277b81a50b9a49f95164adbfb19d44a5d1336
+  revision: c9cf37a23754d55c91a63f28aee85be5905cfb6f
   branch: main
   specs:
     flood_risk_engine (1.2)
@@ -94,12 +94,12 @@ GEM
     activerecord-postgis-adapter (10.0.3)
       activerecord (~> 7.2)
       rgeo-activerecord (~> 8.0.0)
-    activerecord-session_store (2.2.0)
-      actionpack (>= 7.0)
-      activerecord (>= 7.0)
+    activerecord-session_store (2.3.0)
+      actionpack (>= 7.1)
+      activerecord (>= 7.1)
       cgi (>= 0.3.6)
       rack (>= 2.0.8, < 4)
-      railties (>= 7.0)
+      railties (>= 7.1)
     activestorage (7.2.3.2)
       actionpack (= 7.2.3.2)
       activejob (= 7.2.3.2)
@@ -218,7 +218,7 @@ GEM
       dotenv (= 2.8.1)
       railties (>= 3.2)
     drb (2.2.3)
-    erb (6.0.4)
+    erb (6.0.6)
     erubi (1.13.1)
     execjs (2.10.1)
     factory_bot (6.6.0)
@@ -293,7 +293,7 @@ GEM
     loofah (2.25.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
-    mail (2.9.0)
+    mail (2.9.1)
       logger
       mini_mime (>= 0.1.1)
       net-imap
@@ -304,7 +304,7 @@ GEM
     mime-types (3.7.0)
       logger
       mime-types-data (~> 3.2025, >= 3.2025.0507)
-    mime-types-data (3.2026.0414)
+    mime-types-data (3.2026.0701)
     mini_mime (1.1.5)
     minitest (5.27.0)
     net-http (0.9.1)
@@ -356,12 +356,12 @@ GEM
     pg (1.6.3-x86_64-darwin)
     pg (1.6.3-x86_64-linux)
     pg (1.6.3-x86_64-linux-musl)
-    phonelib (0.10.22)
+    phonelib (0.10.23)
     poltergeist (1.18.1)
       capybara (>= 2.1, < 4)
       cliver (~> 0.3.1)
       websocket-driver (>= 0.2.0)
-    pp (0.6.3)
+    pp (0.6.4)
       prettyprint
     prettyprint (0.2.0)
     prism (1.9.0)
@@ -372,9 +372,6 @@ GEM
     protocol-http2 (0.16.0)
       protocol-hpack (~> 1.4)
       protocol-http (~> 0.18)
-    psych (5.4.0)
-      date
-      stringio
     public_suffix (7.0.5)
     pundit (2.5.2)
       activesupport (>= 3.0.0)
@@ -420,10 +417,15 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.4.2)
+    rbs (4.0.3)
+      logger
+      prism (>= 1.6.0)
+      tsort
     rbtree3 (0.7.1)
-    rdoc (7.2.0)
+    rdoc (8.0.0)
       erb
-      psych (>= 4.0.0)
+      prism (>= 1.6.0)
+      rbs (>= 4.0.0)
       tsort
     regexp_parser (2.12.0)
     reline (0.6.3)
@@ -527,7 +529,6 @@ GEM
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       sprockets (>= 3.0.0)
-    stringio (3.2.0)
     sucker_punch (3.3.0)
       concurrent-ruby (~> 1.0)
     terser (1.2.7)
@@ -551,7 +552,7 @@ GEM
       i18n (>= 0.8.0)
       simpleidn
     webrick (1.9.2)
-    websocket-driver (0.8.1)
+    websocket-driver (0.8.2)
       base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
