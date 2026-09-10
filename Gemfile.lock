@@ -198,7 +198,7 @@ GEM
       rails
       sprockets-rails
     defra_ruby_style (0.4.1)
-    defra_ruby_template (5.11.1)
+    defra_ruby_template (6.4.0)
     defra_ruby_validators (3.1.0)
       activemodel
       defra_ruby_companies_house
@@ -261,7 +261,7 @@ GEM
       rake (>= 10.0)
     globalid (1.4.0)
       activesupport (>= 6.1)
-    govuk_design_system_formbuilder (6.2.1)
+    govuk_design_system_formbuilder (6.4.0)
       actionview (>= 7.2)
       activemodel (>= 7.2)
       activesupport (>= 7.2)
@@ -580,7 +580,7 @@ DEPENDENCIES
   capybara-email
   ci_reporter_rspec
   defra_ruby_style
-  defra_ruby_template (~> 5.11)
+  defra_ruby_template (~> 6.4)
   defra_ruby_validators
   dotenv-rails
   factory_bot_rails
@@ -589,7 +589,7 @@ DEPENDENCIES
   faraday-retry
   flood_risk_engine!
   github_changelog_generator
-  govuk_design_system_formbuilder
+  govuk_design_system_formbuilder (~> 6.4.0)
   high_voltage
   jquery-rails (~> 4.4)
   net-imap
