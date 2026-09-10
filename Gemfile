@@ -1,6 +1,7 @@
 source "https://rubygems.org", cooldown: 7
 ruby "3.4.6"
 
+gem "dartsass-sprockets"
 gem "defra_ruby_template", "~> 6.4"
 gem "faraday"
 gem "faraday-retry"
@@ -11,7 +12,6 @@ gem "net-imap", require: false
 gem "net-pop", require: false
 gem "pg"
 gem "pundit"
-gem "sass-rails"
 gem "secure_headers"
 gem "terser"
 gem "whenever"
