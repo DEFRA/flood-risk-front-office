@@ -1,17 +1,17 @@
 source "https://rubygems.org", cooldown: 7
 ruby "3.4.6"
 
-gem "defra_ruby_template", "~> 5.11"
+gem "dartsass-sprockets"
+gem "defra_ruby_template", "~> 6.4"
 gem "faraday"
 gem "faraday-retry"
-gem "govuk_design_system_formbuilder"
+gem "govuk_design_system_formbuilder", "~> 6.4.0"
 gem "high_voltage"
 gem "jquery-rails", "~> 4.4"
 gem "net-imap", require: false
 gem "net-pop", require: false
 gem "pg"
 gem "pundit"
-gem "sass-rails"
 gem "secure_headers"
 gem "terser"
 gem "whenever"
