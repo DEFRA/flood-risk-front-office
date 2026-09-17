@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/DEFRA/flood-risk-engine
-  revision: 0174538697e5b73d0241d3f44ac690ffa84046a8
+  revision: bcc08f6a1800fa6b0b4906f6ccc8b6ec4fe12c27
   branch: chore/rails-8-1-upgrade
   specs:
     flood_risk_engine (1.2)
