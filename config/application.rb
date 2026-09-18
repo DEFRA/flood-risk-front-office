@@ -8,7 +8,11 @@ Bundler.require(*Rails.groups)
 
 module FloodRiskFrontOffice
   class Application < Rails::Application
-    config.load_defaults 7.0
+    config.load_defaults 8.1
+
+    # Keep has_secure_token generating on create (the pre-7.1 default). The
+    # engine relies on unsaved registrations having no token yet.
+    config.active_record.generate_secure_token_on = :create
 
     # Sprockets stylesheets are built on @import, which Dart Sass deprecates.
     # Silenced until the gem and the apps move to @use.
