@@ -2,7 +2,17 @@
 
 ## [Unreleased](https://github.com/defra/flood-risk-front-office/tree/HEAD)
 
-[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v2.1.9...HEAD)
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v2.1.10...HEAD)
+
+**Merged pull requests:**
+
+- Upgrade Rails to 8.1 and update related configurations [\#1137](https://github.com/DEFRA/flood-risk-front-office/pull/1137) ([brujeo](https://github.com/brujeo))
+- FRAE: Update defra-ruby-template to version 6.4.0 [\#1136](https://github.com/DEFRA/flood-risk-front-office/pull/1136) ([jjromeo](https://github.com/jjromeo))
+- Bump activestorage from 7.2.3.1 to 7.2.3.2 [\#1128](https://github.com/DEFRA/flood-risk-front-office/pull/1128) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+## [v2.1.10](https://github.com/defra/flood-risk-front-office/tree/v2.1.10) (2026-06-30)
+
+[Full Changelog](https://github.com/defra/flood-risk-front-office/compare/v2.1.9...v2.1.10)
 
 **Fixed bugs:**
 
@@ -10,6 +20,7 @@
 
 **Merged pull requests:**
 
+- Release v2.1.10 [\#1115](https://github.com/DEFRA/flood-risk-front-office/pull/1115) ([jjromeo](https://github.com/jjromeo))
 - Bump flood\_risk\_engine from `17c3ccd` to `4d1277b` [\#1114](https://github.com/DEFRA/flood-risk-front-office/pull/1114) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump flood\_risk\_engine from `f5da507` to `17c3ccd` [\#1113](https://github.com/DEFRA/flood-risk-front-office/pull/1113) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Feature/ruby 4336 frae security enable bundler cooldown give new gems a few days to be vetted [\#1112](https://github.com/DEFRA/flood-risk-front-office/pull/1112) ([brujeo](https://github.com/brujeo))
