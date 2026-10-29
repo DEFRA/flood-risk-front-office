@@ -610,7 +610,7 @@ DEPENDENCIES
   ci_reporter_rspec
   dartsass-sprockets
   defra_ruby_style
-  defra_ruby_template (~> 6.4)
+  defra_ruby_template (= 6.4.0)
   defra_ruby_validators
   dotenv-rails
   factory_bot_rails
