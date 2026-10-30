@@ -16,7 +16,6 @@ module FloodRiskFrontOffice
 
     # Sprockets stylesheets are built on @import, which Dart Sass deprecates.
     # Silenced until the gem and the apps move to @use.
-    config.sass.silence_deprecations = ["import"]
 
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
 
